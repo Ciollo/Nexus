@@ -1,0 +1,12 @@
+.centered-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(20, 22, 46, 1);
+}
+
+.img-fluid {
+    width: 700px; /* Imposta direttamente la larghezza */
+    height: auto;
+}
