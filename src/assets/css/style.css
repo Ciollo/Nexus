@@ -17,7 +17,6 @@
     height: auto;
 }
 
-
 .site-bg {
     background-color: rgba(20, 22, 46, 1);
 }
@@ -82,31 +81,18 @@
     padding: 10px 0px 10px 15px;
 }
 
-.bx-at {
+.bx-at, .bxs-hide, .bxs-show{
     position: absolute;
     top: 63%;
-    right: 10px;
+    right: 23px;
     transform: translateY(-27%);
 }
 
-.bxs-hide {
-    position: absolute;
-    top: 63%;
-    right: 10px;
-    transform: translateY(-27%);
+.bxs-hide, .bxs-show{
     cursor: pointer;
 }
 
-.bxs-show {
-    position: absolute;
-    top: 63%;
-    right: 10px;
-    transform: translateY(-27%);
-    cursor: pointer;
-}
-
-.btn-sign-in {
-    margin-top: 11px;
+.btn-sign-in, .btn-continue-sign-in {
     background: linear-gradient(90deg, #4F5FE5ff, #0DB0F6ff);
     width: 100%;
     height: auto;
@@ -121,6 +107,6 @@
 }
 
 .msg-no-account {
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 15px;
+    text-align: center;
 } 

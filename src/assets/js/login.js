@@ -6,14 +6,18 @@ $(document).ready(function(){
 
 var toggleViewPasswordElement = document.getElementById("toggleViewPassword");
 var userPassword =  document.getElementById("userPassword");
-var id =  document.getElementById("cas");
+var btnContinueSignIn =  document.getElementById("vtn-continue-sign-in");
 
 toggleViewPasswordElement.addEventListener("click", toggleViewPassword);
 
-// id.addEventListener("click", function nada () {
-//     var containerpass = document.getElementById("container-pass")
-//     containerpass.hidden = false;
-// })
+id.addEventListener("click", function nada () {
+    var containerpass = document.getElementById("container-pass")
+    containerpass.hidden = false;
+})
+
+// function continueSignIn() {
+
+// }
 
 function toggleViewPassword() {
     if (toggleViewPasswordElement.classList.contains("bxs-hide")) {
@@ -26,7 +30,6 @@ function toggleViewPassword() {
         userPassword.type = "password";
     }
 }
-
 
 var nexusLogo = document.getElementById("nexusLogo");
 nexusLogo.addEventListener("click", goToIndex);
