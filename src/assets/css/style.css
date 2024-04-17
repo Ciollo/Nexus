@@ -60,12 +60,18 @@
     cursor: pointer;
 }
 
+.logo-form{
+    width: 150px;
+    height: auto;
+}
+
 .container-input-form {
     position: relative;
     margin-top: 14px;
 }
 
 .label-input {
+    margin-left: 3px;
     font-size: 15px;    
     font-weight: 600
 }
@@ -116,6 +122,8 @@
 
 .msg-no-account {
     margin-top: 10px;
+    margin-left: 3px;
+
 } 
 
 
