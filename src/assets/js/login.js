@@ -1,3 +1,9 @@
+$(document).ready(function(){
+    setTimeout(function() {
+        $("body").animate({opacity: 1}, 1000);
+    }, 1000);
+});
+
 var toggleViewPasswordElement = document.getElementById("toggleViewPassword");
 var userPassword =  document.getElementById("userPassword");
 var id =  document.getElementById("cas");
