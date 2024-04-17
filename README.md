@@ -35,18 +35,18 @@ To get started with Nexus, follow these simple steps:
 ## Implementation
 | Features              | Status                   |
 | --------------        | -------------------------------- |
-| Database              | -  [<span style="color:red"></span>]  |
-| Pages                 | -  [<span style="color:red"></span>]  |
-| Note taking           | -  [<span style="color:red"></span>]  |
-| Todo                  | -  [<span style="color:red"></span>]  |
-| GUI                   | -  [<span style="color:red"></span>]  |
-| Multi-User            | -  [<span style="color:red"></span>]  |
-| Login                 | -  [<span style="color:red"></span>]  |
-| Register              | -  [<span style="color:red"></span>]  |
-| Splash screen         | -  [<span style="color:green"></span>] |
-| Online publication    | -  [<span style="color:red"></span>]  |
-| Dark mode             | -  [<span style="color:red"></span>]  |
-| Settings              | -  [<span style="color:red"></span>]  |
+| Database              | -  [<span style="color:red">x</span>]  |
+| Pages                 | -  [<span style="color:red">x</span>]  |
+| Note taking           | -  [<span style="color:red">x</span>]  |
+| Todo                  | -  [<span style="color:red">x</span>]  |
+| GUI                   | -  [<span style="color:red">x</span>]  |
+| Multi-User            | -  [<span style="color:red">x</span>]  |
+| Login                 | -  [<span style="color:red">x</span>]  |
+| Register              | -  [<span style="color:red">x</span>]  |
+| Splash screen         | -  [<span style="color:green">V</span>] |
+| Online publication    | -  [<span style="color:red"></span>]  |
+| Dark mode             | -  [<span style="color:red"></span>]  |
+| Settings              | -  [<span style="color:red"></span>]  |
 
 ## Documentation
 
