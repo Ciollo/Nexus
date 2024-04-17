@@ -44,9 +44,9 @@ To get started with Nexus, follow these simple steps:
 | Login                 | -  [<span style="color:red">x</span>]  |
 | Register              | -  [<span style="color:red">x</span>]  |
 | Splash screen         | -  [<span style="color:green">V</span>] |
-| Online publication    | -  [<span style="color:red"></span>]  |
-| Dark mode             | -  [<span style="color:red"></span>]  |
-| Settings              | -  [<span style="color:red"></span>]  |
+| Online publication    | -  [<span style="color:red">x</span>]  |
+| Dark mode             | -  [<span style="color:red">x</span>]  |
+| Settings              | -  [<span style="color:red">x</span>]  |
 
 ## Documentation
 
