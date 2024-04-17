@@ -1,0 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+
+.animated-body {
+    opacity: 0;
+}
+
+.centered-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-fluid {
+    width: 700px; /* Imposta direttamente la larghezza */
+    height: auto;
+}
+
+.site-bg {
+    background-color: rgba(20, 22, 46, 1);
+}
+
+.login-card {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 100%; 
+    max-width: 400px; 
+    height: auto;
+    padding: 15px 15px 10px 15px; /* Si, lo so che bastava scrivere padding: 15px*/
+    border: none;
+    border-radius: 8px;
+}
+
+.login-card h2, input, p, label, button{
+  font-family: "Mulish", sans-serif;
+}
+
+.title-login {
+    justify-content: center;
+        display: flex;
+}
+
+.title-login h2{
+    font-weight: bold;
+}
+
+.logo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top:15px;
+    left:15px;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+}
+
+.logo-form{
+    width: 150px;
+    height: auto;
+}
+
+.container-input-form {
+    position: relative;
+    margin-top: 14px;
+}
+
+.label-input {
+    margin-left: 3px;
+    font-size: 15px;    
+    font-weight: 600
+}
+
+.input-form {
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 10px 0px 10px 15px;
+}
+
+.bx-at, .bxs-hide, .bxs-show{
+    position: absolute;
+    top: 63%;
+    right: 23px;
+    transform: translateY(-27%);
+}
+
+.bxs-hide, .bxs-show{
+    cursor: pointer;
+}
+
+.btn-sign-in, .btn-continue-sign-in {
+    background: linear-gradient(90deg, #4F5FE5ff, #0DB0F6ff);
+    width: 100%;
+    height: auto;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    letter-spacing: 0.025em;
+    padding: 5px 0px 5px 0px;
+    font-weight: bold;
+    color: rgb(249, 246, 238);
+    font-size: 15px
+}
+
+
+.msg-no-account {
+    margin-top: 15px;
+    text-align: center;
+} 
