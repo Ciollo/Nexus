@@ -1,3 +1,7 @@
+<p align="center">
+    <img width="300" alt="Nexus Logo" src="src/assets/images/Nexus_temp_no_bg.png">
+</p>
+
 # Nexus - Your Ultimate Productivity Hub
 
 <div align = center>
