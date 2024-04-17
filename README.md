@@ -4,6 +4,7 @@
 
 <br>
 
+
 [![Badge License]][License] 
 ![Badge Language]
 
@@ -30,6 +31,22 @@ To get started with Nexus, follow these simple steps:
 3. **Create Your Workspace**: Set up your workspace by organizing your notes, tasks, and projects according to your workflow.
 4. **Invite Collaborators**: If you're working with a team, invite collaborators to share and collaborate on notes and projects.
 5. **Start Productivity**: Begin using Nexus to capture ideas, manage tasks, and enhance your productivity!
+
+## Implementation
+| Features              | Status                   |
+| --------------        | -------------------------------- |
+| Database              | -  [<span style="color:red"></span>]  |
+| Pages                 | -  [<span style="color:red"></span>]  |
+| Note taking           | -  [<span style="color:red"></span>]  |
+| Todo                  | -  [<span style="color:red"></span>]  |
+| GUI                   | -  [<span style="color:red"></span>]  |
+| Multi-User            | -  [<span style="color:red"></span>]  |
+| Login                 | -  [<span style="color:red"></span>]  |
+| Register              | -  [<span style="color:red"></span>]  |
+| Splash screen         | -  [<span style="color:green"></span>] |
+| Online publication    | -  [<span style="color:red"></span>]  |
+| Dark mode             | -  [<span style="color:red"></span>]  |
+| Settings              | -  [<span style="color:red"></span>]  |
 
 ## Documentation
 
