@@ -1,7 +1,12 @@
 var toggleViewPasswordElement = document.getElementById("toggleViewPassword");
 var userPassword =  document.getElementById("userPassword");
+var id =  document.getElementById("cas");
 
 toggleViewPasswordElement.addEventListener("click", toggleViewPassword);
+id.addEventListener("click", function nada () {
+    var containerpass = document.getElementById("container-pass")
+    containerpass.hidden = false;
+})
 
 function toggleViewPassword() {
     if (toggleViewPasswordElement.classList.contains("bxs-hide")) {
