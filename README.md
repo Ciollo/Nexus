@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="300" alt="Nexus Logo" src="src/assets/images/Nexus_temp_no_bg.png">
+    <img width="300" alt="Nexus Logo" src="src/assets/images/Nexus_logo_no_bg.png">
 </p>
 
 # Nexus - Your Ultimate Productivity Hub
@@ -43,20 +43,20 @@ To get started with Nexus, follow these simple steps:
 5. **Start Productivity**: Begin using Nexus to capture ideas, manage tasks, and enhance your productivity!
 
 ## Implementation
-| Features              | Status                   |
-| --------------        | -------------------------------- |
-| Database              | -  [<span style="color:red">x</span>]  |
-| Pages                 | -  [<span style="color:red">x</span>]  |
-| Note taking           | -  [<span style="color:red">x</span>]  |
-| Todo                  | -  [<span style="color:red">x</span>]  |
-| GUI                   | -  [<span style="color:red">x</span>]  |
-| Multi-User            | -  [<span style="color:red">x</span>]  |
-| Login                 | -  [<span style="color:red">x</span>]  |
-| Register              | -  [<span style="color:red">x</span>]  |
-| Splash screen         | -  [<span style="color:green">V</span>] |
-| Online publication    | -  [<span style="color:red">x</span>]  |
-| Dark mode             | -  [<span style="color:red">x</span>]  |
-| Settings              | -  [<span style="color:red">x</span>]  |
+| Features              | Status |
+| --------------        | ------ |
+| Database              | -  ❌  |
+| Pages                 | -  ❌  |
+| Note taking           | -  ❌  |
+| Todo                  | -  ❌  |
+| GUI                   | -  ❌  |
+| Multi-User            | -  ❌  |
+| Login                 | -  ❌  |
+| Register              | -  ❌  |
+| Splash screen         | -  ✅  |
+| Online publication    | -  ❌  |
+| Dark mode             | -  ❌  |
+| Settings              | -  ❌  |
 
 ## Documentation
 
@@ -72,7 +72,7 @@ Contributions are welcome! If you're interested in contributing to Nexus, please
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for 
+This project is licensed under the GNU License - see the [LICENSE](LICENSE) file for 
 
 ---
 
