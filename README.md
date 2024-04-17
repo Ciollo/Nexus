@@ -1,4 +1,3 @@
-
 # Nexus - Your Ultimate Productivity Hub
 
 <div align = center>
@@ -46,8 +45,13 @@ Contributions are welcome! If you're interested in contributing to Nexus, please
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for 
 
 ---
 
 Happy organizing and stay productive with Nexus!
+
+<!----------------------------------{ Badges }--------------------------------->
+
+[Badge Language]: https://img.shields.io/github/languages/top/Ciollo/Nexus
+[Badge License]: https://img.shields.io/github/license/Ciollo/Nexes
