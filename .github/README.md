@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="300" alt="Nexus Logo" src="src/assets/images/Nexus_logo_no_bg.png">
+    <img width="300" alt="Nexus Logo" src="../src/assets/images/Nexus_logo_no_bg.png">
 </p>
 
 # Nexus - Your Ultimate Productivity Hub
@@ -32,7 +32,7 @@ Welcome to Nexus, your ultimate productivity companion! Nexus is a versatile not
 - **Customization**: Customize your workspace with colors, tags, and labels to suit your preferences.
 - **Cross-Platform**: Access Nexus from your desktop, browser, or mobile device, ensuring you stay productive wherever you go.
 
-## Getting Started
+## 🚀 Getting Started
 
 To get started with Nexus, follow these simple steps:
 
@@ -42,7 +42,7 @@ To get started with Nexus, follow these simple steps:
 4. **Invite Collaborators**: If you're working with a team, invite collaborators to share and collaborate on notes and projects.
 5. **Start Productivity**: Begin using Nexus to capture ideas, manage tasks, and enhance your productivity!
 
-## Implementation
+## ⚒️ Implementation
 ❌ = Not Implemented <br>
 🚧 = In Progress    <br>
 ✅ = Implemented    
@@ -65,19 +65,39 @@ To get started with Nexus, follow these simple steps:
 | Footer                | -  🚧  |
 | Side bar              | -  ❌  |
 
-## Documentation
+## 📄 Documentation
 
 For detailed documentation on how to use Nexus, refer to the [User Guide](https://www.nexusapp.com/docs) available on our website.
 
-## Feedback and Support
+## 📩 Feedback and Support
 
 We value your feedback! If you have any questions, suggestions, or encounter any issues while using Nexus, please don't hesitate to [contact our support team](mailto:support@nexusapp.com).
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! If you're interested in contributing to Nexus, please refer to our [Contribution Guidelines](CONTRIBUTING.md) for more information.
 
-## License
+## 👥 Credits
+
+<div align = center>
+
+| ![Ciollo](https://raw.githubusercontent.com/Ciollo/Ciollo-Resources/main/cat_macchiato_150x150.png) | ![NicoMezzaa](https://raw.githubusercontent.com/Ciollo/Ciollo-Resources/main/mezzapfp_150x150.png)		|
+|:------------------------------------------------------------------------------------------------------------------------:	|:----------------------------------------------------------------------------------------------------:	|
+|                                                         **Ciollo**                                                         |                                            **NicoMezza**                                           |
+
+</div>
+
+## 💸 Donate
+
+<div style="margin: 10px;">
+    <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" width="200">
+</div>
+
+<div style="margin: 10px;">
+    <img src="https://raw.githubusercontent.com/Ciollo/Ciollo-Resources/main/OnlyFans_logo_resized.png?token=GHSAT0AAAAAACN4BSR7CHBPEMWQJBPO7PLQZRBSMBQ" alt="OnlyFans" width="200">
+</div>
+
+## © License
 
 This project is licensed under the GNU License - see the [LICENSE](LICENSE) file for 
 
