@@ -14,7 +14,7 @@
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![BootStrap]( 	https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![MySql](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
-
+![Sass](https://img.shields.io/badge/-Sass-CC6699?style=flat&logo=sass&logoColor=white)
 
 [![Badge License]][License] 
 
@@ -45,18 +45,18 @@ To get started with Nexus, follow these simple steps:
 ## Implementation
 | Features              | Status |
 | --------------        | ------ |
-| Database              | -  ❌  |
-| Pages                 | -  ❌  |
-| Note taking           | -  ❌  |
-| Todo                  | -  ❌  |
-| GUI                   | -  ❌  |
-| Multi-User            | -  ❌  |
-| Login                 | -  ❌  |
-| Register              | -  ❌  |
-| Splash screen         | -  ✅  |
-| Online publication    | -  ❌  |
-| Dark mode             | -  ❌  |
-| Settings              | -  ❌  |
+| Database              | -  ❌ |
+| Pages                 | -  ❌ |
+| Note taking           | -  ❌ |
+| Todo                  | -  ❌ |
+| GUI                   | -  ❌ |
+| Multi-User            | -  ❌ |
+| Login                 | -  ❌ |
+| Register              | -  ❌ |
+| Splash screen         | -  ✅ |
+| Online publication    | -  ❌ |
+| Dark mode             | -  ❌ |
+| Settings              | -  ❌ |
 
 ## Documentation
 
