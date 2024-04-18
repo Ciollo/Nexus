@@ -103,6 +103,9 @@
   color: rgb(249, 246, 238);
   font-size: 15px;
 }
+.btn-sign-in:hover, .btn-continue-sign-in:hover {
+  background: linear-gradient(90deg, #0db0f6, #4f5fe5);
+}
 
 .msg-no-account {
   margin-top: 15px;

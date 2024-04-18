@@ -1,63 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" class="site-bg">
-<!-- TODO UNA VOLTA FATTO IL DB FACCIAMO CHE DOPO CHE SI INSERISCA L'EMAIL CONTROLLI SE L'UTENTE ESISTA E VADA IN PASS-->
-<!-- 
-    $('#emailCheckForm').on('submit', function(e) {
-    e.preventDefault();
-
-    var email = $('#exampleInputEmail1').val();
-
-    $.ajax({
-        url: 'check_email.php',
-        type: 'post',
-        data: {email: email},
-        success: function(response) {
-            if(response == "exists") {
-                // Email exists in the database
-                // Show password field or do something else
-            } else {
-                // Email does not exist in the database
-                // Show an error message or do something else
-            }
-        }
-    });
-});
-<form id="emailCheckForm">
-    <div class="form-group container-input-form">
-        <label class="label-input">Email:</label>
-        <input type="email" class="form-control input-form" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email" required>
-        <i class='bx bx-at'></i>
-    </div>
-    <div class="container-input-form">
-        <button type="submit" class="btn-continue-sign-in" id="btn-continue-sign-in">Continua</button>
-    </div>
-</form><?php
-    $email = $_POST['email'];
-
-    // Database connection
-    $conn = new mysqli('localhost', 'username', 'password', 'database');
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    $sql = "SELECT * FROM users WHERE email = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    if ($result->num_rows > 0) {
-        echo "exists";
-    } else {
-        echo "not exists";
-    }
-
-    $stmt->close();
-    $conn->close();
-?>
- -->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,7 +8,7 @@
 
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <title>Login</title>
+    <title>Register</title>
 </head>
 
 <body class="site-bg centered-container animated-body">
@@ -82,25 +24,25 @@
                         <input type="email" class="form-control input-form" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Email" required>
                         <i class='bx bx-at'></i>
                     </div>
-                    <!-- <div class="form-group container-input-form">
+                    <div class="form-group container-input-form">
                         <label class="label-input">Password:</label>
                         <input type="password" class="form-control input-form" id="userPassword" placeholder="Your Password" required>
                         <i class='bx bxs-hide' id="toggleViewPassword"></i>
-                    </div> -->
+                    </div>
                     <div class="form-group container-input-form" hidden id="container-pass">
                         <label class="label-input">Password:</label>
                         <input type="password" class="form-control input-form" id="userPassword" placeholder="Your Password" required>
                         <i class='bx bxs-hide' id="toggleViewPassword"></i>
                     </div>
                     <div class="container-input-form">
-                        <button class="btn-continue-sign-in" id="btn-continue-sign-in">Continue</button>
+                        <button class="btn-continue-sign-in" id="btn-continue-sign-in">Continua</button>
                     </div> 
                     <!-- <div class="container-input-form">
                     <button class="btn-sign-in">Sign in</button>
                     </div> -->
                 <!-- </form> -->
                 <p class="msg-no-account">
-                    Don't have an account? <a href="register.html">Sign Up</a>
+                    You already have an account? <a href="login.html">Sign In</a>
                 </p>
         </div>
     </div>
