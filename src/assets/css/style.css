@@ -27,8 +27,14 @@
   background-color: rgb(20, 22, 46);
 }
 
-.btn-sign-in, .btn-continue, .btn-sign-up {
-  background: linear-gradient(90deg, #4f5fe5, #0db0f6);
+* {
+  font-family: "Mulish", sans-serif;
+}
+
+.btn-sign-in,
+.btn-continue,
+.btn-sign-up {
+  background-image: linear-gradient(90deg, #4f5fe5, #0db0f6);
   width: 100%;
   height: auto;
   border: none;
@@ -39,9 +45,20 @@
   font-weight: bold;
   color: rgb(249, 246, 238);
   font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+  background-size: 200% 100%;
 }
-.btn-sign-in:hover, .btn-continue:hover, .btn-sign-up:hover {
-  background: linear-gradient(90deg, #0db0f6, #4f5fe5);
+.btn-sign-in:hover,
+.btn-continue:hover,
+.btn-sign-up:hover {
+  background-position: 100% 0;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
 }
 
 .login-card, .register-card {
@@ -154,7 +171,7 @@
   height: auto;
 }
 
-.msg-no-account {
+.lbl-no-account {
   margin-top: 15px;
   text-align: center;
 }/*# sourceMappingURL=style.css.map */

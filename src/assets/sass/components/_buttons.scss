@@ -1,7 +1,7 @@
-@use "../abstracts" as *;
+@use "../abstracts"as *;
 
 @mixin btnAccess() {
-    background: $radiantLogoColor;
+    background-image: $radiantLogoColor;
     width: 100%;
     height: auto;
     border: none;
@@ -12,13 +12,23 @@
     font-weight: bold;
     color: rgb(249, 246, 238);
     font-size: 15px;
-    // transition: all .2s ease-in; //TODO AGGIUNGERE TRANSIZIONE, DI BASE CSS Non supporta radint color transition
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+    background-size: 200% 100%;
 
-    &:hover{
-        background: $invertedRadiantLogoColor;
-    } 
+    &:hover {
+        background-position: 100% 0;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    }
 }
 
-.btn-sign-in, .btn-continue, .btn-sign-up{
+.btn-sign-in,
+.btn-continue,
+.btn-sign-up {
     @include btnAccess();
 }

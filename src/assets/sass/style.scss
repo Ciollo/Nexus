@@ -7,16 +7,13 @@
 @use 'layout';
 @use 'pages';
 
+// TODO FIX POSITION of those element
 .img-fluid {
     width: 700px; /* Imposta direttamente la larghezza */
     height: auto;
 }
 
-// .login-card h2, input, p, label, button, span{
-//   font-family: "Mulish", sans-serif;
-// }
-
-.msg-no-account {
+.lbl-no-account {
     margin-top: 15px;
     text-align: center;
 }
