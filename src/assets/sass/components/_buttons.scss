@@ -1,0 +1,24 @@
+@use "../abstracts" as *;
+
+@mixin btnAccess() {
+    background: $radiantLogoColor;
+    width: 100%;
+    height: auto;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    letter-spacing: 0.025em;
+    padding: 5px 0px 5px 0px;
+    font-weight: bold;
+    color: rgb(249, 246, 238);
+    font-size: 15px;
+    // transition: all .2s ease-in; //TODO AGGIUNGERE TRANSIZIONE, DI BASE CSS Non supporta radint color transition
+
+    &:hover{
+        background: $invertedRadiantLogoColor;
+    } 
+}
+
+.btn-sign-in, .btn-continue, .btn-sign-up{
+    @include btnAccess();
+}

@@ -1,32 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
-.img-splash-screen {
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  width: 75%;
-  height: auto;
+@font-face {
+  font-family: "Computer Modern";
+  src: url("http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf");
 }
-
+@font-face {
+  font-family: "Computer Modern";
+  src: url("http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsx.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Computer Modern";
+  src: url("http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunsi.otf");
+  font-style: italic, oblique;
+}
+@font-face {
+  font-family: "Computer Modern";
+  src: url("http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunbxo.otf");
+  font-weight: bold;
+  font-style: italic, oblique;
+}
 .animated-body {
   opacity: 0;
-}
-
-.centered-container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.img-fluid {
-  width: 700px; /* Imposta direttamente la larghezza */
-  height: auto;
 }
 
 .site-bg {
   background-color: rgb(20, 22, 46);
 }
 
-.login-card {
+.btn-sign-in, .btn-continue, .btn-sign-up {
+  background: linear-gradient(90deg, #4f5fe5, #0db0f6);
+  width: 100%;
+  height: auto;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  letter-spacing: 0.025em;
+  padding: 5px 0px 5px 0px;
+  font-weight: bold;
+  color: rgb(249, 246, 238);
+  font-size: 15px;
+}
+.btn-sign-in:hover, .btn-continue:hover, .btn-sign-up:hover {
+  background: linear-gradient(90deg, #0db0f6, #4f5fe5);
+}
+
+.login-card, .register-card {
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   width: 100%;
@@ -37,38 +55,13 @@
   border-radius: 10px;
 }
 
-.login-card h2, input, p, label, button, span {
-  font-family: "Mulish", sans-serif;
+.input-form {
+  font-size: 14px;
+  font-weight: lighter;
+  padding: 10px 0px 10px 15px;
 }
-
-.link-sign-up {
-  color: linear-gradient(90deg, #4f5fe5, #0db0f6);
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration-line: none;
-}
-
-.title-login {
-  justify-content: center;
-  display: flex;
-}
-
-.title-login h2 {
-  font-weight: bold;
-}
-
-.logo {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  top: 15px;
-  left: 15px;
-}
-
-.logo img {
-  width: 150px;
-  height: auto;
-  cursor: pointer;
+.input-form:focus {
+  font-weight: 400;
 }
 
 .logo-form {
@@ -81,19 +74,10 @@
   margin-top: 14px;
 }
 
-.label-input {
+.label-input-form {
   margin-left: 3px;
   font-size: 15px;
   font-weight: 600;
-}
-
-.input-form {
-  font-size: 14px;
-  font-weight: lighter;
-  padding: 10px 0px 10px 15px;
-}
-.input-form:focus {
-  font-weight: 400;
 }
 
 .bx-at, .bxs-hide, .bxs-show {
@@ -107,26 +91,31 @@
   cursor: pointer;
 }
 
-.btn-sign-in, .btn-continue-sign-in {
-  background: linear-gradient(90deg, #4f5fe5, #0db0f6);
-  width: 100%;
-  height: auto;
-  border: none;
-  cursor: pointer;
-  border-radius: 8px;
-  letter-spacing: 0.025em;
-  padding: 5px 0px 5px 0px;
-  font-weight: bold;
-  color: rgb(249, 246, 238);
-  font-size: 15px;
-}
-.btn-sign-in:hover, .btn-continue-sign-in:hover {
-  background: linear-gradient(90deg, #0db0f6, #4f5fe5);
+.centered-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.msg-no-account {
-  margin-top: 15px;
-  text-align: center;
+.link-sign-up, .link-sign-in {
+  color: linear-gradient(90deg, #0db0f6, #4f5fe5);
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration-line: none;
+}
+
+.logo {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 15px;
+  left: 15px;
+}
+.logo img {
+  width: 150px;
+  height: auto;
+  cursor: pointer;
 }
 
 .footer {
@@ -151,4 +140,21 @@
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.025em;
+}
+
+.img-splash-screen {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  width: 75%;
+  height: auto;
+}
+
+.img-fluid {
+  width: 700px; /* Imposta direttamente la larghezza */
+  height: auto;
+}
+
+.msg-no-account {
+  margin-top: 15px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

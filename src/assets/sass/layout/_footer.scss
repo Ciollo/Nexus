@@ -1,0 +1,26 @@
+@use '../abstracts' as *;
+.footer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 5%;
+    text-align: center;
+    .logo-mini-footer {
+        width: 30px;
+        height: auto;
+        margin-right: 5px;
+    }
+
+    span {
+        background-image: $radiantLogoColor;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+    }
+
+}

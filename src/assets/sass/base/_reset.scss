@@ -1,0 +1,9 @@
+@use "../abstracts" as *;
+
+.animated-body {
+    opacity: 0;
+}
+
+.site-bg {
+    background-color: $default-background;
+}

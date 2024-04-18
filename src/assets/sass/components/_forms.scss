@@ -1,0 +1,26 @@
+.input-form {
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 10px 0px 10px 15px;
+
+    &:focus {
+        font-weight: 400;
+    }
+}
+
+.logo-form {
+    width: 150px;
+    height: auto;
+}
+
+.container-input-form {
+    position: relative;
+    margin-top: 14px;
+}
+
+.label-input-form {
+    margin-left: 3px;
+    font-size: 15px;    
+    font-weight: 600
+
+}

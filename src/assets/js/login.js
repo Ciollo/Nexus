@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 var toggleViewPasswordElement = document.getElementById("toggleViewPassword");
 var userPassword =  document.getElementById("userPassword");
-var btnContinueSignIn =  document.getElementById("btn-continue-sign-in");
+var btnContinueSignIn =  document.getElementById("btn-continue");
 
 toggleViewPasswordElement.addEventListener("click", toggleViewPassword);
 
@@ -15,7 +15,7 @@ btnContinueSignIn.addEventListener("click", continueSignIn);
 function continueSignIn() {
     var containerpass = document.getElementById("container-pass")
     containerpass.hidden = false;
-    btnContinueSignIn.classList.remove("btn-continue-sign-in");
+    btnContinueSignIn.classList.remove("btn-continue");
     btnContinueSignIn.classList.add("btn-sign-in");
     btnContinueSignIn.innerHTML = "Sign In";
 
