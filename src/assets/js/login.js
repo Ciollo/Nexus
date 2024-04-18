@@ -33,6 +33,19 @@ function toggleViewPassword() {
     }
 }
 
+var linkSignUp = document.getElementById("link-sign-up");
+
+linkSignUp.addEventListener("click", goToSignUp);
+
+function goToSignUp() {
+$(document).ready(function () {
+    $("body").fadeOut("slow", function () {
+      window.location.href = "register.html";
+    });
+});
+
+}
+
 var nexusLogo = document.getElementById("nexusLogo");
 nexusLogo.addEventListener("click", goToIndex);
 

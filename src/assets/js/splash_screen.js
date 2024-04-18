@@ -1,5 +1,7 @@
 $(document).ready(function(){
-    $("body").hide().fadeIn(1000);
+    setTimeout(function() {
+        $("body").animate({opacity: 1}, 1000);
+    }, 750);
 });
 
 

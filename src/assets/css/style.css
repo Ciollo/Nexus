@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
+.img-splash-screen {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  width: 75%;
+  height: auto;
+}
+
 .animated-body {
   opacity: 0;
 }
@@ -27,11 +34,18 @@
   height: auto;
   padding: 15px 15px 10px 15px; /* Si, lo so che bastava scrivere padding: 15px*/
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .login-card h2, input, p, label, button, span {
   font-family: "Mulish", sans-serif;
+}
+
+.link-sign-up {
+  color: linear-gradient(90deg, #4f5fe5, #0db0f6);
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration-line: none;
 }
 
 .title-login {
@@ -77,6 +91,9 @@
   font-size: 14px;
   font-weight: lighter;
   padding: 10px 0px 10px 15px;
+}
+.input-form:focus {
+  font-weight: 400;
 }
 
 .bx-at, .bxs-hide, .bxs-show {

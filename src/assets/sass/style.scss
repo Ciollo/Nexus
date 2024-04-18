@@ -2,6 +2,11 @@
 
 $radiantLogoColor:linear-gradient(90deg, #4F5FE5ff, #0DB0F6ff);
 
+.img-splash-screen {
+    max-width: fit-content;
+    width: 75%;
+    height: auto;
+}
 .animated-body {
     opacity: 0;
 }
@@ -30,11 +35,18 @@ $radiantLogoColor:linear-gradient(90deg, #4F5FE5ff, #0DB0F6ff);
     height: auto;
     padding: 15px 15px 10px 15px; /* Si, lo so che bastava scrivere padding: 15px*/
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .login-card h2, input, p, label, button, span{
   font-family: "Mulish", sans-serif;
+}
+
+.link-sign-up {
+    color: $radiantLogoColor;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration-line: none;
 }
 
 .title-login {
@@ -85,6 +97,10 @@ $radiantLogoColor:linear-gradient(90deg, #4F5FE5ff, #0DB0F6ff);
     font-size: 14px;
     font-weight: lighter;
     padding: 10px 0px 10px 15px;
+
+    &:focus {
+        font-weight: 400;
+    }
 }
 
 .bx-at, .bxs-hide, .bxs-show{
