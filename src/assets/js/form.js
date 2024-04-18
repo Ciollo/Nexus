@@ -1,39 +1,50 @@
-var toggleViewPasswordElement = document.getElementById("toggleViewPassword");
-var userPassword = document.getElementById("userPassword");
-var btnContinueSignIn = document.getElementById("btn-continue");
+// var toggleViewPasswordElement = document.getElementById("toggleViewPassword");
+// var linkSignIn = document.getElementById("link-sign-in");
+// var userPassword = document.getElementById("userPassword");
+// var btnContinueSignIn = document.getElementById("btn-continue");
+// var linkSignUp = document.getElementById("link-sign-up");
 
-toggleViewPasswordElement.addEventListener("click", toggleViewPassword);
 
-btnContinueSignIn.addEventListener("click", continueSignIn);
+// linkSignIn.addEventListener("click", goToSignIn);
+// linkSignUp.addEventListener("click", goToSignUp);
 
-function continueSignIn() {
-  var containerpass = document.getElementById("container-pass");
-  containerpass.hidden = false;
-  btnContinueSignIn.classList.remove("btn-continue");
-  btnContinueSignIn.classList.add("btn-sign-in");
-  btnContinueSignIn.innerHTML = "Sign In";
-}
+// toggleViewPasswordElement.addEventListener("click", toggleViewPassword);
+// linkSignUp.addEventListener("click", goToSignUp);
 
-function toggleViewPassword() {
-  if (toggleViewPasswordElement.classList.contains("bxs-hide")) {
-    toggleViewPasswordElement.classList.remove("bxs-hide");
-    toggleViewPasswordElement.classList.add("bxs-show");
-    userPassword.type = "text";
-  } else {
-    toggleViewPasswordElement.classList.remove("bxs-show");
-    toggleViewPasswordElement.classList.add("bxs-hide");
-    userPassword.type = "password";
-  }
-}
+// btnContinueSignIn.addEventListener("click", continueSignIn);
 
-var linkSignUp = document.getElementById("link-sign-up");
+// function continueSignIn() {
+//   var containerpass = document.getElementById("container-pass");
+//   containerpass.hidden = false;
+//   btnContinueSignIn.classList.remove("btn-continue");
+//   btnContinueSignIn.classList.add("btn-sign-in");
+//   btnContinueSignIn.innerHTML = "Sign In";
+// }
 
-linkSignUp.addEventListener("click", goToSignUp);
+// function toggleViewPassword() {
+//   if (toggleViewPasswordElement.classList.contains("bxs-hide")) {
+//     toggleViewPasswordElement.classList.remove("bxs-hide");
+//     toggleViewPasswordElement.classList.add("bxs-show");
+//     userPassword.type = "text";
+//   } else {
+//     toggleViewPasswordElement.classList.remove("bxs-show");
+//     toggleViewPasswordElement.classList.add("bxs-hide");
+//     userPassword.type = "password";
+//   }
+// }
 
-function goToSignUp() {
-  $(document).ready(function () {
-    $("body").fadeOut("slow", function () {
-      window.location.href = "register.html";
-    });
-  });
-}
+// function goToSignIn() {
+//   $(document).ready(function () {
+//     $("body").fadeOut("slow", function () {
+//       window.location.href = "login.html";
+//     });
+//   });
+// }
+
+// function goToSignUp() {
+//   $(document).ready(function () {
+//     $("body").fadeOut("slow", function () {
+//       window.location.href = "register.html";
+//     });
+//   });
+// }
