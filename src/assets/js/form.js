@@ -1,10 +1,3 @@
-
-$(document).ready(function () {
-  setTimeout(function () {
-    $("body").animate({ opacity: 1 }, 1000);
-  }, 750);
-});
-
 var toggleViewPasswordElement = document.getElementById("toggleViewPassword");
 var userPassword = document.getElementById("userPassword");
 var btnContinueSignIn = document.getElementById("btn-continue");
@@ -41,17 +34,6 @@ function goToSignUp() {
   $(document).ready(function () {
     $("body").fadeOut("slow", function () {
       window.location.href = "register.html";
-    });
-  });
-}
-
-var nexusLogo = document.getElementById("nexusLogo");
-nexusLogo.addEventListener("click", goToIndex);
-
-function goToIndex() {
-  $(document).ready(function () {
-    $("body").fadeOut("slow", function () {
-      window.location.href = "index.html";
     });
   });
 }
