@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
 
+$radiantLogoColor:linear-gradient(90deg, #4F5FE5ff, #0DB0F6ff);
 
 .animated-body {
     opacity: 0;
@@ -32,7 +33,7 @@
     border-radius: 8px;
 }
 
-.login-card h2, input, p, label, button{
+.login-card h2, input, p, label, button, span{
   font-family: "Mulish", sans-serif;
 }
 
@@ -98,7 +99,7 @@
 }
 
 .btn-sign-in, .btn-continue-sign-in {
-    background: linear-gradient(90deg, #4F5FE5ff, #0DB0F6ff);
+    background: $radiantLogoColor;
     width: 100%;
     height: auto;
     border: none;
@@ -123,11 +124,27 @@
 
 
 .footer {
-    align-content: center;
+    position: absolute;
     display: flex;
-    footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
+    align-items: center;
+    bottom: 5%;
+    text-align: center;
+    .logo-mini-footer {
+        width: 30px;
+        height: auto;
+        margin-right: 5px;
     }
+
+    span {
+        background-image: $radiantLogoColor;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+    }
+
 }

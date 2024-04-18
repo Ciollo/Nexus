@@ -30,7 +30,7 @@
   border-radius: 8px;
 }
 
-.login-card h2, input, p, label, button {
+.login-card h2, input, p, label, button, span {
   font-family: "Mulish", sans-serif;
 }
 
@@ -113,11 +113,25 @@
 }
 
 .footer {
-  align-content: center;
-  display: flex;
-}
-.footer footer {
   position: absolute;
-  bottom: 0;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  bottom: 5%;
+  text-align: center;
+}
+.footer .logo-mini-footer {
+  width: 30px;
+  height: auto;
+  margin-right: 5px;
+}
+.footer span {
+  background-image: linear-gradient(90deg, #4f5fe5, #0db0f6);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
 }/*# sourceMappingURL=style.css.map */
