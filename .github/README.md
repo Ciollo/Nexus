@@ -103,7 +103,7 @@ Contributions are welcome! If you're interested in contributing to Nexus, please
 
 ## © License
 
-This project is licensed under the GNU License - see the [LICENSE](LICENSE) file for 
+This project is licensed under the GNU License - see the [LICENSE](../LICENSE) file for 
 
 ---
 
