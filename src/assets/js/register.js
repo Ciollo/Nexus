@@ -16,6 +16,7 @@ toggleViewPasswordElement.addEventListener("click", function() {
 toggleViewConfirmPassword.addEventListener("click", function() {
   toggleViewPassword(toggleViewConfirmPassword, userConfirmPassword);
 });
+
 btnContinueSignUp.addEventListener("click", continueSignUp);
 
 function continueSignUp() {

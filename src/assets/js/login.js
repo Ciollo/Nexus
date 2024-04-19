@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
   setTimeout(function () {
     $("body").animate({ opacity: 1 }, 1000);
@@ -14,11 +13,13 @@ toggleViewPasswordElement.addEventListener("click", toggleViewPassword);
 btnContinueSignIn.addEventListener("click", continueSignIn);
 
 function continueSignIn() {
-  var containerpass = document.getElementById("container-pass");
-  containerpass.hidden = false;
-  btnContinueSignIn.classList.remove("btn-continue");
-  btnContinueSignIn.classList.add("btn-sign-in");
-  btnContinueSignIn.innerHTML = "Sign In";
+  var continueContainer = document.getElementById("continue-container");
+  var signInContainer = document.getElementById("sign-in-container");
+  var containerPassword = document.getElementById("container-password")
+
+  continueContainer.hidden = true;
+  signInContainer.hidden = false;
+  containerPassword.hidden = false;
 }
 
 function toggleViewPassword() {
@@ -31,6 +32,17 @@ function toggleViewPassword() {
     toggleViewPasswordElement.classList.add("bxs-hide");
     userPassword.type = "password";
   }
+}
+
+var btnSignIn = document.getElementById("btn-sign-in");
+btnSignIn.addEventListener("click", goToHome);
+
+function goToHome() {
+  $(document).ready(function () {
+    $("body").fadeOut("slow", function () {
+      window.location.href = "home.html";
+    });
+  });
 }
 
 var linkSignUp = document.getElementById("link-sign-up");
@@ -47,6 +59,7 @@ function goToSignUp() {
 
 var nexusLogo = document.getElementById("nexusLogo");
 nexusLogo.addEventListener("click", goToIndex);
+// TODO CHANGE WHEN DB IMPLEMENTED
 
 function goToIndex() {
   $(document).ready(function () {

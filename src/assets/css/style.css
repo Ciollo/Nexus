@@ -122,19 +122,6 @@
   text-decoration-line: none;
 }
 
-.logo {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  top: 15px;
-  left: 15px;
-}
-.logo img {
-  width: 150px;
-  height: auto;
-  cursor: pointer;
-}
-
 .footer {
   position: absolute;
   display: flex;
@@ -157,6 +144,19 @@
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.025em;
+}
+
+.header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 15px;
+  left: 15px;
+}
+.header .logo {
+  width: 150px;
+  height: auto;
+  cursor: pointer;
 }
 
 .img-splash-screen {

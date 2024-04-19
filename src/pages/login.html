@@ -65,15 +65,15 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="../assets/images/nexus_favicon.ico">
     <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="icon" type="image/x-icon" href="../assets/images/nexus_favicon.ico">
     <title>Login</title>
 </head>
 
 <body class="site-bg centered-container animated-body">
-    <div class="logo">
-        <img src="../assets/images/Nexus_logo_no_bg.png" alt="Nexus logo" class="nexus-logo" id="nexusLogo">
-    </div>
+    <footer class="header">
+            <img src="../assets/images/Nexus_logo_no_bg.png" alt="Nexus logo" class="logo" id="nexusLogo">
+    </footer>
     <div class="centered-container">
         <div class="login-card">
             <div class="row justify-content-center">
@@ -82,7 +82,7 @@
                 <div class="form-group container-input-form">
                     <label class="label-input">Email:</label>
                     <input type="email" class="form-control input-form" id="exampleInputEmail1"
-                        aria-describedby="emailHelp" placeholder="Your Email" required autocomplete="off">
+                        aria-describedby="emailHelp" placeholder="Your Email" required>
                     <i class='bx bx-at'></i>
                 </div>
                 <!-- <div class="form-group container-input-form">
@@ -90,22 +90,20 @@
                         <input type="password" class="form-control input-form" id="userPassword" placeholder="Your Password" required>
                         <i class='bx bxs-hide' id="toggleViewPassword"></i>
                     </div> -->
-                <div class="form-group container-input-form" hidden id="container-pass">
+                <div class="form-group container-input-form" hidden id="container-password">
                     <label class="label-input">Password:</label>
                     <input type="password" class="form-control input-form" id="userPassword" placeholder="Your Password"
                         required>
                     <i class='bx bxs-hide' id="toggleViewPassword"></i>
-
                 </div>
-                <div class="container-input-form">
+                <div class="container-input-form" id="continue-container">
                     <button class="btn-continue" id="btn-continue">Continue</button>
                 </div>
-                <!-- <div class="container-input-form">
-                    <button class="btn-sign-in">Sign in</button>
-                    </div> -->
-                <!-- </form> -->
+                <div class="container-input-form" id="sign-in-container" hidden>
+                    <button class="btn-sign-in" id="btn-sign-in">Sign in</button>
+                </div>
                 <p class="lbl-no-account">
-                    Don't have an account? <a id="link-sign-up" class="link-sign-up">Sign Up</a>
+                    Don't have an account? <a href="register.html" id="link-sign-up" class="link-sign-up">Sign Up</a>
                 </p>
             </div>
         </div>
@@ -113,10 +111,10 @@
     <div class="footer">
         <footer>
             <div>
-            <img class="logo-mini-footer" src="../assets/images/Nexus_only_logo_no_bg.png">
-            <span>
-            © 2024 Nexus 
-            </span>
+                <img class="logo-mini-footer" src="../assets/images/Nexus_only_logo_no_bg.png">
+                <span>
+                    © 2024 Nexus
+                </span>
             </div>
         </footer>
     </div>

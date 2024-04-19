@@ -14,7 +14,7 @@
 // btnContinueSignIn.addEventListener("click", continueSignIn);
 
 // function continueSignIn() {
-//   var containerpass = document.getElementById("container-pass");
+//   var containerpass = document.getElementById("container-password");
 //   containerpass.hidden = false;
 //   btnContinueSignIn.classList.remove("btn-continue");
 //   btnContinueSignIn.classList.add("btn-sign-in");
