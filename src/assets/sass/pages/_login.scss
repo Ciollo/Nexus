@@ -1,0 +1,5 @@
+@use '../components' as *;
+.login-card{
+    @include accessCard();
+    margin-top: -10%;
+}

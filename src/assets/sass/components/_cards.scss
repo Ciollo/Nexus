@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 @mixin accessCard() {
-    background-color: rgb(255, 255, 255);
+    background-color: $cardDefaultColor;
     box-shadow: $default-box-shadow-color;
     width: 100%; 
     max-width: 400px; 
@@ -11,6 +11,3 @@
     border-radius: 10px;
 }
 
-.login-card, .register-card{
-    @include accessCard();
-}

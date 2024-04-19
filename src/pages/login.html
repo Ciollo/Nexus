@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="site-bg">
+<html lang="en">
 <!-- TODO UNA VOLTA FATTO IL DB FACCIAMO CHE DOPO CHE SI INSERISCA L'EMAIL CONTROLLI SE L'UTENTE ESISTA E VADA IN PASS-->
 <!-- 
     $('#emailCheckForm').on('submit', function(e) {
@@ -70,10 +70,29 @@
     <title>Login</title>
 </head>
 
-<body class="site-bg centered-container animated-body">
-    <footer class="header">
+<body class="site-bg animated-body">
+    <header class="header">
+        <div>
             <img src="../assets/images/Nexus_logo_no_bg.png" alt="Nexus logo" class="logo" id="nexusLogo">
-    </footer>
+        </div>
+        <nav class="container-navbar">
+            <ul class="top-nav-items">
+                <li class="top-nav-item">
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="https://github.com/Ciollo/Nexus" target="_blank"><i class='bx bxl-github'></i></a>
+                </li>
+                <li class="top-nav-item">
+                    <a href="https://ko-fi.com/ciollo" target="_blank">Support us</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="container-buttons-go-to">
+            <button class="btn-go-to-sign-in navbar-btn-go-to-sign-in" id="goToSignBtn">Login</button>
+            <button class="btn-go-to-sign-up navbar-btn-go-to-sign-up" id="goToSignUpBtn">Sign Up</button>
+        </div>
+    </header>
     <div class="centered-container">
         <div class="login-card">
             <div class="row justify-content-center">
@@ -108,16 +127,16 @@
             </div>
         </div>
     </div>
-    <div class="footer">
-        <footer>
-            <div>
-                <img class="logo-mini-footer" src="../assets/images/Nexus_only_logo_no_bg.png">
-                <span>
-                    © 2024 Nexus
-                </span>
-            </div>
-        </footer>
-    </div>
+   
+    <footer class="footer">
+        <div>
+            <img class="logo-mini-footer" src="../assets/images/Nexus_only_logo_no_bg.png">
+            <span>
+                © 2024 Nexus
+            </span>
+        </div>
+    </footer>
+
 
     <body>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

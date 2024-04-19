@@ -1,0 +1,5 @@
+@use '../components' as *;
+.register-card{
+    @include accessCard();
+    margin-top: -10%;
+}

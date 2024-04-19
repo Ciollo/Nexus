@@ -13,58 +13,79 @@
     <title>Register</title>
 </head>
 
-<body class="site-bg centered-container animated-body">
-    <footer class="header">
+<body class="site-bg animated-body">
+    <header class="header">
+        <div>
             <img src="../assets/images/Nexus_logo_no_bg.png" alt="Nexus logo" class="logo" id="nexusLogo">
-    </footer>
-    <div class="login-card">
-        <div class="row justify-content-center">
-            <img src="../assets/images/Nexus_title_logo_no_bg.png" class="logo-form">
-            <!-- <form> -->
-            <div class="form-group container-input-form">
-                <label class="label-input">Email:</label>
-                <input type="email" class="form-control input-form" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="Your Email" required autocomplete="off">
-                <i class='bx bx-at'></i>
-            </div>
-            <!-- <div class="form-group container-input-form">
+        </div>
+        <nav class="container-navbar">
+            <ul class="top-nav-items">
+                <li class="top-nav-item">
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="https://github.com/Ciollo/Nexus" target="_blank"><i class='bx bxl-github'></i></a>
+                </li>
+                <li class="top-nav-item">
+                    <a href="https://ko-fi.com/ciollo" target="_blank">Support us</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="container-buttons-go-to">
+            <button class="btn-go-to-sign-in navbar-btn-go-to-sign-in" id="goToSignBtn">Login</button>
+            <button class="btn-go-to-sign-up navbar-btn-go-to-sign-up" id="goToSignUpBtn">Sign Up</button>
+        </div>
+    </header>
+    <div class="centered-container">
+        <div class="login-card">
+            <div class="row justify-content-center">
+                <img src="../assets/images/Nexus_title_logo_no_bg.png" class="logo-form">
+                <!-- <form> -->
+                <div class="form-group container-input-form">
+                    <label class="label-input">Email:</label>
+                    <input type="email" class="form-control input-form" id="exampleInputEmail1"
+                        aria-describedby="emailHelp" placeholder="Your Email" required autocomplete="off">
+                    <i class='bx bx-at'></i>
+                </div>
+                <!-- <div class="form-group container-input-form">
                         <label class="label-input">Password:</label>
                         <input type="password" class="form-control input-form" id="userPassword" placeholder="Your Password" required>
                         <i class='bx bxs-hide' id="toggleViewPassword"></i>
                     </div> -->
-            <div class="form-group container-input-form" hidden id="container-user-password">
-                <label class="label-input">Password:</label>
-                <input type="password" class="form-control input-form" id="userPassword" placeholder="Your Password"
-                    required>
-                <i class='bx bxs-hide' id="toggleViewPassword"></i>
-            </div>
-            <div class="form-group container-input-form" hidden id="container-user-confirm-password">
-                <label class="label-input">Confirm Password:</label>
-                <input type="password" class="form-control input-form" id="userConfirmPassword" placeholder="Confirm Password"
-                    required>
-                <i class='bx bxs-hide' id="toggleViewConfirmPassword"></i>
-            </div>
-            <div class="container-input-form">
-                <button class="btn-continue" id="btn-continue">Continue</button>
-            </div>
-            <!-- <div class="container-input-form">
+                <div class="form-group container-input-form" hidden id="container-user-password">
+                    <label class="label-input">Password:</label>
+                    <input type="password" class="form-control input-form" id="userPassword" placeholder="Your Password"
+                        required>
+                    <i class='bx bxs-hide' id="toggleViewPassword"></i>
+                </div>
+                <div class="form-group container-input-form" hidden id="container-user-confirm-password">
+                    <label class="label-input">Confirm Password:</label>
+                    <input type="password" class="form-control input-form" id="userConfirmPassword"
+                        placeholder="Confirm Password" required>
+                    <i class='bx bxs-hide' id="toggleViewConfirmPassword"></i>
+                </div>
+                <div class="container-input-form">
+                    <button class="btn-continue" id="btn-continue">Continue</button>
+                </div>
+                <!-- <div class="container-input-form">
                     <button class="btn-sign-in">Sign in</button>
                     </div> -->
-            <!-- </form> -->
-            <p class="lbl-no-account">
-                You already have an account? <a class="link-sign-in" id="link-sign-in">Sign In</a>
-            </p>
+                <!-- </form> -->
+                <p class="lbl-no-account">
+                    You already have an account? <a class="link-sign-in" id="link-sign-in">Sign In</a>
+                </p>
+            </div>
         </div>
     </div>
-    <div class="footer">
-        <footer>
-            <div>
-                <img class="logo-mini-footer" src="../assets/images/Nexus_only_logo_no_bg.png">
-                <span>
-                    © 2024 Nexus
-                </span>
-            </div>
-        </footer>
+
+    <footer class="footer">
+        <div>
+            <img class="logo-mini-footer" src="../assets/images/Nexus_only_logo_no_bg.png">
+            <span>
+                © 2024 Nexus
+            </span>
+        </div>
+    </footer>
     </div>
 
     <body class="container-center">
