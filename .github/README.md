@@ -2,7 +2,7 @@
     <img width="300" alt="Nexus Logo" src="../src/assets/images/Nexus_logo_no_bg.png">
 </p>
 
-# Nexus - Your Ultimate Productivity Hub
+# 
 
 <div align = center>
 
