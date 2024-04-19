@@ -1,14 +1,68 @@
+@use '../abstracts' as *;
 .header {
-    position: absolute;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    top: 15px;
-    left: 15px;
+    position: ative;
+    width: 100%;
+    text-align: center;
+    top: 10px;
 
     .logo {
+        position: relative;
         width: 150px;
         height: auto;
         cursor: pointer;
+        margin-left: 10px;
+        margin-right: 110px;
+    }
+
+    .container-navbar {
+        .top-nav-items {
+            display: flex;
+            justify-content: center;
+            font-size: 0;
+            padding-left: 0;
+            font-weight: 500;
+            color: #fdfdfd;
+            cursor: pointer;
+            list-style-type: none;
+        }
+    }
+
+    .container-buttons-go-to {
+        display: flex;
+        justify-content: center;
+        margin-right: 10px;
+    }
+
+    .bxl-github {
+     background-image: $radiantLogoColor;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+        font-size: 50px;
+    }
+
+    .top-nav-item {
+        display: inline-block;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s;
+    
+    }
+    .navbar-btn-go-to-sign-in,
+    .navbar-btn-go-to-sign-up {
+        width: 100px;
+        height: auto;
+        position: relative;
+        margin-left: 5px;
+        
     }
 
 }

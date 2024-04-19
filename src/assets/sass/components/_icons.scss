@@ -5,10 +5,19 @@
     transform: translateY(-27%);
 }
 
-.bx-at, .bxs-hide, .bxs-show{
+.bx-at,
+.bxs-hide,
+.bxs-show {
     @include bxIcon();
 }
 
-.bxs-hide, .bxs-show{
+.bxs-hide,
+.bxs-show {
+    cursor: pointer;
+}
+
+
+.bxl-github {
+    font-size: 2.5rem;
     cursor: pointer;
 }

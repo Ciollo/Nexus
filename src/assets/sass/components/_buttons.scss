@@ -32,3 +32,12 @@
 .btn-sign-up {
     @include btnAccess();
 }
+
+.btn-go-to-sign-in,
+.btn-go-to-sign-up {
+    @include btnAccess();
+}
+
+.btn-default {
+    @include btnAccess();
+}

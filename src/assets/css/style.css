@@ -61,6 +61,60 @@
   -webkit-transition: all 0.5s ease-in-out;
 }
 
+.btn-go-to-sign-in,
+.btn-go-to-sign-up {
+  background-image: linear-gradient(90deg, #4f5fe5, #0db0f6);
+  width: 100%;
+  height: auto;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  letter-spacing: 0.025em;
+  padding: 5px 0px 5px 0px;
+  font-weight: bold;
+  color: rgb(249, 246, 238);
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+  background-size: 200% 100%;
+}
+.btn-go-to-sign-in:hover,
+.btn-go-to-sign-up:hover {
+  background-position: 100% 0;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+.btn-default {
+  background-image: linear-gradient(90deg, #4f5fe5, #0db0f6);
+  width: 100%;
+  height: auto;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  letter-spacing: 0.025em;
+  padding: 5px 0px 5px 0px;
+  font-weight: bold;
+  color: rgb(249, 246, 238);
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+  background-size: 200% 100%;
+}
+.btn-default:hover {
+  background-position: 100% 0;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
 .login-card, .register-card {
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -97,14 +151,22 @@
   font-weight: 600;
 }
 
-.bx-at, .bxs-hide, .bxs-show {
+.bx-at,
+.bxs-hide,
+.bxs-show {
   position: absolute;
   top: 63%;
   right: 23px;
   transform: translateY(-27%);
 }
 
-.bxs-hide, .bxs-show {
+.bxs-hide,
+.bxs-show {
+  cursor: pointer;
+}
+
+.bxl-github {
+  font-size: 2.5rem;
   cursor: pointer;
 }
 
@@ -123,11 +185,13 @@
 }
 
 .footer {
-  position: absolute;
   display: flex;
+  position: absolute;
   align-items: center;
   bottom: 5%;
   text-align: center;
+  justify-content: center;
+  width: 100%;
 }
 .footer .logo-mini-footer {
   width: 30px;
@@ -147,16 +211,61 @@
 }
 
 .header {
-  position: absolute;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  top: 15px;
-  left: 15px;
+  position: ative;
+  width: 100%;
+  text-align: center;
+  top: 10px;
 }
 .header .logo {
+  position: relative;
   width: 150px;
   height: auto;
   cursor: pointer;
+  margin-left: 10px;
+  margin-right: 110px;
+}
+.header .container-navbar .top-nav-items {
+  display: flex;
+  justify-content: center;
+  font-size: 0;
+  padding-left: 0;
+  font-weight: 500;
+  color: #fdfdfd;
+  cursor: pointer;
+  list-style-type: none;
+}
+.header .container-buttons-go-to {
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+}
+.header .bxl-github {
+  background-image: linear-gradient(90deg, #4f5fe5, #0db0f6);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: 50px;
+}
+.header .top-nav-item {
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.header .navbar-btn-go-to-sign-in,
+.header .navbar-btn-go-to-sign-up {
+  width: 100px;
+  height: auto;
+  position: relative;
+  margin-left: 5px;
 }
 
 .img-splash-screen {

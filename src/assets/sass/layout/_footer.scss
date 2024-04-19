@@ -1,10 +1,14 @@
 @use '../abstracts' as *;
+
 .footer {
-    position: absolute;
     display: flex;
+    position: absolute;
     align-items: center;
     bottom: 5%;
     text-align: center;
+    justify-content: center;
+    width: 100%;
+
     .logo-mini-footer {
         width: 30px;
         height: auto;
