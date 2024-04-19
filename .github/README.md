@@ -90,7 +90,7 @@ Contributions are welcome! If you're interested in contributing to Nexus, please
 ## 💸 Donate
 
 <div style="margin: 10px;">
-    <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" width="200">
+    <img src="https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Ko-Fi" width="200" href="https://ko-fi.com/ciollo">
 </div>
 
 <div style="margin: 10px;">
