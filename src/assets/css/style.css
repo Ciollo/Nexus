@@ -152,6 +152,7 @@ body {
 
 .bx-at,
 .bxs-hide,
+.bx-user,
 .bxs-show {
   position: absolute;
   top: 63%;
@@ -300,6 +301,11 @@ body {
   max-width: fit-content;
   width: 75%;
   height: auto;
+}
+
+.title-nexus {
+  color: antiquewhite;
+  font-size: 70px;
 }
 
 .img-fluid {
