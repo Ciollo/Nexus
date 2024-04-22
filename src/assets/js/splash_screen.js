@@ -8,5 +8,5 @@ $(document).ready(function () {
     $("body").fadeOut("slow", function () {
       window.location.href = "home.html";
     });
-  }, 3000);
+  }, 5000);
 });

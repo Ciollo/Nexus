@@ -65,6 +65,8 @@ To get started with Nexus, follow these simple steps:
 | Nav bar               | -  ❌  |
 | Footer                | -  🚧  |
 | Side bar              | -  ❌  |
+| Barba JS              | -  🚧  |
+| Sistemare grafica     | -  🚧  |
 
 ## 📄 Documentation
 

@@ -1,3 +1,4 @@
+@use "../abstracts" as *;
 .centered-container {
     display: flex;
     justify-content: center;
@@ -10,5 +11,18 @@
 }
 
 .content-wrap {
-  padding-bottom: 10.5rem;    /* Footer height */
+    padding-bottom: 10.5rem;
+    /* Footer height */
+}
+
+
+.centered-container-page{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-content {
+    animation: anmFadeIn 0.5s ;
 }

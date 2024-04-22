@@ -1,8 +1,8 @@
-$(document).ready(function () {
-  setTimeout(function () {
-    $("body").animate({ opacity: 1 }, 1000);
-  }, 750);
-});
+// $(document).ready(function () {
+//   setTimeout(function () {
+//     $("body").animate({ opacity: 1 }, 1000);
+//   }, 750);
+// });
 
 var goToSignBtn = document.getElementById("goToSignBtn");
 var goToSignUpBtn = document.getElementById("goToSignUpBtn");
@@ -169,6 +169,10 @@ var typed = new Typed('#typed', {
    */
   onDestroy: (self) => {},
 });
+
+var btnStartYourJourney = document.getElementById("btn-start-your-journey");
+
+btnStartYourJourney.addEventListener("click", goToLogin);
 
 function goToRegister() {
   $(document).ready(function () {

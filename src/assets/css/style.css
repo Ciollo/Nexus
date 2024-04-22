@@ -179,7 +179,19 @@ body {
 }
 
 .content-wrap {
-  padding-bottom: 10.5rem; /* Footer height */
+  padding-bottom: 10.5rem;
+  /* Footer height */
+}
+
+.centered-container-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-content {
+  animation: anmFadeIn 0.5s;
 }
 
 .link-sign-up, .link-sign-in {
@@ -316,7 +328,7 @@ body {
 
 .img-splash-screen {
   max-width: fit-content;
-  width: 75%;
+  width: 70%;
   height: auto;
 }
 

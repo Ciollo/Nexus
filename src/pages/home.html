@@ -9,11 +9,10 @@
 <title>Home</title>
 </head>
 
-<body class="site-bg animated-body">
+<body class="site-bg">
     <div class="page-container">
         <div class="content-wrap">
-
-            <header class="header">
+            <header class="header" data-barba="wrapper">
                 <div class="container-logo">
                     <img src="../assets/images/Nexus_logo_no_bg.png" alt="Nexus logo" class="logo" id="nexusLogo">
                 </div>
@@ -35,47 +34,50 @@
                     <button class="btn-go-to-sign-up navbar-btn-go-to-sign-up" id="goToSignUpBtn">Sign Up</button>
                 </div>
             </header>
-            <div class="container-logo-nexus">
-                <img src="../assets/images/Nexus_only_logo_no_bg.png" alt="Logo">
-            </div>
-            <div id="typed-strings">
-                <p>For Note-Taking</p>
-                <p>For Agenda.</p>
-                <p>For To-Do.</p>
-                <p>For Self-improvement.</p>
-                <p>For Organize.</p>
-                <p>For Company.</p>
-                <p>For People.</p>
-                <p>For Anyone.</p>
-                <p>For Everything.</p>
-            </div>
-            <div class="container-title-nexus">
-                <span class="title-nexus">
-                    Nexus
-                </span>
-            </div>
-            <div class="container-typing">
-                <span id="typed" class="typing"></span>
-                <span id="typed-cursor" class="typed-cursor">|</span>
-            </div>
-            <div class="centered-container container-btn-start-journey">
-                <button class="btn-default btn-start-journey">
-                    Start Your Journey.
-                </button>
+            <div class="page-content" data-barba="container" data-barba-namespace="home">
+                <div class="container-logo-nexus">
+                    <img src="../assets/images/Nexus_only_logo_no_bg.png" alt="Logo">
+                </div>
+                <div id="typed-strings">
+                    <p>For Note-Taking</p>
+                    <p>For Agenda.</p>
+                    <p>For To-Do.</p>
+                    <p>For Self-improvement.</p>
+                    <p>For Organize.</p>
+                    <p>For Company.</p>
+                    <p>For People.</p>
+                    <p>For Anyone.</p>
+                    <p>For Everything.</p>
+                </div>
+                <div class="container-title-nexus">
+                    <span class="title-nexus">
+                        Nexus
+                    </span>
+                </div>
+                <div class="container-typing">
+                    <span id="typed" class="typing"></span>
+                    <span id="typed-cursor" class="typed-cursor">|</span>
+                </div>
+                <div class="centered-container container-btn-start-journey">
+                    <button class="btn-default btn-start-journey" id="btn-start-your-journey">
+                        Start Your Journey.
+                    </button>
+                </div>
             </div>
         </div>
         <footer class="footer">
-                <img class="logo-mini-footer" src="../assets/images/Nexus_only_logo_no_bg.png">
-                <span>
-                    © 2024 Nexus
-                </span>
+            <img class="logo-mini-footer" src="../assets/images/Nexus_only_logo_no_bg.png">
+            <span>
+                © 2024 Nexus
+            </span>
         </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="../assets/js/home.js"></script>
-    <script>
-    </script>
+    <script src="https://unpkg.com/@barba/core"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
 
 </body>
 
