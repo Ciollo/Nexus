@@ -55,6 +55,7 @@ To get started with Nexus, follow these simple steps:
 | Todo                  | -  ❌  |
 | GUI                   | -  ❌  |
 | Multi-User            | -  ❌  |
+| Responsive            | -  ❌  |
 | Login                 | -  🚧  |
 | Register              | -  🚧  |
 | Splash screen         | -  ✅  |

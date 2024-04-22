@@ -21,9 +21,12 @@ btnContinueSignUp.addEventListener("click", continueSignUp);
 
 function continueSignUp() {
   var containerUserPassword = document.getElementById("container-user-password");
+  var containerUserUsername = document.getElementById("container-user-username");
   var containerUserConfirmPassword = document.getElementById("container-user-confirm-password");
 
 
+
+containerUserUsername.hidden = false;
   containerUserPassword.hidden = false;
 containerUserConfirmPassword.hidden = false;
   btnContinueSignUp.classList.remove("btn-continue");

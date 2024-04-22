@@ -43,7 +43,7 @@
                 <!-- <form> -->
                 <div class="form-group container-input-form">
                     <label class="label-input">Email:</label>
-                    <input type="email" class="form-control input-form" id="exampleInputEmail1"
+                    <input type="email" class="form-control input-form" name="email" id="exampleInputEmail1"
                         aria-describedby="emailHelp" placeholder="Your Email" required autocomplete="off">
                     <i class='bx bx-at'></i>
                 </div>
@@ -52,15 +52,21 @@
                         <input type="password" class="form-control input-form" id="userPassword" placeholder="Your Password" required>
                         <i class='bx bxs-hide' id="toggleViewPassword"></i>
                     </div> -->
+                <div class="form-group container-input-form" hidden id="container-user-username">
+                    <label class="label-input">Username:</label>
+                    <input type="text" class="form-control input-form" name="username" id="userUsername" placeholder="Your Username"
+                        required>
+                <i class='bx bx-user'></i>
+                </div>
                 <div class="form-group container-input-form" hidden id="container-user-password">
                     <label class="label-input">Password:</label>
-                    <input type="password" class="form-control input-form" id="userPassword" placeholder="Your Password"
+                    <input type="password" class="form-control input-form" name="password" id="userPassword" placeholder="Your Password"
                         required>
                     <i class='bx bxs-hide' id="toggleViewPassword"></i>
                 </div>
                 <div class="form-group container-input-form" hidden id="container-user-confirm-password">
                     <label class="label-input">Confirm Password:</label>
-                    <input type="password" class="form-control input-form" id="userConfirmPassword"
+                    <input type="password" class="form-control input-form" name="confirmPassword" id="userConfirmPassword"
                         placeholder="Confirm Password" required>
                     <i class='bx bxs-hide' id="toggleViewConfirmPassword"></i>
                 </div>
