@@ -18,31 +18,35 @@ function goToLogin() {
   });
 }
 
-var typed = new Typed('#element', {
+// var typed = new Typed("#typed", {
+//   stringsElement: "#element",
+// });
+
+  // var typed = new Typed('#typed', {
+  //   stringsElement: '#typed-strings'
+  // });
+var typed = new Typed('#typed', {
   /**
    * @property {array} strings strings to be typed
    * @property {string} stringsElement ID of element containing string children
    */
 
-  strings: [
-    'These are the default values...',
-  ],
-  stringsElement: null,
+  stringsElement: '#typed-strings',
 
   /**
    * @property {number} typeSpeed type speed in milliseconds
    */
-  typeSpeed: 0,
+  typeSpeed: 100,
 
   /**
    * @property {number} startDelay time before typing starts in milliseconds
    */
-  startDelay: 0,
+  startDelay: 2000,
 
   /**
    * @property {number} backSpeed backspacing speed in milliseconds
    */
-  backSpeed: 0,
+  backSpeed: 50,
 
   /**
    * @property {boolean} smartBackspace only backspace what doesn't match the previous string
@@ -72,7 +76,7 @@ var typed = new Typed('#element', {
    * @property {boolean} loop loop strings
    * @property {number} loopCount amount of loops
    */
-  loop: false,
+  loop: true,
   loopCount: Infinity,
 
   /**
