@@ -53,14 +53,33 @@
                 display: flex;
             }
 
-            a {
+            .link-navbar {
                 text-decoration: none;
                 color: inherit;
-            transition: all 0.5s ease-in-out;
-            &:hover {
-                color: $default-nav-color;
+                transition: all 0.5s ease-in-out;
+
+                &:hover {
+                    text-shadow:
+                        0 0 5px $logoColor,
+                        0 0 10px $logoColor,
+                        0 0 15px $logoColor,
+                        0 0 20px $logoColor,
+                        0 0 25px $logoColor,
+                        0 0 30px $logoColor,
+                        0 0 40px $logoColor,
+                        0 0 70px $logoColor,
+                }
             }
-            }
+
+            .icon-navbar {
+                &:hover {
+                    text-shadow:
+                        0 0 1px $logoColor,
+                        0 0 70px $logoColor,
+                }
+            
+                }
+            
 
         }
     }

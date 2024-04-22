@@ -266,13 +266,16 @@ body {
   justify-content: center;
   display: flex;
 }
-.header .container-navbar .top-nav-items a {
+.header .container-navbar .top-nav-items .link-navbar {
   text-decoration: none;
   color: inherit;
   transition: all 0.5s ease-in-out;
 }
-.header .container-navbar .top-nav-items a:hover {
-  color: #aaaaaa;
+.header .container-navbar .top-nav-items .link-navbar:hover {
+  text-shadow: 0 0 5px rgb(13, 176, 246), 0 0 10px rgb(13, 176, 246), 0 0 15px rgb(13, 176, 246), 0 0 20px rgb(13, 176, 246), 0 0 25px rgb(13, 176, 246), 0 0 30px rgb(13, 176, 246), 0 0 40px rgb(13, 176, 246), 0 0 70px rgb(13, 176, 246);
+}
+.header .container-navbar .top-nav-items .icon-navbar:hover {
+  text-shadow: 0 0 1px rgb(13, 176, 246), 0 0 70px rgb(13, 176, 246);
 }
 .header .container-buttons-go-to {
   display: flex;
