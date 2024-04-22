@@ -220,7 +220,6 @@ body {
 .header .container-logo {
   display: flex;
   align-items: center;
-  width: 150px;
 }
 .header .logo {
   width: 100%;
@@ -230,16 +229,25 @@ body {
 .header .container-navbar .top-nav-items {
   display: flex;
   justify-content: center;
-  align-items: center; /* Add this line */
+  align-items: center;
   padding-left: 0;
   color: #fdfdfd;
   list-style-type: none;
-  padding: 10px 20px;
+  padding: 0px;
   cursor: pointer;
-  font-size: 1.2rem;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
+  font-size: 20px;
+}
+.header .container-navbar .top-nav-items li {
+  text-decoration: none;
+  color: inherit;
+  width: 150px;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 .header .container-navbar .top-nav-items a {
   text-decoration: none;
@@ -251,8 +259,11 @@ body {
 .header .container-buttons-go-to {
   display: flex;
   justify-content: center;
-  margin-right: 10px;
-  width: 150px;
+  height: auto;
+}
+.header .container-buttons-go-to,
+.header .container-logo {
+  width: 200px;
 }
 .header .bxl-github {
   background-image: linear-gradient(90deg, #4f5fe5, #0db0f6);
@@ -266,9 +277,9 @@ body {
 }
 .header .navbar-btn-go-to-sign-in,
 .header .navbar-btn-go-to-sign-up {
-  width: 100px;
   height: auto;
-  position: relative;
+}
+.header .navbar-btn-go-to-sign-up {
   margin-left: 5px;
 }
 
@@ -297,7 +308,6 @@ body {
 }
 
 .img-splash-screen {
-  max-width: -moz-fit-content;
   max-width: fit-content;
   width: 75%;
   height: auto;
@@ -331,4 +341,4 @@ body {
 .lbl-no-account {
   margin-top: 15px;
   text-align: center;
-}/*# sourceMappingURL=style.css.map */
+}

@@ -18,48 +18,61 @@
     .container-logo {
         display: flex;
         align-items: center;
-        width: 150px;
     }
 
     .logo {
         // position: relative;
-         width: 100%;
+        width: 100%;
         height: auto;
         cursor: pointer;
         // margin-right: 100px;
     }
 
-   .container-navbar {
-    .top-nav-items {
-        display: flex;
-        justify-content: center;
-        align-items: center; /* Add this line */
-        padding-left: 0;
-        color: #fdfdfd;
-        list-style-type: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        font-size: 1.2rem;
-        font-weight: 500;
-        text-decoration: none;
-        transition: all 0.5s ease-in-out;
-
-        a {
+    .container-navbar {
+        .top-nav-items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 0;
+            color: #fdfdfd;
+            list-style-type: none;
+            padding: 0px;
+            cursor: pointer;
+            font-weight: 500;
             text-decoration: none;
-            color: inherit;
-        }
+            transition: all 0.5s ease-in-out;
+            font-size: 20px;
 
-        &:hover {
-            color: $default-nav-color;
+            li {
+                text-decoration: none;
+                color: inherit;
+                width: 150px;
+                height: auto;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            &:hover {
+                color: $default-nav-color;
+            }
         }
     }
-}
 
     .container-buttons-go-to {
         display: flex;
         justify-content: center;
-        margin-right: 10px;
-        width: 150px;
+        height: auto;
+    }
+
+    .container-buttons-go-to,
+    .container-logo {
+        width: 200px;
     }
 
     .bxl-github {
@@ -75,11 +88,12 @@
 
     .navbar-btn-go-to-sign-in,
     .navbar-btn-go-to-sign-up {
-        width: 100px;
         height: auto;
-        position: relative;
-        margin-left: 5px;
 
+    }
+
+    .navbar-btn-go-to-sign-up {
+        margin-left: 5px;
     }
 
 }

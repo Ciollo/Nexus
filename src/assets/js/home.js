@@ -18,13 +18,6 @@ function goToLogin() {
   });
 }
 
-// var typed = new Typed("#typed", {
-//   stringsElement: "#element",
-// });
-
-  // var typed = new Typed('#typed', {
-  //   stringsElement: '#typed-strings'
-  // });
 var typed = new Typed('#typed', {
   /**
    * @property {array} strings strings to be typed
@@ -61,7 +54,7 @@ var typed = new Typed('#typed', {
   /**
    * @property {number} backDelay time before backspacing in milliseconds
    */
-  backDelay: 700,
+  backDelay: 1000,
 
   /**
    * @property {boolean} fadeOut Fade out instead of backspace
