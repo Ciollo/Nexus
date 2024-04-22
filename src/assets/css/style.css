@@ -210,21 +210,17 @@ body {
 }
 
 .header {
+  padding: 0 80px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  position: ative;
-  width: 100%;
-  text-align: center;
-  margin-top: 0px;
+  justify-content: space-between;
+  height: 80px;
 }
 .header .logo {
-  position: relative;
   width: 150px;
   height: auto;
   cursor: pointer;
   margin-left: 10px;
-  margin-right: 100px;
 }
 .header .container-navbar .top-nav-items {
   display: flex;

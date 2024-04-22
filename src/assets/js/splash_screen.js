@@ -6,7 +6,7 @@ $(document).ready(function(){
 $(document).ready(function () {
   setTimeout(function () {
     $("body").fadeOut("slow", function () {
-      window.location.href = "login.html";
+      window.location.href = "home.html";
     });
   }, 3000);
 });

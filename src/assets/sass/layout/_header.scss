@@ -1,21 +1,26 @@
 @use '../abstracts'as *;
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: ative;
-    width: 100%;
-    text-align: center;
-    margin-top: 0px;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // position: ative;
+    // width: 100%;
+    // text-align: center;
+    // margin-top: 0px;
 
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
     .logo {
-        position: relative;
+        // position: relative;
         width: 150px;
         height: auto;
         cursor: pointer;
         margin-left: 10px;
-        margin-right: 100px;
+        // margin-right: 100px;
     }
 
    .container-navbar {
