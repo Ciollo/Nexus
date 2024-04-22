@@ -216,11 +216,15 @@ body {
   justify-content: space-between;
   height: 80px;
 }
+.header .container-logo {
+  display: flex;
+  align-items: center;
+  width: 150px;
+}
 .header .logo {
   width: 150px;
   height: auto;
   cursor: pointer;
-  margin-left: 10px;
 }
 .header .container-navbar .top-nav-items {
   display: flex;
@@ -247,6 +251,7 @@ body {
   display: flex;
   justify-content: center;
   margin-right: 10px;
+  width: 150px;
 }
 .header .bxl-github {
   background-image: linear-gradient(90deg, #4f5fe5, #0db0f6);
@@ -291,6 +296,7 @@ body {
 }
 
 .img-splash-screen {
+  max-width: -moz-fit-content;
   max-width: fit-content;
   width: 75%;
   height: auto;
@@ -304,4 +310,4 @@ body {
 .lbl-no-account {
   margin-top: 15px;
   text-align: center;
-}
+}/*# sourceMappingURL=style.css.map */
