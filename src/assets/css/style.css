@@ -223,6 +223,7 @@ body {
   width: 150px;
 }
 .header .logo {
+  width: 100%;
   height: auto;
   cursor: pointer;
 }
