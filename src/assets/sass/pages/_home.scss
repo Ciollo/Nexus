@@ -1,4 +1,5 @@
-@use '../abstracts' as *;
+@use '../abstracts'as *;
+
 // TODO TO MDIFY
 .title-nexus {
     color: $radiantLogoColor;
@@ -6,8 +7,7 @@
 }
 
 .typing,
-.typed-cursor
-{
+.typed-cursor {
     color: white;
     font-size: 70px;
 }
@@ -45,4 +45,22 @@
     align-items: center;
     height: 150px;
     margin-top: 50px;
+}
+
+.container-btn-start-journey {
+    margin-top: 100px;
+}
+
+
+.btn-start-journey {
+    width: 250px;
+    height: 40px;
+
+    &:hover {
+        box-shadow:
+            0 0 10px $logoColor,
+            0 0 40px $logoColor,
+            0 0 80px $logoColor,
+    }
+
 }

@@ -1,12 +1,13 @@
-@use '../abstracts' as *;
+@use '../abstracts'as *;
 
 .footer {
     display: flex;
     position: absolute;
     align-items: center;
-    bottom: 5%;
+    bottom: 0;
     text-align: center;
     justify-content: center;
+    height: 2.5rem;
     width: 100%;
 
     .logo-mini-footer {
@@ -20,7 +21,7 @@
         -webkit-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;
-        -webkit-text-fill-color: transparent; 
+        -webkit-text-fill-color: transparent;
         -moz-text-fill-color: transparent;
         font-size: 14px;
         font-weight: 400;

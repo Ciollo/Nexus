@@ -44,8 +44,7 @@ body {
 .btn-sign-in,
 .btn-continue,
 .btn-sign-up {
-  background-image: linear-gradient(90deg, #4f5fe5, #0db0f6);
-  width: 100%;
+  background-image: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
   height: auto;
   border: none;
   cursor: pointer;
@@ -73,8 +72,7 @@ body {
 
 .btn-go-to-sign-in,
 .btn-go-to-sign-up {
-  background-image: linear-gradient(90deg, #4f5fe5, #0db0f6);
-  width: 100%;
+  background-image: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
   height: auto;
   border: none;
   cursor: pointer;
@@ -100,8 +98,7 @@ body {
 }
 
 .btn-default {
-  background-image: linear-gradient(90deg, #4f5fe5, #0db0f6);
-  width: 100%;
+  background-image: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
   height: auto;
   border: none;
   cursor: pointer;
@@ -171,14 +168,22 @@ body {
 }
 
 .centered-container {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  padding-bottom: 10.5rem; /* Footer height */
+}
+
 .link-sign-up, .link-sign-in {
-  color: linear-gradient(90deg, #0db0f6, #4f5fe5);
+  color: linear-gradient(90deg, rgb(13, 176, 246), rgb(79, 95, 229));
   font-weight: bold;
   cursor: pointer;
   text-decoration-line: none;
@@ -188,9 +193,10 @@ body {
   display: flex;
   position: absolute;
   align-items: center;
-  bottom: 5%;
+  bottom: 0;
   text-align: center;
   justify-content: center;
+  height: 2.5rem;
   width: 100%;
 }
 .footer .logo-mini-footer {
@@ -199,7 +205,7 @@ body {
   margin-right: 5px;
 }
 .footer span {
-  background-image: linear-gradient(90deg, #4f5fe5, #0db0f6);
+  background-image: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -215,7 +221,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: auto;
 }
 .header .container-logo {
   display: flex;
@@ -237,7 +243,6 @@ body {
   cursor: pointer;
   font-weight: 500;
   text-decoration: none;
-  transition: all 0.5s ease-in-out;
   font-size: 20px;
 }
 .header .container-navbar .top-nav-items li {
@@ -252,8 +257,9 @@ body {
 .header .container-navbar .top-nav-items a {
   text-decoration: none;
   color: inherit;
+  transition: all 0.5s ease-in-out;
 }
-.header .container-navbar .top-nav-items:hover {
+.header .container-navbar .top-nav-items a:hover {
   color: #aaaaaa;
 }
 .header .container-buttons-go-to {
@@ -266,7 +272,7 @@ body {
   width: 200px;
 }
 .header .bxl-github {
-  background-image: linear-gradient(90deg, #4f5fe5, #0db0f6);
+  background-image: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -277,7 +283,8 @@ body {
 }
 .header .navbar-btn-go-to-sign-in,
 .header .navbar-btn-go-to-sign-up {
-  height: auto;
+  width: 100px;
+  height: 100%;
 }
 .header .navbar-btn-go-to-sign-up {
   margin-left: 5px;
@@ -314,7 +321,7 @@ body {
 }
 
 .title-nexus {
-  color: linear-gradient(90deg, #4f5fe5, #0db0f6);
+  color: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
   font-size: 70px;
 }
 
@@ -335,7 +342,7 @@ body {
 }
 
 .container-title-nexus .title-nexus {
-  background-image: linear-gradient(90deg, #4f5fe5, #0db0f6);
+  background-image: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -352,6 +359,18 @@ body {
   align-items: center;
   height: 150px;
   margin-top: 50px;
+}
+
+.container-btn-start-journey {
+  margin-top: 100px;
+}
+
+.btn-start-journey {
+  width: 250px;
+  height: 40px;
+}
+.btn-start-journey:hover {
+  box-shadow: 0 0 10px rgb(13, 176, 246), 0 0 40px rgb(13, 176, 246), 0 0 80px rgb(13, 176, 246);
 }
 
 .img-fluid {
