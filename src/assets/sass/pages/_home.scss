@@ -1,15 +1,43 @@
+@use '../abstracts' as *;
 // TODO TO MDIFY
 .title-nexus {
+    color: $radiantLogoColor;
+    font-size: 70px;
+}
+
+.typing,
+.typed-cursor
+{
     color: white;
     font-size: 70px;
 }
 
-.container-title-nexus {
+.container-title-nexus,
+.container-typing {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 200px;
+    align-self: center;
+    height: auto;
+    width: 100%;
+    justify-content: center;
 }
+
+.container-title-nexus {
+    .title-nexus {
+        background-image: $radiantLogoColor;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 140px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+    }
+}
+
+.container-typing {}
+
 
 .container-logo-nexus {
     display: flex;

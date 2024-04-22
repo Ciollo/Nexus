@@ -314,15 +314,36 @@ body {
 }
 
 .title-nexus {
+  color: linear-gradient(90deg, #4f5fe5, #0db0f6);
+  font-size: 70px;
+}
+
+.typing,
+.typed-cursor {
   color: white;
   font-size: 70px;
 }
 
-.container-title-nexus {
+.container-title-nexus,
+.container-typing {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 200px;
+  align-self: center;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+}
+
+.container-title-nexus .title-nexus {
+  background-image: linear-gradient(90deg, #4f5fe5, #0db0f6);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: 140px;
+  font-weight: 400;
+  letter-spacing: 0.025em;
 }
 
 .container-logo-nexus {

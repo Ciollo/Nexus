@@ -39,7 +39,7 @@ var typed = new Typed('#typed', {
   /**
    * @property {number} backSpeed backspacing speed in milliseconds
    */
-  backSpeed: 50,
+  backSpeed: 80,
 
   /**
    * @property {boolean} smartBackspace only backspace what doesn't match the previous string
@@ -54,7 +54,7 @@ var typed = new Typed('#typed', {
   /**
    * @property {number} backDelay time before backspacing in milliseconds
    */
-  backDelay: 1000,
+  backDelay: 2000,
 
   /**
    * @property {boolean} fadeOut Fade out instead of backspace
@@ -77,7 +77,7 @@ var typed = new Typed('#typed', {
    * @property {string} cursorChar character for cursor
    * @property {boolean} autoInsertCss insert CSS for cursor and fadeOut into HTML <head>
    */
-  showCursor: true,
+  showCursor: false,
   cursorChar: '|',
   autoInsertCss: true,
 
