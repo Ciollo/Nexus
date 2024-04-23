@@ -2,7 +2,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var cursor = document.querySelector(".cursor-light");
   var links = document.querySelectorAll("a");
   var btn = document.querySelectorAll("button");
+  var loginCard = document.querySelector(".login-card");
   var initCursor = false;
+
+  var selfCard = loginCard;
+
+  selfCard.addEventListener("mouseover", function() {
+    cursor.classList.add("cursor-light--link");
+  })
+
+  selfCard.addEventListener("mouseout", function() {
+    cursor.classList.remove("cursor-light--link");
+  })
 
   for (var i = 0; i < links.length; i++) {
     var selfLink = links[i];
