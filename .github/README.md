@@ -68,6 +68,16 @@ To get started with Nexus, follow these simple steps:
 | Barba JS              | -  🚧  |
 | Sistemare grafica     | -  🚧  |
 
+## 🚧️ Little Fixes
+❌ = Not Fixed yet <br>
+🚧 = On working    <br>
+✅ = Fixed    
+
+| Features        | Status | Description |
+| --------------  | ------ | ----------- |
+| Controllo password durante il login | -  ❌  | - |
+
+
 ## 📄 Documentation
 
 For detailed documentation on how to use Nexus, refer to the [User Guide](https://www.nexusapp.com/docs) available on our website.
