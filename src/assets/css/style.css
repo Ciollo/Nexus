@@ -29,9 +29,7 @@
 
 * {
   font-family: "Mulish", sans-serif;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 body {
@@ -137,8 +135,9 @@ body {
   margin-top: 14px;
 }
 .container-input-form .label-input-form {
+  display: flex;
   width: 100px;
-  align-content: center;
+  align-items: center;
   margin-left: 3px;
   font-size: 15px;
   font-weight: 600;
@@ -147,7 +146,7 @@ body {
   font-size: 14px;
   font-weight: lighter;
   padding: 10px 0px 10px 15px;
-  width: 270px;
+  width: 350px;
 }
 .container-input-form .input-form:focus {
   font-weight: 400;
@@ -165,10 +164,15 @@ body {
 .container-input-form .bxs-show {
   cursor: pointer;
 }
-.container-input-form .btn-continue,
-.container-input-form .btn-sign-in {
-  width: 100%;
-  margin: 5px 50px;
+
+.container-btn-form {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.container-btn-form .btn-continue,
+.container-btn-form .btn-sign-in {
+  width: 90%;
 }
 
 .bxl-github {
@@ -201,6 +205,10 @@ body {
 
 .page-content {
   animation: anmFadeIn 0.5s;
+}
+
+.hidden {
+  display: none;
 }
 
 .link-sign-up, .link-sign-in {
@@ -396,7 +404,6 @@ body {
 }
 
 .img-splash-screen {
-  max-width: -moz-fit-content;
   max-width: fit-content;
   width: 70%;
   height: auto;
@@ -465,4 +472,4 @@ body {
 .lbl-no-account {
   margin-top: 15px;
   text-align: center;
-}/*# sourceMappingURL=style.css.map */
+}

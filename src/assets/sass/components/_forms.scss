@@ -17,18 +17,19 @@
     margin-top: 14px;
 
     .label-input-form {
+        display: flex;
         width: 100px;
-        align-content: center;
+        align-items: center;
         margin-left: 3px;
         font-size: 15px;
-        font-weight: 600
+        font-weight: 600;
     }
 
     .input-form {
         font-size: 14px;
         font-weight: lighter;
         padding: 10px 0px 10px 15px;
-        width: 270px;
+        width: 350px;
 
         &:focus {
             font-weight: 400;
@@ -46,11 +47,15 @@
     .bxs-show {
         cursor: pointer;
     }
+}
+
+.container-btn-form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
 
     .btn-continue,
     .btn-sign-in {
-        width: 100%;
-        margin: 5px 50px;
+        width: 90%;
     }
-
 }

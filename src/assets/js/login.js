@@ -17,9 +17,10 @@ function continueSignIn() {
   var signInContainer = document.getElementById("sign-in-container");
   var containerPassword = document.getElementById("container-password")
 
-  continueContainer.hidden = true;
-  signInContainer.hidden = false;
-  containerPassword.hidden = false;
+  continueContainer.classList.add("hidden");
+  signInContainer.classList.remove("hidden");
+  containerPassword.classList.remove("hidden");
+
 }
 
 function toggleViewPassword() {
