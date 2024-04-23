@@ -1,5 +1,5 @@
 @use '../components' as *;
-@use '../abstracts' as *;
+@use '../abstracts/' as *;
 
 .login-card{
     @include accessCard();
