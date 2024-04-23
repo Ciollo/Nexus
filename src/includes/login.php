@@ -12,7 +12,7 @@ if (!isset($_POST['email']) || !isset($_POST['password'])) {
     $email = strtolower($email);
 	$password = hash('sha256', $password);
 
-    $query = "SELECT * FROM utenti WHERE email = '$email' AND password = '$password'";
+    $query = "SELECT * FROM Users WHERE email = '$email' AND password = '$password'";
     $result = $conn->query($query);
 
     if ($result->num_rows > 0) {

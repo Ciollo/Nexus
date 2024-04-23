@@ -20,13 +20,16 @@ if (
     if ($password !== $confirmPassword) {
         echo "Le password non corrispondono";
     } else {
-        $check_query = "SELECT * FROM utenti WHERE email = '$email'";
+        $password = hash('sha256', $password);
+        $email = strtolower($email);
+        // check if username is already in
+        $check_query = "SELECT * FROM users WHERE email = '$email' OR username = '$username'";
         $result = $conn->query($check_query);
 
         if ($result->num_rows > 0) {
             echo "Questo utente esiste già nel database.";
         } else {
-            $insert_query = "INSERT INTO utenti (Email, Password, Username, Account_creation_date) 
+            $insert_query = "INSERT INTO Users (Email, Password, Username, Account_creation_date) 
             VALUES ('$email', '$password', '$username', '$account_creation_date')";
             
             if ($conn->query($insert_query) === TRUE) {
