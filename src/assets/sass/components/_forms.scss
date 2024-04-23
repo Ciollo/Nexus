@@ -1,11 +1,8 @@
-.input-form {
-    font-size: 14px;
-    font-weight: lighter;
-    padding: 10px 0px 10px 15px;
-
-    &:focus {
-        font-weight: 400;
-    }
+@mixin bxIconInput() {
+    position: absolute;
+    top: 43%;
+    right: 14px;
+    transform: translateY(-27%);
 }
 
 .logo-form {
@@ -14,13 +11,46 @@
 }
 
 .container-input-form {
+    display: flex;
+    justify-content: space-between;
     position: relative;
     margin-top: 14px;
-}
 
-.label-input-form {
-    margin-left: 3px;
-    font-size: 15px;    
-    font-weight: 600
+    .label-input-form {
+        width: 100px;
+        align-content: center;
+        margin-left: 3px;
+        font-size: 15px;
+        font-weight: 600
+    }
+
+    .input-form {
+        font-size: 14px;
+        font-weight: lighter;
+        padding: 10px 0px 10px 15px;
+        width: 270px;
+
+        &:focus {
+            font-weight: 400;
+        }
+    }
+
+    .bx-at,
+    .bxs-hide,
+    .bx-user,
+    .bxs-show {
+        @include bxIconInput();
+    }
+
+    .bxs-hide,
+    .bxs-show {
+        cursor: pointer;
+    }
+
+    .btn-continue,
+    .btn-sign-in {
+        width: 100%;
+        margin: 5px 50px;
+    }
 
 }

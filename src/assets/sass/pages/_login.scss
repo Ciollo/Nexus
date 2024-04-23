@@ -1,5 +1,30 @@
 @use '../components' as *;
+@use '../abstracts' as *;
+
 .login-card{
     @include accessCard();
     margin-top: -10%;
+}
+
+.container-login-card-title {
+    text-align: center;
+    width: 100%;
+}
+
+.title-nexus-login-card {
+    background-image: $radiantLogoColor;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+}
+
+.form-content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }

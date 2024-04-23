@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   var cursor = document.querySelector(".cursor-light");
   var links = document.querySelectorAll("a");
+  var btn = document.querySelectorAll("button");
   var initCursor = false;
 
   for (var i = 0; i < links.length; i++) {
@@ -10,6 +11,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
       cursor.classList.add("cursor-light--link");
     });
     selfLink.addEventListener("mouseout", function() {
+      cursor.classList.remove("cursor-light--link");
+    });
+  }
+
+  for (var i = 0; i < btn.length; i++) {
+    var selfBtn = btn[i];
+
+    selfBtn.addEventListener("mouseover", function() {
+      cursor.classList.add("cursor-light--link");
+    });
+    selfBtn.addEventListener("mouseout", function() {
       cursor.classList.remove("cursor-light--link");
     });
   }

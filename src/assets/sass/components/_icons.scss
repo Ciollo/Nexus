@@ -1,21 +1,3 @@
-@mixin bxIcon() {
-    position: absolute;
-    top: 63%;
-    right: 23px;
-    transform: translateY(-27%);
-}
-
-.bx-at,
-.bxs-hide,
-.bx-user,
-.bxs-show {
-    @include bxIcon();
-}
-
-.bxs-hide,
-.bxs-show {
-    cursor: pointer;
-}
 
 
 .bxl-github {

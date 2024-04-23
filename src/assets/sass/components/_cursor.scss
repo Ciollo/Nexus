@@ -23,17 +23,17 @@
         right: 0;
         bottom: 0;
         width: 100%;
-        box-shadow: 0 0 100px 100px $logoColor;
+        box-shadow: 0 0 400px 150px $logoColor;
         height: 100%;
         border-radius: 50%;
         filter: blur(5px);
     }
 
-
-
 }
 
 .cursor-light--link {
     // transform: translate(-50%, -50%) scale(1);
-    transform: scale(0);
+    transition: transform 0.2s ease-in-out;
+    // transform: scale(0);
+    transform: translate(-50%, -50%) scale(0);
 }

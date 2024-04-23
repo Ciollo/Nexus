@@ -69,65 +69,75 @@
 </head>
 
 <body class="site-bg animated-body">
-    <header class="header" data-barba="wrapper">
-        <div class="container-logo">
-            <img src="../assets/images/Nexus_logo_no_bg.png" alt="Nexus logo" class="logo" id="nexusLogo">
-        </div>
-        <nav class="container-navbar">
-            <ul class="top-nav-items">
-                <li>
-                    <a href="features.html">Features</a>
-                </li>
-                <li>
-                    <a href="https://github.com/Ciollo/Nexus" target="_blank"><i class='bx bxl-github'></i></a>
-                </li>
-                <li>
-                    <a href="https://ko-fi.com/ciollo" target="_blank">Support us</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="container-buttons-go-to">
-            <button class="btn-go-to-sign-in navbar-btn-go-to-sign-in" id="goToSignBtn">Login</button>
-            <button class="btn-go-to-sign-up navbar-btn-go-to-sign-up" id="goToSignUpBtn">Sign Up</button>
-        </div>
-    </header>
-    <div class="centered-container-page">
-        <div class="login-card">
-            <div class="row justify-content-center">
-                <img src="../assets/images/Nexus_title_logo_no_bg.png" class="logo-form">
-                <form onsubmit=continueSignIn() method="post" action="../includes/login.php">
-                    <div class="form-group container-input-form">
-                        <label class="label-input">Email:</label>
-                        <input type="email" class="form-control input-form" name="email" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" placeholder="Your Email" required>
-                        <i class='bx bx-at'></i>
+
+    <div class="page-container">
+        <div class="content-wrap">
+            <header class="header" data-barba="wrapper">
+                <div class="container-logo">
+                    <img src="../assets/images/Nexus_logo_no_bg.png" alt="Nexus logo" class="logo" id="nexusLogo">
+                </div>
+                <nav class="container-navbar">
+                    <ul class="top-nav-items">
+                        <li>
+                            <a href="home.html" class="link-navbar">home</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Ciollo/Nexus" target="_blank"><i
+                                    class='bx bxl-github icon-navbar'></i></a>
+                        </li>
+                        <li>
+                            <a href="https://ko-fi.com/ciollo" target="_blank" class="link-navbar">Support us</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="container-buttons-go-to">
+                    <button class="btn-go-to-sign-in navbar-btn-go-to-sign-in" id="goToSignBtn">Login</button>
+                    <button class="btn-go-to-sign-up navbar-btn-go-to-sign-up" id="goToSignUpBtn">Sign Up</button>
+                </div>
+            </header>
+            <div class="centered-container-page">
+                <div class="login-card">
+                    <!-- <img src="../assets/images/Nexus_title_logo_no_bg.png" class="logo-form"> -->
+                    <div class="container-login-card-title">
+                        <!-- <h1 class="title-nexus-login-card">Nexus</h1> -->
+                        <span class="title-nexus-login-card">
+                            Nexus
+                        </span>
                     </div>
-                    <!-- <div class="form-group container-input-form">
-                        <label class="label-input">Password:</label>
-                        <input type="password" class="form-control input-form" id="userPassword" placeholder="Your Password" required>
-                        <i class='bx bxs-hide' id="toggleViewPassword"></i>
-                    </div> -->
-                    <div class="form-group container-input-form" hidden id="container-password">
-                        <label class="label-input">Password:</label>
-                        <input type="password" class="form-control input-form" name="password" id="userPassword"
-                            placeholder="Your Password" required>
-                        <i class='bx bxs-hide' id="toggleViewPassword"></i>
-                    </div>
-                    <div class="container-input-form" id="continue-container">
-                        <button class="btn-continue" id="btn-continue">Continue</button>
-                    </div>
-                    <div class="container-input-form" id="sign-in-container" hidden>
-                        <button class="btn-sign-in" id="btn-sign-in">Sign in</button>
-                    </div>
-                    <p class="lbl-no-account">
-                        Don't have an account? <a href="register.html" id="link-sign-up" class="link-sign-up">Sign
-                            Up</a>
-                    </p>
-                </form>
+                    <form onsubmit=continueSignIn() method="post" action="../includes/login.php">
+                        <div class="container-input-form">
+                            <label class="label-input-form">Email:</label>
+                            <input type="email" class="input-form" name="email" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Your Email" required>
+                            <i class='bx bx-at'></i>
+                        </div>
+                        <!-- <div class="form-group container-input-form" hidden id="container-password"> -->
+                        <!-- TODO AGGIUNGERE HIDDEN -->
+                        <div id="container-password" class="container-input-form">
+                            <label class="label-input-form">Password:</label>
+                            <input type="password" class="form-control input-form" name="password" id="userPassword"
+                                placeholder="Your Password" required>
+                            <i class='bx bxs-hide' id="toggleViewPassword"></i>
+                        </div>
+                        <!-- <div class="container-input-form" id="continue-container"> -->
+                        <div id="continue-container" class="container-input-form">
+                            <button class="btn-continue" id="btn-continue">Continue</button>
+                        </div>
+                        <div class="container-input-form" id="sign-in-container" hidden>
+                            <button class="btn-sign-in" id="btn-sign-in">Sign in</button>
+                        </div>
+
+                        <p class="lbl-no-account">
+                            Don't have an account? <a href="register.html" id="link-sign-up" class="link-sign-up">Sign
+                                Up</a>
+                        </p>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 
+    </div>
     <footer class="footer">
         <div>
             <img class="logo-mini-footer" src="../assets/images/Nexus_only_logo_no_bg.png">
@@ -136,6 +146,7 @@
             </span>
         </div>
     </footer>
+    </div>
 
 
     <body>

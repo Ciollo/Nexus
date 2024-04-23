@@ -125,44 +125,50 @@ body {
   -webkit-transition: all 0.5s ease-in-out;
 }
 
-.input-form {
-  font-size: 14px;
-  font-weight: lighter;
-  padding: 10px 0px 10px 15px;
-}
-.input-form:focus {
-  font-weight: 400;
-}
-
 .logo-form {
   width: 150px;
   height: auto;
 }
 
 .container-input-form {
+  display: flex;
+  justify-content: space-between;
   position: relative;
   margin-top: 14px;
 }
-
-.label-input-form {
+.container-input-form .label-input-form {
+  width: 100px;
+  align-content: center;
   margin-left: 3px;
   font-size: 15px;
   font-weight: 600;
 }
-
-.bx-at,
-.bxs-hide,
-.bx-user,
-.bxs-show {
+.container-input-form .input-form {
+  font-size: 14px;
+  font-weight: lighter;
+  padding: 10px 0px 10px 15px;
+  width: 270px;
+}
+.container-input-form .input-form:focus {
+  font-weight: 400;
+}
+.container-input-form .bx-at,
+.container-input-form .bxs-hide,
+.container-input-form .bx-user,
+.container-input-form .bxs-show {
   position: absolute;
-  top: 63%;
-  right: 23px;
+  top: 43%;
+  right: 14px;
   transform: translateY(-27%);
 }
-
-.bxs-hide,
-.bxs-show {
+.container-input-form .bxs-hide,
+.container-input-form .bxs-show {
   cursor: pointer;
+}
+.container-input-form .btn-continue,
+.container-input-form .btn-sign-in {
+  width: 100%;
+  margin: 5px 50px;
 }
 
 .bxl-github {
@@ -227,14 +233,15 @@ body {
   right: 0;
   bottom: 0;
   width: 100%;
-  box-shadow: 0 0 100px 100px rgb(13, 176, 246);
+  box-shadow: 0 0 400px 150px rgb(13, 176, 246);
   height: 100%;
   border-radius: 50%;
   filter: blur(5px);
 }
 
 .cursor-light--link {
-  transform: scale(0);
+  transition: transform 0.2s ease-in-out;
+  transform: translate(-50%, -50%) scale(0);
 }
 
 .footer {
@@ -351,6 +358,29 @@ body {
   border: none;
   border-radius: 10px;
   margin-top: -10%;
+}
+
+.container-login-card-title {
+  text-align: center;
+  width: 100%;
+}
+
+.title-nexus-login-card {
+  background-image: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+}
+
+.form-content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 .register-card {
