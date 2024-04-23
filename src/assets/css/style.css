@@ -443,7 +443,7 @@ body {
 .title-nexus {
   color: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
   font-size: 70px;
-  text-shadow: 0 0 100px rgb(20, 22, 46), 0 0 200px rgb(13, 176, 246), 0 0 200px rgb(20, 22, 46), 0 0 300px rgb(13, 176, 246), 0 0 300px rgb(20, 22, 46);
+  text-shadow: 0 0 1px rgb(13, 176, 246), 0 0 100px rgb(20, 22, 46), 0 0 200px rgb(13, 176, 246), 0 0 200px rgb(20, 22, 46), 0 0 300px rgb(13, 176, 246), 0 0 300px rgb(20, 22, 46);
 }
 
 .typing,

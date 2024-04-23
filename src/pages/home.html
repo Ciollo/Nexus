@@ -13,31 +13,31 @@
         <div class="content-wrap">
             <header class="header" data-barba="wrapper">
                 <div class="container-logo">
-                    <img src="../assets/images/Nexus_logo_no_bg.png" alt="Nexus logo" class="logo" id="nexusLogo">
+                    <img src="../assets/images/Nexus_logo_no_bg.png" alt="Nexus logo" class="logo no-cursor-effect" id="nexusLogo">
                 </div>
                 <nav class="container-navbar">
                     <ul class="top-nav-items">
                         <li>
-                            <a href="features.html" class="link-navbar">Features</a>
+                            <a href="features.html" class="link-navbar no-cursor-effect">Features</a>
                         </li>
                         <li>
-                            <a href="https://github.com/Ciollo/Nexus" target="_blank"><i class='bx bxl-github icon-navbar'></i></a>
+                            <a href="https://github.com/Ciollo/Nexus" target="_blank"><i class='bx bxl-github icon-navbar no-cursor-effect'></i></a>
                         </li>
                         <li>
-                            <a href="https://ko-fi.com/ciollo" target="_blank" class="link-navbar">Support us</a>
+                            <a href="https://ko-fi.com/ciollo" target="_blank" class="link-navbar no-cursor-effect">Support us</a>
                         </li>
                     </ul>
                 </nav>
                 <div class="container-buttons-go-to">
-                    <button class="btn-go-to-sign-in navbar-btn-go-to-sign-in" id="goToSignBtn">Login</button>
-                    <button class="btn-go-to-sign-up navbar-btn-go-to-sign-up" id="goToSignUpBtn">Sign Up</button>
+                    <button class="btn-go-to-sign-in navbar-btn-go-to-sign-in no-cursor-effect" id="btnGoToSignIn">Login</button>
+                    <button class="btn-go-to-sign-up navbar-btn-go-to-sign-up no-cursor-effect" id="btnGoToSignUp">Sign Up</button>
                 </div>
             </header>
             <div class="page-content" data-barba="container" data-barba-namespace="home">
                 <div class="container-logo-nexus">
-                    <img src="../assets/images/Nexus_only_logo_no_bg.png" alt="Logo">
+                    <img src="../assets/images/Nexus_only_logo_no_bg.png" alt="Logo" class="no-cursor-effect">
                 </div>
-                <div id="typed-strings">
+                <div id="typed-strings" class="hidden">
                     <p>For Note-Taking</p>
                     <p>For Agenda.</p>
                     <p>For To-Do.</p>
@@ -49,16 +49,16 @@
                     <p>For Everything.</p>
                 </div>
                 <div class="container-title-nexus">
-                    <span class="title-nexus">
+                    <span class="title-nexus no-cursor-effect">
                         Nexus
                     </span>
                 </div>
                 <div class="container-typing">
-                    <span id="typed" class="typing"></span>
-                    <span id="typed-cursor" class="typed-cursor">|</span>
+                    <span id="typed" class="typing no-cursor-effect"></span>
+                    <span id="typed-cursor" class="typed-cursor no-cursor-effect">|</span>
                 </div>
                 <div class="centered-container container-btn-start-journey">
-                    <button class="btn-default btn-start-journey" id="btn-start-your-journey">
+                    <button class="btn-default btn-start-journey no-cursor-effect" id="btn-start-your-journey">
                         Get Started
                     </button>
                 </div>
@@ -66,7 +66,7 @@
         </div>
         <footer class="footer">
             <img class="logo-mini-footer" src="../assets/images/Nexus_only_logo_no_bg.png">
-            <span>
+            <span class="no-cursor-effect">
                 © 2024 Nexus
             </span>
         </footer>
@@ -75,11 +75,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="../assets/js/home.js"></script>
-    <script src="../assets/js/cursor.js"></script>
+    <script type="module" src="../assets/js/pages/home.js"></script>
+    <script src="../assets/js/utils/cursor.js"></script>
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
 
 </body>

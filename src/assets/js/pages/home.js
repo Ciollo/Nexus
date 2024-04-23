@@ -1,30 +1,24 @@
+import { goToPage } from "../utils/goToPages.js";
+
 // $(document).ready(function () {
 //   setTimeout(function () {
 //     $("body").animate({ opacity: 1 }, 1000);
 //   }, 750);
 // });
 
-var goToSignBtn = document.getElementById("goToSignBtn");
-var goToSignUpBtn = document.getElementById("goToSignUpBtn");
+// Variables
+var btnStartYourJourney = document.getElementById("btn-start-your-journey");
+var btnGoToSignIn = document.getElementById("btnGoToSignIn");
+var btnGoToSignUp = document.getElementById("btnGoToSignUp");
 
-goToSignBtn.addEventListener("click", goToLogin);
-goToSignUpBtn.addEventListener("click", goToRegister);
-
-function goToLogin() {
-  $(document).ready(function () {
-    $("body").fadeOut("slow", function () {
-      window.location.href = "login.html";
-    });
-  });
-}
-
-var typed = new Typed('#typed', {
+// modules
+var typed = new Typed("#typed", {
   /**
    * @property {array} strings strings to be typed
    * @property {string} stringsElement ID of element containing string children
    */
 
-  stringsElement: '#typed-strings',
+  stringsElement: "#typed-strings",
 
   /**
    * @property {number} typeSpeed type speed in milliseconds
@@ -62,7 +56,7 @@ var typed = new Typed('#typed', {
    * @property {boolean} fadeOutDelay Fade out delay in milliseconds
    */
   fadeOut: false,
-  fadeOutClass: 'typed-fade-out',
+  fadeOutClass: "typed-fade-out",
   fadeOutDelay: 500,
 
   /**
@@ -78,7 +72,7 @@ var typed = new Typed('#typed', {
    * @property {boolean} autoInsertCss insert CSS for cursor and fadeOut into HTML <head>
    */
   showCursor: false,
-  cursorChar: '|',
+  cursorChar: "|",
   autoInsertCss: true,
 
   /**
@@ -95,7 +89,7 @@ var typed = new Typed('#typed', {
   /**
    * @property {string} contentType 'html' or 'null' for plaintext
    */
-  contentType: 'html',
+  contentType: "html",
 
   /**
    * Before it begins typing
@@ -170,14 +164,13 @@ var typed = new Typed('#typed', {
   onDestroy: (self) => {},
 });
 
-var btnStartYourJourney = document.getElementById("btn-start-your-journey");
-
-btnStartYourJourney.addEventListener("click", goToLogin);
-
-function goToRegister() {
-  $(document).ready(function () {
-    $("body").fadeOut("slow", function () {
-      window.location.href = "register.html";
-    });
-  });
-}
+// Event
+btnStartYourJourney.addEventListener("click", function () {
+  goToPage("login.html");
+});
+btnGoToSignIn.addEventListener("click", function () {
+  goToPage("login.html");
+});
+btnGoToSignUp.addEventListener("click", function () {
+  goToPage("register.html");
+});
