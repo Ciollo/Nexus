@@ -1,4 +1,4 @@
-@use 'abstracts' as *;
+@use 'abstracts'as *;
 
 @mixin bxIconInput() {
     position: absolute;
@@ -33,6 +33,7 @@
         padding: 10px 0px 10px 15px;
         width: 350px;
         border: 100px solid none;
+
         &:focus {
             font-weight: 400;
             outline: none;
@@ -60,5 +61,20 @@
     .btn-continue,
     .btn-sign-in {
         width: 90%;
+    }
+}
+
+.lbl-no-account {
+    margin-top: 15px;
+    text-align: center;
+
+    .link-sign-up {
+        font-weight: 600;
+        cursor: pointer;
+        color: $linkColorDefault;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            font-weight: 700;
+        }
     }
 }

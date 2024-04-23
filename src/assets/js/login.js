@@ -13,9 +13,9 @@ toggleViewPasswordElement.addEventListener("click", toggleViewPassword);
 
 btnContinueSignIn.addEventListener("click", continueSignIn);
 
-userEmail.addEventListener("input", function () {
-  checkEmailValidation(userEmail);
-});
+// userEmail.addEventListener("input", function () {
+//  checkEmailValidation(userEmail);
+// });
 
 function isEmailValid(email) {
   return email
@@ -24,8 +24,33 @@ function isEmailValid(email) {
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     );
 }
-function checkEmailValidation(userEmail) {
+// function checkEmailValidation(userEmail) {
+//   if (isEmailValid(userEmail.value)) {
+//     if (userEmail.classList.contains("border-error-red")) {
+//       userEmail.classList.remove("border-error-red");
+//     } else if (userEmail.classList.contains("border-default")) {
+//       userEmail.classList.remove("border-default");
+//     }
+//     userEmail.classList.add("border-confirm-green");
+//   } else {
+//     if (userEmail.classList.contains("border-confirm-green")) {
+//       userEmail.classList.remove("border-confirm-green");
+//     } else if (userEmail.classList.contains("border-default")) {
+//       userEmail.classList.remove("border-default");
+//     }
+//     userEmail.classList.add("border-error-red");
+//   }
+// }
+function continueSignIn() {
+  let userEmail = document.getElementById("userEmail");
   if (isEmailValid(userEmail.value)) {
+    var continueContainer = document.getElementById("continue-container");
+    var signInContainer = document.getElementById("sign-in-container");
+    var containerPassword = document.getElementById("container-password");
+
+    continueContainer.classList.add("hidden");
+    signInContainer.classList.remove("hidden");
+    containerPassword.classList.remove("hidden");
     if (userEmail.classList.contains("border-error-red")) {
       userEmail.classList.remove("border-error-red");
     } else if (userEmail.classList.contains("border-default")) {
@@ -39,21 +64,6 @@ function checkEmailValidation(userEmail) {
       userEmail.classList.remove("border-default");
     }
     userEmail.classList.add("border-error-red");
-  }
-}
-function continueSignIn() {
-  let userEmail = document.getElementById("userEmail");
-  if (isEmailValid(userEmail.value)) {
-    var continueContainer = document.getElementById("continue-container");
-    var signInContainer = document.getElementById("sign-in-container");
-    var containerPassword = document.getElementById("container-password");
-
-    continueContainer.classList.add("hidden");
-    signInContainer.classList.remove("hidden");
-    containerPassword.classList.remove("hidden");
-   
-  } else {
-
   }
 }
 

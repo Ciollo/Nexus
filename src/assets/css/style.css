@@ -192,6 +192,20 @@ body {
   width: 90%;
 }
 
+.lbl-no-account {
+  margin-top: 15px;
+  text-align: center;
+}
+.lbl-no-account .link-sign-up {
+  font-weight: 600;
+  cursor: pointer;
+  color: #0b57d0;
+  transition: all 0.3s ease-in-out;
+}
+.lbl-no-account .link-sign-up:hover {
+  font-weight: 700;
+}
+
 .bxl-github {
   font-size: 2.5rem;
   cursor: pointer;
@@ -484,9 +498,4 @@ body {
 .img-fluid {
   width: 700px; /* Imposta direttamente la larghezza */
   height: auto;
-}
-
-.lbl-no-account {
-  margin-top: 15px;
-  text-align: center;
 }
