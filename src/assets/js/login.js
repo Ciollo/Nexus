@@ -7,20 +7,54 @@ $(document).ready(function () {
 var toggleViewPasswordElement = document.getElementById("toggleViewPassword");
 var userPassword = document.getElementById("userPassword");
 var btnContinueSignIn = document.getElementById("btn-continue");
+var userEmail = document.getElementById("userEmail");
 
 toggleViewPasswordElement.addEventListener("click", toggleViewPassword);
 
 btnContinueSignIn.addEventListener("click", continueSignIn);
 
+userEmail.addEventListener("input", function () {
+  checkEmailValidation(userEmail);
+});
+
+function isEmailValid(email) {
+  return email
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+}
+function checkEmailValidation(userEmail) {
+  if (isEmailValid(userEmail.value)) {
+    if (userEmail.classList.contains("border-error-red")) {
+      userEmail.classList.remove("border-error-red");
+    } else if (userEmail.classList.contains("border-default")) {
+      userEmail.classList.remove("border-default");
+    }
+    userEmail.classList.add("border-confirm-green");
+  } else {
+    if (userEmail.classList.contains("border-confirm-green")) {
+      userEmail.classList.remove("border-confirm-green");
+    } else if (userEmail.classList.contains("border-default")) {
+      userEmail.classList.remove("border-default");
+    }
+    userEmail.classList.add("border-error-red");
+  }
+}
 function continueSignIn() {
-  var continueContainer = document.getElementById("continue-container");
-  var signInContainer = document.getElementById("sign-in-container");
-  var containerPassword = document.getElementById("container-password")
+  let userEmail = document.getElementById("userEmail");
+  if (isEmailValid(userEmail.value)) {
+    var continueContainer = document.getElementById("continue-container");
+    var signInContainer = document.getElementById("sign-in-container");
+    var containerPassword = document.getElementById("container-password");
 
-  continueContainer.classList.add("hidden");
-  signInContainer.classList.remove("hidden");
-  containerPassword.classList.remove("hidden");
+    continueContainer.classList.add("hidden");
+    signInContainer.classList.remove("hidden");
+    containerPassword.classList.remove("hidden");
+   
+  } else {
 
+  }
 }
 
 function toggleViewPassword() {

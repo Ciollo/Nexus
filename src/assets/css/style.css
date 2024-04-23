@@ -19,6 +19,21 @@
   font-weight: bold;
   font-style: italic, oblique;
 }
+.border-confirm-green {
+  border: 1px solid;
+  border-color: #00FF00;
+}
+
+.border-error-red {
+  border: 1px solid;
+  border-color: #FF0000;
+}
+
+.border-default {
+  border: 1px solid;
+  border-color: #000000;
+}
+
 .animated-body {
   opacity: 0;
 }
@@ -147,9 +162,11 @@ body {
   font-weight: lighter;
   padding: 10px 0px 10px 15px;
   width: 350px;
+  border: 100px solid none;
 }
 .container-input-form .input-form:focus {
   font-weight: 400;
+  outline: none;
 }
 .container-input-form .bx-at,
 .container-input-form .bxs-hide,

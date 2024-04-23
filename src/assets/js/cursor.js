@@ -1,39 +1,16 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   var cursor = document.querySelector(".cursor-light");
-  var links = document.querySelectorAll("a");
-  var btn = document.querySelectorAll("button");
-  var loginCard = document.querySelector(".login-card");
+  var noCursorEffectOnHover = document.querySelectorAll(".no-cursor-effect");
   var initCursor = false;
 
-  var selfCard = loginCard;
+  for (var i = 0; i < noCursorEffectOnHover.length; i++) {
+    var selfNoCursorEffectOnHover = noCursorEffectOnHover[i];
 
-  selfCard.addEventListener("mouseover", function() {
+    selfNoCursorEffectOnHover.addEventListener("mouseover", function() {
     cursor.classList.add("cursor-light--link");
-  })
-
-  selfCard.addEventListener("mouseout", function() {
+    });
+    selfNoCursorEffectOnHover.addEventListener("mouseout", function() {
     cursor.classList.remove("cursor-light--link");
-  })
-
-  for (var i = 0; i < links.length; i++) {
-    var selfLink = links[i];
-
-    selfLink.addEventListener("mouseover", function() {
-      cursor.classList.add("cursor-light--link");
-    });
-    selfLink.addEventListener("mouseout", function() {
-      cursor.classList.remove("cursor-light--link");
-    });
-  }
-
-  for (var i = 0; i < btn.length; i++) {
-    var selfBtn = btn[i];
-
-    selfBtn.addEventListener("mouseover", function() {
-      cursor.classList.add("cursor-light--link");
-    });
-    selfBtn.addEventListener("mouseout", function() {
-      cursor.classList.remove("cursor-light--link");
     });
   }
 

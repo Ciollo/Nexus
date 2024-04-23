@@ -1,3 +1,5 @@
+@use 'abstracts' as *;
+
 @mixin bxIconInput() {
     position: absolute;
     top: 43%;
@@ -30,9 +32,10 @@
         font-weight: lighter;
         padding: 10px 0px 10px 15px;
         width: 350px;
-
+        border: 100px solid none;
         &:focus {
             font-weight: 400;
+            outline: none;
         }
     }
 
