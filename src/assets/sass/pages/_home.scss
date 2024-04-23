@@ -4,12 +4,28 @@
 .title-nexus {
     color: $radiantLogoColor;
     font-size: 70px;
+    text-shadow: 
+            // 0 0 30vw $logoColor,
+            // 0 0 80vw $logoColor,
+            // 0 0 200vw $logoColor,
+            // 0 0 500vw $logoColor,
+            // 0 0 8000vw $logoColor,
+            // 0 0 10rem $logoColor,
+            // 0 0 1000rem $logoColor,
+            // 0 0 100px $logoColor,
+            0 0 100px $default-background,
+            0 0 200px $logoColor,
+            0 0 200px $default-background,
+            0 0 300px $logoColor,
+            0 0 300px $default-background;
 }
 
 .typing,
 .typed-cursor {
     color: white;
     font-size: 70px;
+    text-shadow: 
+            0px 0px 10px $logoColor;
 }
 
 .container-title-nexus,

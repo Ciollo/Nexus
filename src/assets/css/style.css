@@ -29,6 +29,9 @@
 
 * {
   font-family: "Mulish", sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -201,6 +204,39 @@ body {
   text-decoration-line: none;
 }
 
+.cursor-light {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background-color: rgb(13, 176, 246);
+  transition: transform 350ms ease;
+  transform: translate(-50%, -50%) scale(0.3);
+  z-index: 1000;
+}
+.cursor-light::before {
+  content: "";
+  mix-blend-mode: difference;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 0 100px 100px rgb(13, 176, 246);
+  height: 100%;
+  border-radius: 50%;
+  filter: blur(5px);
+}
+
+.cursor-light--link {
+  transform: scale(0);
+}
+
 .footer {
   display: flex;
   position: absolute;
@@ -330,6 +366,7 @@ body {
 }
 
 .img-splash-screen {
+  max-width: -moz-fit-content;
   max-width: fit-content;
   width: 70%;
   height: auto;
@@ -338,12 +375,14 @@ body {
 .title-nexus {
   color: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
   font-size: 70px;
+  text-shadow: 0 0 100px rgb(20, 22, 46), 0 0 200px rgb(13, 176, 246), 0 0 200px rgb(20, 22, 46), 0 0 300px rgb(13, 176, 246), 0 0 300px rgb(20, 22, 46);
 }
 
 .typing,
 .typed-cursor {
   color: white;
   font-size: 70px;
+  text-shadow: 0px 0px 10px rgb(13, 176, 246);
 }
 
 .container-title-nexus,
@@ -396,4 +435,4 @@ body {
 .lbl-no-account {
   margin-top: 15px;
   text-align: center;
-}
+}/*# sourceMappingURL=style.css.map */
