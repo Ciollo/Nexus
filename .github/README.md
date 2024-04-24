@@ -2,9 +2,9 @@
     <img width="300" alt="Nexus Logo" src="../src/assets/images/Nexus_logo_no_bg.png">
 </p>
 
-# 
-
 <div align = center>
+
+# Nexus - Your Ultimate Productivity Hub
 
 <br>
 
@@ -76,6 +76,7 @@ To get started with Nexus, follow these simple steps:
 | Features        | Status | Description |
 | --------------  | ------ | ----------- |
 | Controllo password durante il login | -  ❌  | - |
+| in | -  ❌  | - |
 
 
 ## 📄 Documentation
