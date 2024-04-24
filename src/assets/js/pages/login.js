@@ -89,9 +89,9 @@ linkSignUp.addEventListener("click", function () {
   goToPage("register.html");
 });
 
-// TODO CHANGE WHEN THE PAGE IS READY
+// todo TOGLIERE QUANDO PUBBLICATA LA PAGINE
 btnSignIn.addEventListener("click", function () {
-  // goToPage("home.html");
+  goToPage("home.html");
 });
 
 toggleViewPasswordElement.addEventListener("click", function () {
