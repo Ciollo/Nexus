@@ -1,6 +1,7 @@
 import { isEmailValid } from "../utils/emailUtils.js";
 import { goToPage } from "../utils/goToPages.js";
 import { toggleViewPassword } from "../utils/formUtils.js";
+import { isPasswordRobust } from "../utils/passwordUtils.js";
 
 var btnSignIn = document.getElementById("btn-sign-in");
 var nexusLogo = document.getElementById("nexusLogo");
@@ -91,7 +92,7 @@ linkSignUp.addEventListener("click", function () {
 
 // TODO CHANGE WHEN THE PAGE IS READY
 btnSignIn.addEventListener("click", function () {
-  goToPage("home.html");
+  // goToPage("home.html");
 });
 
 toggleViewPasswordElement.addEventListener("click", function () {

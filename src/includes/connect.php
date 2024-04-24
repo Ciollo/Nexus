@@ -12,5 +12,6 @@ if ($conn->error) {
 	echo "errore durante la connessione al db!";
 } else {
 	// echo "connesso al db!".'<br/>';
+    // echo "go out";
 }
 ?>
