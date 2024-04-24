@@ -206,11 +206,6 @@ body {
   font-weight: 700;
 }
 
-.bxl-github {
-  font-size: 2.5rem;
-  cursor: pointer;
-}
-
 .centered-container {
   display: flex;
   justify-content: center;
@@ -356,9 +351,6 @@ body {
 .header .container-navbar .top-nav-items .link-navbar:hover {
   text-shadow: 0 0 5px rgb(13, 176, 246), 0 0 10px rgb(13, 176, 246), 0 0 15px rgb(13, 176, 246), 0 0 20px rgb(13, 176, 246), 0 0 25px rgb(13, 176, 246), 0 0 30px rgb(13, 176, 246), 0 0 40px rgb(13, 176, 246), 0 0 70px rgb(13, 176, 246);
 }
-.header .container-navbar .top-nav-items .icon-navbar:hover {
-  text-shadow: 0 0 1px rgb(13, 176, 246), 0 0 70px rgb(13, 176, 246);
-}
 .header .container-buttons-go-to {
   display: flex;
   justify-content: center;
@@ -375,8 +367,27 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  font-size: 50px;
+  font-size: 2.5rem;
+  cursor: pointer;
   margin: 0px 50px;
+}
+.header .bxl-github:hover {
+  text-shadow: 0 0 1px rgb(13, 176, 246), 0 0 70px rgb(13, 176, 246);
+}
+.header .bx-user-circle {
+  background-image: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: 2.5rem;
+  cursor: pointer;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+.header .bx-user-circle:hover {
+  text-shadow: 0 0 1px rgb(13, 176, 246), 0 0 70px rgb(13, 176, 246);
 }
 .header .navbar-btn-go-to-sign-in,
 .header .navbar-btn-go-to-sign-up {

@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['logged'] = true;
             $_SESSION['email'] = $email;
             echo "Login riuscito!";
-            header("Location: ../pages/user.html");
+            header("Location: ../pages/main.html");
         } else {
             echo "Credenziali errate. Login fallito!";
         }

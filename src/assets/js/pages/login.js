@@ -91,7 +91,7 @@ linkSignUp.addEventListener("click", function () {
 
 // todo TOGLIERE QUANDO PUBBLICATA LA PAGINE
 btnSignIn.addEventListener("click", function () {
-  goToPage("home.html");
+  goToPage("main.html");
 });
 
 toggleViewPasswordElement.addEventListener("click", function () {

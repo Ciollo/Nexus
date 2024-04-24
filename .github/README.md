@@ -75,8 +75,9 @@ To get started with Nexus, follow these simple steps:
 
 | Features        | Status | Description |
 | --------------  | ------ | ----------- |
-| Controllo password durante il login | -  ❌  | - |
-| in | -  ❌  | - |
+| Controllo password durante register | -  ❌  | - |
+| Cursor in localhost non funziona | -  ❌  | - |
+| Spostare navbar main in laterale | -  ❌  | - |
 
 
 ## 📄 Documentation

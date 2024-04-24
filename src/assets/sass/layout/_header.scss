@@ -1,5 +1,21 @@
 @use '../abstracts'as *;
 
+@mixin navBarIcon() {
+    background-image: $radiantLogoColor;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-size: 2.5rem;
+    cursor: pointer;
+        &:hover {
+            text-shadow: 
+                0 0 1px $logoColor,
+                0 0 70px $logoColor,
+        }
+}
+
 .header {
     // display: flex;
     // justify-content: space-between;
@@ -71,16 +87,14 @@
                 }
             }
 
-            .icon-navbar {
-                &:hover {
-                    text-shadow:
-                        0 0 1px $logoColor,
-                        0 0 70px $logoColor,
-                }
-            
-                }
-            
+            // .icon-navbar {
+            //     &:hover {
+            //         text-shadow:
+            //             0 0 1px $logoColor,
+            //             0 0 70px $logoColor,
+            //     }
 
+            // }
         }
     }
 
@@ -96,14 +110,15 @@
     }
 
     .bxl-github {
-        background-image: $radiantLogoColor;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-text-fill-color: transparent;
-        font-size: 50px;
+        @include navBarIcon();
         margin: 0px 50px;
+    }
+
+    .bx-user-circle {
+        @include navBarIcon();
+        font-size: 2.5rem;
+        cursor: pointer;
+
     }
 
     .navbar-btn-go-to-sign-in,

@@ -36,7 +36,7 @@ if (
                 $_SESSION['logged'] = true;
                 $_SESSION['email'] = $email;
                 echo "Utente registrato con successo nel database.";
-                header("refresh:3; url=../pages/user.html");
+            header("Location: ../pages/main.html");
             } else {
                 echo "Errore durante l'inserimento dell'utente nel database: " . $conn->error;
             }
