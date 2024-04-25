@@ -398,6 +398,50 @@ body {
   margin-left: 5px;
 }
 
+.header-main .navbar-side {
+  position: fixed;
+  height: 100vh;
+  background-color: #40405c;
+}
+.header-main .navbar-side .navbar-side-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-direction: column;
+  margin-right: 2rem;
+  padding-left: 0;
+}
+.header-main .navbar-side .navbar-side-list .navbar-item {
+  border: 1px solid rgb(20, 22, 46);
+  border-style: solid none;
+  padding: 0rem 1rem;
+}
+.header-main .navbar-side .navbar-side-list .navbar-item :hover {
+  cursor: pointer;
+}
+.header-main .navbar-side .navbar-side-list .navbar-item .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 5rem;
+  text-decoration: none;
+}
+.header-main .navbar-side .navbar-side-list .navbar-item .nav-link:visited {
+  color: inherit;
+}
+.header-main .navbar-side .navbar-side-list .navbar-item .nav-link .user-pfp {
+  border-radius: 50%;
+}
+.header-main .navbar-side .navbar-side-list .navbar-item .nav-link .link-img {
+  width: 2rem;
+}
+.header-main .navbar-side .navbar-side-list .navbar-item .nav-link .nav-link-title {
+  margin-left: 1rem;
+  font-size: 1.1rem;
+  color: #fdfdfd;
+}
+
 .login-card {
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;

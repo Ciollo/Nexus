@@ -67,6 +67,7 @@ To get started with Nexus, follow these simple steps:
 | Side bar              | -  ❌  |
 | Barba JS              | -  🚧  |
 | Sistemare grafica     | -  🚧  |
+| Personalize scrollbar | -  ❌  |
 
 ## 🚧️ Little Fixes
 ❌ = Not Fixed yet <br>

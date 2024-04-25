@@ -8,10 +8,35 @@
 <link rel="stylesheet" href="../assets/css/style.css">
 <title>Main</title>
 </head>
+
 <body class="site-bg">
     <div class="page-container">
         <div class="content-wrap">
-            <header class="header" data-barba="wrapper">
+            <header class="header-main no-cursor-effect">
+                <nav class="navbar-side">
+                    <ul class=" navbar-side-list">
+                        <li class="navbar-item">
+                            <a class="nav-link" href="user.html">
+                                <img src="/src/assets/images/nexus_logo.png" alt="user-pfp" class="user-pfp link-img">
+                                <!-- TODO GOING TO DO A QUERY TO GET THE USER PFP-->
+                                <span class="nav-link-title">
+                                    UserName
+                                </span>
+                            </a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link" href="main.html">
+                                <img src="/src/assets/images/nexus_logo.png" alt="user-pfp" class="link-img">
+                                <span class="nav-link-title">
+                                    Main
+                                </span>
+                            </a>
+                        </li>
+ 
+                    </ul>
+                </nav>
+            </header>
+            <!-- <header class="header" data-barba="wrapper">
                 <div class="container-logo">
                     <img src="../assets/images/Nexus_logo_no_bg.png" alt="Nexus logo" class="logo no-cursor-effect" id="nexusLogo">
                 </div>
@@ -29,14 +54,11 @@
                     </ul>
                 </nav>
                 <div class="container-buttons-go-to">
-                    <!-- <button class="btn-go-to-sign-in navbar-btn-go-to-sign-in no-cursor-effect" id="btnGoToSignIn">Login</button>
-                    <button class="btn-go-to-sign-up navbar-btn-go-to-sign-up no-cursor-effect" id="btnGoToSignUp">Sign Up</button> -->
-                    <!-- <button class="btn-go-to-sign-up navbar-btn-go-to-sign-up no-cursor-effect" id="btnGoToSignUp"></button>  -->
                 <i class='bx bx-user-circle no-cursor-effect' ></i>
                 </div>
-            </header>
+            </header> -->
             <div class="page-content" data-barba="container" data-barba-namespace="home">
-                
+
             </div>
         </div>
         <footer class="footer">
@@ -50,7 +72,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script type="module" src="../assets/js/pages/home.js"></script>
+    <script type="module" src="../assets/js/pages/main.js"></script>
     <script src="../assets/js/utils/cursor.js"></script>
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>

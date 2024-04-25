@@ -9,11 +9,12 @@
     -moz-text-fill-color: transparent;
     font-size: 2.5rem;
     cursor: pointer;
-        &:hover {
-            text-shadow: 
-                0 0 1px $logoColor,
-                0 0 70px $logoColor,
-        }
+
+    &:hover {
+        text-shadow:
+            0 0 1px $logoColor,
+            0 0 70px $logoColor,
+    }
 }
 
 .header {
@@ -132,4 +133,60 @@
         margin-left: 5px;
     }
 
+}
+
+.header-main {
+
+    .navbar-side {
+        position: fixed;
+        height: 100vh;
+        background-color: #40405c;
+
+        .navbar-side-list {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-direction: column;
+            margin-right: 2rem;
+            padding-left: 0;
+
+            .navbar-item {
+                border: 1px solid $default-background;
+                border-style: solid none;
+                padding: 0rem 1rem;
+
+                :hover {
+                    cursor: pointer;
+                }
+
+                .nav-link {
+                    display: flex;
+                    align-items: center;
+                    justify-content: left;
+                    height: 5rem;
+                    text-decoration: none;
+
+                    &:visited {
+                        color: inherit;
+                    }
+
+                    .user-pfp {
+                        border-radius: 50%;
+                    }
+
+
+                    .link-img {
+                        width: 2rem;
+                    }
+
+                    .nav-link-title {
+                        margin-left: 1rem;
+                        font-size: 1.1rem;
+                        color: #fdfdfd;
+                    }
+                }
+            }
+        }
+    }
 }
