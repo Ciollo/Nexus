@@ -437,6 +437,9 @@ body {
   height: 4rem;
   text-decoration: none;
 }
+.header-main .navbar-side .navbar-side-list .navbar-item .nav-title {
+  justify-content: center;
+}
 .header-main .navbar-side .navbar-side-list .navbar-item .nav-title .title-img {
   width: 7rem;
 }
@@ -480,7 +483,7 @@ body {
   display: none;
 }
 .header-main .navbar-side-not-active {
-  width: 5%;
+  width: 6rem;
 }
 
 .login-card {
