@@ -17,6 +17,8 @@ $borderDefaultColor: #000000;
 
 $linkColorDefault: #0b57d0;
 
+$default-navbar-side-color: #40405c;
+
 @mixin radiantColor() {
   background-image: $radiantLogoColor;
   -webkit-background-clip: text;

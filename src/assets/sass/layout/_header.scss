@@ -131,19 +131,28 @@
             justify-content: center;
             list-style: none;
             flex-direction: column;
-            margin: 0 2rem;
+            // margin: 0 0rem;
             padding-left: 0;
 
             .navbar-item {
+                padding: 0rem 2rem;
                 border: 1px solid $default-background;
                 border-style: none none solid none;
 
+
                 &:hover {
                     cursor: pointer;
+                    background-color: darken($color: $default-navbar-side-color, $amount: 5)
+                }
+
+                &:first-child {
+                    cursor: default;
+                    background-color: $default-navbar-side-color;
                 }
 
                 &:last-child {
                     margin-top: auto;
+                    margin-bottom: 1rem;
                     border-style: solid none none none;
                 }
 
@@ -152,7 +161,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: left;
-                    height: 5rem;
+                    height: 4rem;
                     text-decoration: none;
                 }
 
@@ -163,11 +172,14 @@
                         width: 7rem;
                     }
 
-                    .btn-close-navbar {
+                    .btn-close-open-navbar {
                         // margin-left: 1rem;
                         font-size: 1.7rem;
                         @include radiantColor;
                         transition: all 0.5s ease-in-out;
+                        &:hover {
+                            cursor: pointer;
+                        }
                     }
 
                     .btn-navbar-not-active {
@@ -177,6 +189,7 @@
                     .btn-navbar-active {
                         margin-left: 1rem;
                     }
+
                 }
 
                 .nav-link {

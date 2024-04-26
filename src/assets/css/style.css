@@ -409,18 +409,24 @@ body {
   justify-content: center;
   list-style: none;
   flex-direction: column;
-  margin: 0 2rem;
   padding-left: 0;
 }
 .header-main .navbar-side .navbar-side-list .navbar-item {
+  padding: 0rem 2rem;
   border: 1px solid rgb(20, 22, 46);
   border-style: none none solid none;
 }
 .header-main .navbar-side .navbar-side-list .navbar-item:hover {
   cursor: pointer;
+  background-color: #36364d;
+}
+.header-main .navbar-side .navbar-side-list .navbar-item:first-child {
+  cursor: default;
+  background-color: #40405c;
 }
 .header-main .navbar-side .navbar-side-list .navbar-item:last-child {
   margin-top: auto;
+  margin-bottom: 1rem;
   border-style: solid none none none;
 }
 .header-main .navbar-side .navbar-side-list .navbar-item .nav-title,
@@ -428,13 +434,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: left;
-  height: 5rem;
+  height: 4rem;
   text-decoration: none;
 }
 .header-main .navbar-side .navbar-side-list .navbar-item .nav-title .title-img {
   width: 7rem;
 }
-.header-main .navbar-side .navbar-side-list .navbar-item .nav-title .btn-close-navbar {
+.header-main .navbar-side .navbar-side-list .navbar-item .nav-title .btn-close-open-navbar {
   font-size: 1.7rem;
   background-image: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
   -webkit-background-clip: text;
@@ -443,6 +449,9 @@ body {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   transition: all 0.5s ease-in-out;
+}
+.header-main .navbar-side .navbar-side-list .navbar-item .nav-title .btn-close-open-navbar:hover {
+  cursor: pointer;
 }
 .header-main .navbar-side .navbar-side-list .navbar-item .nav-title .btn-navbar-not-active {
   rotate: 180deg;
