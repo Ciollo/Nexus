@@ -157,13 +157,14 @@
                 }
 
                 .nav-title {
+                    // justify-content: center;
 
                     .title-img {
                         width: 7rem;
                     }
 
                     .btn-close-navbar {
-                        margin-left: 1rem;
+                        // margin-left: 1rem;
                         font-size: 1.7rem;
                         @include radiantColor;
                         transition: all 0.5s ease-in-out;
@@ -174,6 +175,7 @@
                     }
 
                     .btn-navbar-active {
+                        margin-left: 1rem;
                     }
                 }
 
@@ -197,26 +199,20 @@
                         color: #fdfdfd;
                     }
                 }
+                .display-block {
+                    display: block;
+                }
+                .display-none {
+                    display: none;
+                }
             }
         }
     }
 
     .navbar-side-active {
-        height: 100vh;
-        background-color: #40405c;
-        position: fixed;
-        z-index: 1000;
-        top: 0;
-        left: 0;
     }
 
     .navbar-side-not-active {
         width: 5%;
-        height: 100vh;
-        background-color: #40405c;
-        position: fixed;
-        z-index: 1000;
-        top: 0;
-        left: 0;
     }
 }

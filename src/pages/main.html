@@ -13,18 +13,18 @@
     <div class="page-container">
         <div class="content-wrap">
             <header class="header-main no-cursor-effect">
-                <nav class="navbar-side navbar-side-active" id="navbar-side">
+                <nav class="navbar-side navbar-side-not-active" id="navbar-side">
                     <ul class=" navbar-side-list">
                         <li class="navbar-item">
                             <a class="nav-title">
-                                <img src="/src/assets/images/Nexus_logo_no_bg.png" alt="title nexus" class="title-img">
+                                <img src="/src/assets/images/Nexus_logo_no_bg.png" alt="title nexus" class="title-img display-none" id="img-title">
                                 <i class='bx bxs-chevrons-left btn-close-navbar btn-navbar-not-active' id="btn-close-open-navbar"></i>
                             </a>
                         </li>
                         <li class="navbar-item">
                             <a class="nav-link" href="main.html">
                                 <img src="/src/assets/images/nexus_logo.png" alt="user-pfp" class="link-img">
-                                <span class="nav-link-title">
+                                <span class="nav-link-title display-none">
                                     Main
                                 </span>
                             </a>
@@ -32,7 +32,7 @@
                         <li class="navbar-item">
                             <a class="nav-link" href="main.html">
                                 <img src="/src/assets/images/nexus_logo.png" alt="user-pfp" class="link-img">
-                                <span class="nav-link-title">
+                                <span class="nav-link-title display-none">
                                     Page 1
                                 </span>
                             </a>
@@ -40,7 +40,7 @@
                         <li class="navbar-item">
                             <a class="nav-link" href="main.html">
                                 <img src="/src/assets/images/nexus_logo.png" alt="user-pfp" class="link-img">
-                                <span class="nav-link-title">
+                                <span class="nav-link-title display-none">
                                     Page 2
                                 </span>
                             </a>
@@ -49,7 +49,7 @@
                             <a class="nav-link" href="user.html">
                                 <img src="/src/assets/images/default_pfp.jpg" alt="user-pfp" class="user-pfp link-img">
                                 <!-- TODO GOING TO DO A QUERY TO GET THE USER PFP-->
-                                <span class="nav-link-title">
+                                <span class="nav-link-title display-none">
                                     UserName
                                 </span>
                             </a>
@@ -82,12 +82,13 @@
 
             </div>
         </div>
-        <footer class="footer">
+        <!-- TODO IDK forse togliere il footer nelle pagine di main? -->
+        <!-- <footer class="footer">
             <img class="logo-mini-footer" src="../assets/images/Nexus_only_logo_no_bg.png">
             <span class="no-cursor-effect">
                 © 2024 Nexus
             </span>
-        </footer>
+        </footer> -->
     </div>
     <div class="cursor-light"></div>
 
