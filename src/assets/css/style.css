@@ -404,28 +404,49 @@ body {
   background-color: #40405c;
 }
 .header-main .navbar-side .navbar-side-list {
-  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   list-style: none;
   flex-direction: column;
-  margin-right: 2rem;
+  margin: 0 2rem;
   padding-left: 0;
 }
 .header-main .navbar-side .navbar-side-list .navbar-item {
   border: 1px solid rgb(20, 22, 46);
-  border-style: solid none;
-  padding: 0rem 1rem;
+  border-style: none none solid none;
 }
-.header-main .navbar-side .navbar-side-list .navbar-item :hover {
+.header-main .navbar-side .navbar-side-list .navbar-item:hover {
   cursor: pointer;
 }
+.header-main .navbar-side .navbar-side-list .navbar-item:last-child {
+  margin-top: auto;
+  border-style: solid none none none;
+}
+.header-main .navbar-side .navbar-side-list .navbar-item .nav-title,
 .header-main .navbar-side .navbar-side-list .navbar-item .nav-link {
   display: flex;
   align-items: center;
   justify-content: left;
   height: 5rem;
   text-decoration: none;
+}
+.header-main .navbar-side .navbar-side-list .navbar-item .nav-title .title-img {
+  width: 7rem;
+}
+.header-main .navbar-side .navbar-side-list .navbar-item .nav-title .btn-close-navbar {
+  margin-left: 1rem;
+  font-size: 1.7rem;
+  background-image: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  transition: all 0.5s ease-in-out;
+}
+.header-main .navbar-side .navbar-side-list .navbar-item .nav-title .btn-navbar-not-active {
+  rotate: 180deg;
 }
 .header-main .navbar-side .navbar-side-list .navbar-item .nav-link:visited {
   color: inherit;
@@ -440,6 +461,23 @@ body {
   margin-left: 1rem;
   font-size: 1.1rem;
   color: #fdfdfd;
+}
+.header-main .navbar-side-active {
+  height: 100vh;
+  background-color: #40405c;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+.header-main .navbar-side-not-active {
+  width: 5%;
+  height: 100vh;
+  background-color: #40405c;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
 }
 
 .login-card {

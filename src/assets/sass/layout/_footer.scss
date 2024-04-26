@@ -17,12 +17,7 @@
     }
 
     span {
-        background-image: $radiantLogoColor;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-text-fill-color: transparent;
+        @include radiantColor;
         font-size: 14px;
         font-weight: 400;
         letter-spacing: 0.025em;

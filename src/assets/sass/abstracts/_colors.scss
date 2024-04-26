@@ -16,3 +16,12 @@ $errorRed: #FF0000;
 $borderDefaultColor: #000000;
 
 $linkColorDefault: #0b57d0;
+
+@mixin radiantColor() {
+  background-image: $radiantLogoColor;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
