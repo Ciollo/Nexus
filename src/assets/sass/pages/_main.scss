@@ -1,5 +1,75 @@
+@use '../abstracts'as *;
+
 .navbar-side {
     position: fixed;
     height: 100vh;
     background-color: white;
+}
+
+.main-page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // background-color: white;
+    margin-left: 6rem;
+    padding: 0;
+    color: white;
+
+    .container-banner {
+        width: 100%;
+        height: 20rem;
+
+        .banner {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .container-img-page,
+    .main-page-title,
+    .user-content {
+        margin-left: 10rem;
+    }
+
+    .container-img-page {
+        .img-page {
+            width: 10rem;
+            height: 10rem;
+            border: 1px solid white; //GOING TO CHANGE
+        }
+    }
+
+    .container-user-page {
+        .main-page-title {
+            margin-top: 3rem;
+            // padding-left: 10rem;
+
+            .main-page-title-text {
+                font-size: 2rem;
+                font-weight: bold;
+                margin-bottom: 2rem;
+                border: none;
+                background-color: $default-background;
+                color: $default-font-color;
+                resize: none;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        .user-content {
+            background-color: $default-background;
+            color: $default-font-color;
+            border: none;
+            resize: none;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+    }
 }

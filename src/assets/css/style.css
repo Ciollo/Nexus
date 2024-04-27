@@ -594,6 +594,64 @@ body {
   box-shadow: 0 0 10px rgb(13, 176, 246), 0 0 40px rgb(13, 176, 246), 0 0 80px rgb(13, 176, 246);
 }
 
+.navbar-side {
+  position: fixed;
+  height: 100vh;
+  background-color: white;
+}
+
+.main-page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 6rem;
+  padding: 0;
+  color: white;
+}
+.main-page-content .container-banner {
+  width: 100%;
+  height: 20rem;
+}
+.main-page-content .container-banner .banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main-page-content .container-img-page,
+.main-page-content .main-page-title,
+.main-page-content .user-content {
+  margin-left: 10rem;
+}
+.main-page-content .container-img-page .img-page {
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid white;
+}
+.main-page-content .container-user-page .main-page-title {
+  margin-top: 3rem;
+}
+.main-page-content .container-user-page .main-page-title .main-page-title-text {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  border: none;
+  background-color: rgb(20, 22, 46);
+  color: #fdfdfd;
+  resize: none;
+}
+.main-page-content .container-user-page .main-page-title .main-page-title-text:focus {
+  outline: none;
+}
+.main-page-content .container-user-page .user-content {
+  background-color: rgb(20, 22, 46);
+  color: #fdfdfd;
+  border: none;
+  resize: none;
+}
+.main-page-content .container-user-page .user-content:focus {
+  outline: none;
+}
+
 .img-fluid {
   width: 700px; /* Imposta direttamente la larghezza */
   height: auto;
