@@ -673,6 +673,23 @@ body {
   margin-left: 12.7rem;
 }
 
+.container-setting-page {
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.6rem;
+  display: flex;
+}
+.container-setting-page .icon-setting {
+  font-size: 1.7rem;
+  cursor: pointer;
+  background-image: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
 .img-fluid {
   width: 700px; /* Imposta direttamente la larghezza */
   height: auto;

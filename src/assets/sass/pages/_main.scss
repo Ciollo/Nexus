@@ -98,13 +98,27 @@
 
     }
 
-  
-}  
+
+}
 
 .main-page-content-not-active {
-        margin-left: 6rem;
-    }
+    margin-left: 6rem;
+}
 
-    .main-page-content-active {
-        margin-left: 12.7rem;
+.main-page-content-active {
+    margin-left: 12.7rem;
+}
+
+.container-setting-page {
+    position: absolute;
+    bottom: 0.6rem;
+    right: 0.6rem;
+    display: flex;
+    // background-color: white;
+
+    .icon-setting {
+        font-size: 1.7rem;
+        cursor: pointer;
+        @include radiantColor();
     }
+}
