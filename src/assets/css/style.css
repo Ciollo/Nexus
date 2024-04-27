@@ -47,9 +47,13 @@
   user-select: none;
 }
 
+html,
 body {
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -218,7 +222,6 @@ body {
 }
 
 .content-wrap {
-  padding-bottom: 10.5rem;
   /* Footer height */
 }
 
@@ -401,7 +404,7 @@ body {
 .header-main .navbar-side {
   position: fixed;
   height: 100vh;
-  background-color: #40405c;
+  background-color: #1c1f40;
 }
 .header-main .navbar-side .navbar-side-list {
   height: 100%;
@@ -418,11 +421,11 @@ body {
 }
 .header-main .navbar-side .navbar-side-list .navbar-item:hover {
   cursor: pointer;
-  background-color: #36364d;
+  background-color: #14162e;
 }
 .header-main .navbar-side .navbar-side-list .navbar-item:first-child {
   cursor: default;
-  background-color: #40405c;
+  background-color: #1c1f40;
 }
 .header-main .navbar-side .navbar-side-list .navbar-item:last-child {
   margin-top: auto;
@@ -619,19 +622,24 @@ body {
 }
 .main-page-content .container-img-page,
 .main-page-content .main-page-title,
-.main-page-content .user-content {
-  margin-left: 10rem;
+.main-page-content .container-user-content,
+.main-page-content .container-banner {
+  margin-left: 6.9rem;
 }
 .main-page-content .container-img-page .img-page {
   width: 10rem;
   height: 10rem;
   border: 1px solid white;
 }
+.main-page-content .container-user-page {
+  padding-left: 10rem;
+}
 .main-page-content .container-user-page .main-page-title {
   margin-top: 3rem;
 }
 .main-page-content .container-user-page .main-page-title .main-page-title-text {
-  font-size: 2rem;
+  width: 100%;
+  font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
   border: none;
@@ -642,13 +650,22 @@ body {
 .main-page-content .container-user-page .main-page-title .main-page-title-text:focus {
   outline: none;
 }
-.main-page-content .container-user-page .user-content {
+.main-page-content .container-user-page .container-user-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.main-page-content .container-user-page .container-user-content .user-content {
+  height: 100%;
+  width: 100%;
   background-color: rgb(20, 22, 46);
   color: #fdfdfd;
   border: none;
   resize: none;
+  scrollbar-width: none;
 }
-.main-page-content .container-user-page .user-content:focus {
+.main-page-content .container-user-page .container-user-content .user-content:focus {
   outline: none;
 }
 

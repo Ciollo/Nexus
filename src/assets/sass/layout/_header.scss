@@ -123,7 +123,7 @@
     .navbar-side {
         position: fixed;
         height: 100vh;
-        background-color: #40405c;
+        background-color: $default-navbar-side-color;
 
         .navbar-side-list {
             height: 100%;

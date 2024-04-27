@@ -78,7 +78,18 @@ To get started with Nexus, follow these simple steps:
 | --------------  | ------ | ----------- |
 | Controllo password durante register | -  ❌  | - |
 | Cursor in localhost non funziona | -  ❌  | - |
-| Spostare navbar main in laterale | -  ❌  | - |
+| Spostare navbar main in laterale | - ✅    | - |
+| Aggiungere bottoni per la modificare del banner e immagine page | -  ❌  | - |
+| Cambiare tutti i px con rem| -  ❌  | - |
+| text area main | -  ❌  | - |
+## 💭 Thoughts
+❌ = Nah <br>
+💭 = Have to think. <br>
+✅ = Going to do
+
+| Features        | Status | Description |
+| --------------  | ------ | ----------- |
+| Navbar togliere il bottone laterale per aprirlo e sostituirlo con un hover | -  💭  | - |
 
 
 ## 📄 Documentation

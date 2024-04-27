@@ -28,11 +28,14 @@
 
     .container-img-page,
     .main-page-title,
-    .user-content {
-        margin-left: 10rem;
+    .container-user-content,
+    .container-banner {
+        margin-left: 6.9rem;
     }
 
     .container-img-page {
+
+        //GOING TO CHANGE to make it like notion
         .img-page {
             width: 10rem;
             height: 10rem;
@@ -41,12 +44,14 @@
     }
 
     .container-user-page {
+
+        padding-left: 10rem;
         .main-page-title {
             margin-top: 3rem;
-            // padding-left: 10rem;
 
             .main-page-title-text {
-                font-size: 2rem;
+                width: 100%;
+                font-size: 2.5rem;
                 font-weight: bold;
                 margin-bottom: 2rem;
                 border: none;
@@ -60,14 +65,24 @@
             }
         }
 
-        .user-content {
-            background-color: $default-background;
-            color: $default-font-color;
-            border: none;
-            resize: none;
+        .container-user-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-            &:focus {
-                outline: none;
+            height: 100%;
+            .user-content {
+            height: 100%;
+                width: 100%;
+                background-color: $default-background;
+                color: $default-font-color;
+                border: none;
+                resize: none;
+                scrollbar-width: none;
+
+                &:focus {
+                    outline: none;
+                }
             }
         }
 

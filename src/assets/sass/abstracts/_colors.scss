@@ -17,7 +17,8 @@ $borderDefaultColor: #000000;
 
 $linkColorDefault: #0b57d0;
 
-$default-navbar-side-color: #40405c;
+// $default-navbar-side-color: #40405c;
+$default-navbar-side-color: lighten($default-background, 5%);
 
 @mixin radiantColor() {
   background-image: $radiantLogoColor;
