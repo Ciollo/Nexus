@@ -62,26 +62,34 @@
                 &:focus {
                     outline: none;
                 }
+
+                &:empty::after{
+                    content: attr(data-text);
+                    color: $default-placeholder-color;
+                }
             }
         }
 
         .container-user-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
 
             height: 100%;
             .user-content {
-            height: 100%;
                 width: 100%;
+
+            height: 100%;
                 background-color: $default-background;
                 color: $default-font-color;
-                border: none;
-                resize: none;
-                scrollbar-width: none;
 
                 &:focus {
                     outline: none;
+                }
+
+                &:empty::after{
+                    content: attr(data-text);
+                    color: $default-placeholder-color;
                 }
             }
         }

@@ -67,7 +67,7 @@ To get started with Nexus, follow these simple steps:
 | Side bar              | -  ❌  |
 | Barba JS              | -  🚧  |
 | Sistemare grafica     | -  🚧  |
-| Personalize scrollbar | -  ❌  |
+| Personalize scrollbar(nota: su firefox non sono supportate) | -  ❌  |
 
 ## 🚧️ Little Fixes
 ❌ = Not Fixed yet <br>
@@ -81,7 +81,8 @@ To get started with Nexus, follow these simple steps:
 | Spostare navbar main in laterale | - ✅    | - |
 | Aggiungere bottoni per la modificare del banner e immagine page | -  ❌  | - |
 | Cambiare tutti i px con rem| -  ❌  | - |
-| text area main | -  ❌  | - |
+| div content editable br quando al limite | -  ❌  | - |
+
 ## 💭 Thoughts
 ❌ = Nah <br>
 💭 = Have to think. <br>
@@ -90,6 +91,7 @@ To get started with Nexus, follow these simple steps:
 | Features        | Status | Description |
 | --------------  | ------ | ----------- |
 | Navbar togliere il bottone laterale per aprirlo e sostituirlo con un hover | -  💭  | - |
+| Togliere personlized cursor nelle pages? | -  💭  | - |
 
 
 ## 📄 Documentation
