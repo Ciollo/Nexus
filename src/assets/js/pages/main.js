@@ -20,4 +20,8 @@ function toggleNavbar() {
         text.classList.toggle('display-none');
         text.classList.toggle('display-block');
     }
+
+    let mainPageContent = document.querySelector(".main-page-content");
+    mainPageContent.classList.toggle('main-page-content-not-active');
+    mainPageContent.classList.toggle('main-page-content-active');
 };

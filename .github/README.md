@@ -73,7 +73,6 @@ To get started with Nexus, follow these simple steps:
 ❌ = Not Fixed yet <br>
 🚧 = On working    <br>
 ✅ = Fixed    
-
 | Features        | Status | Description |
 | --------------  | ------ | ----------- |
 | Controllo password durante register | -  ❌  | - |
