@@ -24,28 +24,29 @@
         }
     }
 
-
-
-    .container-img-page,
-    .main-page-title,
-    .container-user-content,
-    .container-banner {
-        // margin-left: 6.7rem;
-    }
-
-    .container-img-page {
-
-        //GOING TO CHANGE to make it like notion
-        .img-page {
-            width: 10rem;
-            height: 10rem;
-            border: 1px solid white; //GOING TO CHANGE
-        }
-    }
+    // .container-img-page,
+    // .main-page-title,
+    // .container-user-content,
+    // .container-banner {
+    //     // margin-left: 6.7rem;
+    // }
 
     .container-user-page {
 
         padding-left: 10rem;
+
+        .container-img-page {
+
+            //GOING TO CHANGE to make it like notion
+            .img-page {
+                width: 10rem;
+                height: 10rem;
+                border: 1px solid white; //GOING TO CHANGE
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
 
         .main-page-title {
             margin-top: 3rem;
@@ -67,6 +68,9 @@
                 &:empty::after {
                     content: attr(data-text);
                     color: $default-placeholder-color;
+                }
+                &:hover {
+                    cursor: text;
                 }
             }
         }
@@ -93,12 +97,13 @@
                     content: attr(data-text);
                     color: $default-placeholder-color;
                 }
+                &:hover {
+                    cursor: text;
+                }
             }
         }
 
     }
-
-
 }
 
 .main-page-content-not-active {
@@ -107,18 +112,4 @@
 
 .main-page-content-active {
     margin-left: 12.7rem;
-}
-
-.container-setting-page {
-    position: absolute;
-    bottom: 0.6rem;
-    right: 0.6rem;
-    display: flex;
-    // background-color: white;
-
-    .icon-setting {
-        font-size: 1.7rem;
-        cursor: pointer;
-        @include radiantColor();
-    }
 }

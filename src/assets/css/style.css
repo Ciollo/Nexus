@@ -490,6 +490,48 @@ body {
   width: 6rem;
 }
 
+.header-main-top {
+  width: 100%;
+  height: 3rem;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(20, 22, 46);
+  margin-left: 6rem;
+}
+.header-main-top .navbar-top-logo-title {
+  display: flex;
+  align-items: center;
+}
+.header-main-top .navbar-top-logo-title .title-img-navbar {
+  margin-left: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  border: 1px solid white;
+}
+.header-main-top .navbar-top-logo-title .navbar-top-title-page {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fdfdfd;
+}
+.header-main-top .container-setting-page {
+  display: flex;
+  margin-right: 7rem;
+}
+.header-main-top .container-setting-page .icon-setting {
+  font-size: 1.7rem;
+  cursor: pointer;
+  background-image: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
 .login-card {
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -620,13 +662,16 @@ body {
   height: 100%;
   object-fit: cover;
 }
-.main-page-content .container-img-page .img-page {
+.main-page-content .container-user-page {
+  padding-left: 10rem;
+}
+.main-page-content .container-user-page .container-img-page .img-page {
   width: 10rem;
   height: 10rem;
   border: 1px solid white;
 }
-.main-page-content .container-user-page {
-  padding-left: 10rem;
+.main-page-content .container-user-page .container-img-page .img-page:hover {
+  cursor: pointer;
 }
 .main-page-content .container-user-page .main-page-title {
   margin-top: 3rem;
@@ -648,6 +693,9 @@ body {
   content: attr(data-text);
   color: rgba(153, 153, 153, 0.6);
 }
+.main-page-content .container-user-page .main-page-title .main-page-title-text:hover {
+  cursor: text;
+}
 .main-page-content .container-user-page .container-user-content {
   height: 100%;
 }
@@ -664,6 +712,9 @@ body {
   content: attr(data-text);
   color: rgba(153, 153, 153, 0.6);
 }
+.main-page-content .container-user-page .container-user-content .user-content:hover {
+  cursor: text;
+}
 
 .main-page-content-not-active {
   margin-left: 6rem;
@@ -671,23 +722,6 @@ body {
 
 .main-page-content-active {
   margin-left: 12.7rem;
-}
-
-.container-setting-page {
-  position: absolute;
-  bottom: 0.6rem;
-  right: 0.6rem;
-  display: flex;
-}
-.container-setting-page .icon-setting {
-  font-size: 1.7rem;
-  cursor: pointer;
-  background-image: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
 }
 
 .img-fluid {
