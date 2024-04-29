@@ -135,7 +135,7 @@
             padding-left: 0;
 
             .navbar-item {
-                padding: 0rem 2rem;
+                // padding: 0rem 2rem;
                 border: 1px solid $default-background;
                 border-style: none none solid none;
 
@@ -192,6 +192,8 @@
                 }
 
                 .nav-link {
+                // todo check padding
+                padding: 0rem 2rem;
                     &:visited {
                         color: inherit;
                     }
@@ -200,9 +202,20 @@
                         border-radius: 50%;
                     }
 
+                    .link-icon,
+                    .link-img {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
 
+                    .link-icon {
+                        font-size: 2rem;
+                        @include radiantColor();
+                    }
                     .link-img {
                         width: 2rem;
+                        height: 2rem;
                     }
 
                     .nav-link-title {
