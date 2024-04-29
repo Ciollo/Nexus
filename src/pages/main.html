@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<link rel="icon" type="image/x-icon" href="../assets/images/nexus_favicon.ico">
-<link rel="stylesheet" href="../assets/css/style.css">
-<title>Main</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="../assets/images/nexus_favicon.ico">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Main</title>
 </head>
 
 <body class="site-bg">
@@ -18,59 +20,56 @@
                     <div class="navbar-top-title-page">Title</div>
                 </div>
                 <div class="container-setting-page">
-                    <i class='bx bx-cog icon-setting'></i>
+                    <i class='bx bx-cog icon-setting' id="btn-page-settings"></i>
                 </div>
-                <!-- <nav>
-                    <li>
-                    </li>
-                </nav> -->
             </header>
-            <header class="header-main no-cursor-effect">
-                <nav class="navbar-side navbar-side-not-active" id="navbar-side">
-                    <ul class=" navbar-side-list">
-                        <li class="navbar-item">
-                            <a class="nav-title">
-                                <img src="/src/assets/images/Nexus_logo_no_bg.png" alt="title nexus"
-                                    class="title-img display-none" id="img-title">
-                                <i class='bx bxs-chevrons-left btn-close-open-navbar btn-navbar-not-active btn-open-close-navbar'
-                                    id="btn-close-open-navbar"></i>
-                            </a>
-                        </li>
-                        <li class="navbar-item">
-                            <a class="nav-link" href="main.html">
-                                <img src="/src/assets/images/nexus_logo.png" alt="user-pfp" class="link-img">
-                                <span class="nav-link-title display-none">
-                                    Main
-                                </span>
-                            </a>
-                        </li>
-                        <li class="navbar-item">
-                            <a class="nav-link" href="main.html">
-                                <img src="/src/assets/images/nexus_logo.png" alt="user-pfp" class="link-img">
-                                <span class="nav-link-title display-none">
-                                    Page 1
-                                </span>
-                            </a>
-                        </li>
-                        <li class="navbar-item">
-                            <a class="nav-link" href="main.html">
-                                <img src="/src/assets/images/nexus_logo.png" alt="user-pfp" class="link-img">
-                                <span class="nav-link-title display-none">
-                                    Page 2
-                                </span>
-                            </a>
-                        </li>
-                        <li class="navbar-item">
-                            <a class="nav-link" href="user.html">
-                                <img src="/src/assets/images/default_pfp.jpg" alt="user-pfp" class="user-pfp link-img">
-                                <!-- TODO GOING TO DO A QUERY TO GET THE USER PFP-->
-                                <span class="nav-link-title display-none">
-                                    UserName
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+            <header class=" header-main no-cursor-effect">
+                        <nav class="navbar-side navbar-side-not-active" id="navbar-side">
+                            <ul class=" navbar-side-list">
+                                <li class="navbar-item">
+                                    <a class="nav-title">
+                                        <img src="/src/assets/images/Nexus_logo_no_bg.png" alt="title nexus"
+                                            class="title-img display-none" id="img-title">
+                                        <i class='bx bxs-chevrons-left btn-close-open-navbar btn-navbar-not-active btn-open-close-navbar'
+                                            id="btn-close-open-navbar"></i>
+                                    </a>
+                                </li>
+                                <li class="navbar-item">
+                                    <a class="nav-link" href="main.html">
+                                        <img src="/src/assets/images/nexus_logo.png" alt="user-pfp" class="link-img">
+                                        <span class="nav-link-title display-none">
+                                            Main
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="navbar-item">
+                                    <a class="nav-link" href="main.html">
+                                        <img src="/src/assets/images/nexus_logo.png" alt="user-pfp" class="link-img">
+                                        <span class="nav-link-title display-none">
+                                            Page 1
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="navbar-item">
+                                    <a class="nav-link" href="main.html">
+                                        <img src="/src/assets/images/nexus_logo.png" alt="user-pfp" class="link-img">
+                                        <span class="nav-link-title display-none">
+                                            Page 2
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="navbar-item">
+                                    <a class="nav-link" href="user.html">
+                                        <img src="/src/assets/images/default_pfp.jpg" alt="user-pfp"
+                                            class="user-pfp link-img">
+                                        <!-- TODO GOING TO DO A QUERY TO GET THE USER PFP-->
+                                        <span class="nav-link-title display-none">
+                                            UserName
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
             </header>
 
             <div class="main-page-content no-cursor-effect main-page-content-not-active">
@@ -93,19 +92,22 @@
         </div>
 
     </div>
-    <div class="main-overlay">
-        <div class="user-setting-panel">
-
+    <div class="main-overlay display-none" id="main-overlay">
+        <div class="container-user-setting-panel display-none" id="container-user-settings-panel">
+            <div class="setting-panel">
+            width: 100rem;
+            height: 100rem;
+            background-color: white;
+            </div>
         </div>
     </div>
     <div class="cursor-light"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script type="module" src="../assets/js/pages/main.js"></script>
+    <script type="module" src="../assets/js/pages/main.js"></script> -->
     <!-- <script src="../assets/js/utils/cursor.js"></script> -->
-    <script src="https://unpkg.com/@barba/core"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <!-- <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
 
 </body>

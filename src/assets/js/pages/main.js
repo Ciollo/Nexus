@@ -1,6 +1,5 @@
 let btnCloseOpenNavbar = document.getElementById("btn-close-open-navbar");
-
-btnCloseOpenNavbar.addEventListener("click", toggleNavbar);
+let btnSettings = document.getElementById("btn-page-settings");
 
 function toggleNavbar() {
   btnCloseOpenNavbar.classList.toggle("btn-navbar-not-active");
@@ -24,4 +23,21 @@ function toggleNavbar() {
   let mainPageContent = document.querySelector(".main-page-content");
   mainPageContent.classList.toggle("main-page-content-not-active");
   mainPageContent.classList.toggle("main-page-content-active");
+
 }
+
+function toggleOverlayVisibility() {
+  let mainOverlay = document.getElementById("main-overlay");
+  mainOverlay.classList.toggle('display-none');
+  mainOverlay.classList.toggle('display-block');
+}
+
+function openSettingsPanel() {
+  toggleOverlayVisibility();
+  let settingsPanel = document.getElementById("container-user-settings-panel");;
+  settingsPanel.classList.toggle("display-none");
+  settingsPanel.classList.toggle("display-block");
+}
+
+btnCloseOpenNavbar.addEventListener("click", toggleNavbar);
+btnSettings.addEventListener("click", openSettingsPanel);
