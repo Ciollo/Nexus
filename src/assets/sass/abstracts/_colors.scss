@@ -29,6 +29,12 @@ $defaultSettingPanelColor: $default-background;
 $defaultNavbarSettingPanelColor: lighten($defaultSettingPanelColor, 5%);
 $defaultNavbarSettingElementHoverColor : darken($defaultNavbarSettingPanelColor, 5%);
 
+$breakLineColor: rgba(255, 255, 255, 0.781);
+
+// $cancelColor: rgb(255, 0, 0);
+$cancelColor: $errorRed;
+
+$borderButtonTransparent: rgb(255, 255, 255, 0.2);
 @mixin radiantColor() {
   background-image: $radiantLogoColor;
   -webkit-background-clip: text;
@@ -37,3 +43,6 @@ $defaultNavbarSettingElementHoverColor : darken($defaultNavbarSettingPanelColor,
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 }
+
+
+

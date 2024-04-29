@@ -1,8 +1,7 @@
 // TODO DA RIGUARDARE
 @use "../abstracts"as *;
 
-@mixin btnDefault() {
-   background-image: $radiantLogoColor;
+@mixin btn() {
     height: auto;
     border: none;
     cursor: pointer;
@@ -20,15 +19,26 @@
     display: inline-block;
     background-size: 200% 100%;
 
+    //TODO LOOK AT THIS
     &:hover {
         background-position: 100% 0;
-    transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
     }
 }
+
+@mixin btnDefaultGradient($backgroundColor : $radiantLogoColor) {
+    @include btn();
+    background-image: $backgroundColor;
+}
  
+@mixin btnDefault($backgroundColor : $radiantLogoColor) {
+    @include btn();
+    background-color: $backgroundColor;
+}
+// TODO see this
 @mixin btnAccess() {
-    background-image: $radiantLogoColor;
+    background-co: $radiantLogoColor;
     height: auto;
     border: none;
     cursor: pointer;
@@ -65,5 +75,13 @@
 }
 
 .btn-default {
-    @include btnDefault();
+    @include btnDefaultGradient();
+}
+
+.btn-cancel {
+    @include btnDefault(transparent);
+    border: 1px solid $borderButtonTransparent;
+    &:hover {
+        background-color: darken($borderButtonTransparent, 50%)
+    }
 }

@@ -132,7 +132,8 @@
         display: flex;
         background-color: $defaultSettingPanelColor;
         position: fixed;
-        width: 40%;
+        width: 60%;
+        height: 70%;
         // text-align: center;
         justify-content: left;
         top: 50%; // Change this to 50%
@@ -146,6 +147,7 @@
         .setting-navbar {
             background-color: $defaultNavbarSettingPanelColor;
             height: 100%;
+
             .setting-title,
             .setting-element {
                 display: flex;
@@ -166,6 +168,7 @@
                     font-size: 1rem;
                     margin-left: 0.5rem;
                 }
+
                 &:hover {
                     cursor: pointer;
                     background-color: $defaultNavbarSettingElementHoverColor;
@@ -173,7 +176,53 @@
             }
         }
 
-        .setting-content {}
+        .setting-content {
+            padding: 2rem 4rem;
+            width: 100%;
+
+            .setting-workspace-content {
+
+                .setting-workspace-content-title {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    margin-bottom: 1rem;
+
+                }
+
+                .setting-workspace-content-element {
+                    .setting-workspace-content-element-title {
+                        font-size: 1rem;
+                        font-weight: 500;
+                        margin-bottom: 1rem;
+                    }
+
+                    .setting-workspace-content-element-input {
+
+                        .input-setting-workspace-name {
+                            width: 100%;
+                        }
+                    }
+
+                    .setting-workspace-content-element-icon {
+                        .setting-workspace-icon {
+                            width: 10rem;
+                            height: 10rem;
+                            cursor: pointer;
+                            object-fit: contain; //TODO TO SEE
+                            border: 1px solid white; //TODO GOING TO CHANGE
+                        }
+                    }
+                }
+            }
+
+            .setting-workspace-content-button {
+                margin-top: 2rem;
+
+                .btn-setting-workspace {
+                    padding: 0.5rem 1rem;
+                }
+            }
+        }
     }
 
     .setting-navbar,

@@ -76,7 +76,7 @@ body {
 .btn-sign-in,
 .btn-continue,
 .btn-sign-up {
-  background-image: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
+  background-co: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
   height: auto;
   border: none;
   cursor: pointer;
@@ -104,7 +104,7 @@ body {
 
 .btn-go-to-sign-in,
 .btn-go-to-sign-up {
-  background-image: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
+  background-co: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
   height: auto;
   border: none;
   cursor: pointer;
@@ -130,7 +130,6 @@ body {
 }
 
 .btn-default {
-  background-image: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
   height: auto;
   border: none;
   cursor: pointer;
@@ -147,11 +146,41 @@ body {
   text-decoration: none;
   display: inline-block;
   background-size: 200% 100%;
+  background-image: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
 }
 .btn-default:hover {
   background-position: 100% 0;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
+}
+
+.btn-cancel {
+  height: auto;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  letter-spacing: 0.025em;
+  padding: 5px 0px 5px 0px;
+  font-weight: bold;
+  color: #fdfdfd;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+  background-size: 200% 100%;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.btn-cancel:hover {
+  background-position: 100% 0;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+.btn-cancel:hover {
+  background-color: rgba(128, 128, 128, 0.2);
 }
 
 .logo-form {
@@ -291,6 +320,12 @@ body {
 .cursor-light--link {
   transition: transform 0.2s ease-in-out;
   transform: translate(-50%, -50%) scale(0);
+}
+
+.breakLine {
+  border-top: 1px solid rgba(255, 255, 255, 0.781);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .footer {
@@ -760,7 +795,8 @@ body {
   display: flex;
   background-color: rgb(20, 22, 46);
   position: fixed;
-  width: 40%;
+  width: 60%;
+  height: 70%;
   justify-content: left;
   top: 50%;
   left: 50%;
@@ -792,6 +828,36 @@ body {
 .main-overlay .container-user-setting-panel .setting-navbar .setting-element:hover {
   cursor: pointer;
   background-color: #14162e;
+}
+.main-overlay .container-user-setting-panel .setting-content {
+  padding: 2rem 4rem;
+  width: 100%;
+}
+.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content .setting-workspace-content-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content .setting-workspace-content-element .setting-workspace-content-element-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content .setting-workspace-content-element .setting-workspace-content-element-input .input-setting-workspace-name {
+  width: 100%;
+}
+.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content .setting-workspace-content-element .setting-workspace-content-element-icon .setting-workspace-icon {
+  width: 10rem;
+  height: 10rem;
+  cursor: pointer;
+  object-fit: contain;
+  border: 1px solid white;
+}
+.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content-button {
+  margin-top: 2rem;
+}
+.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content-button .btn-setting-workspace {
+  padding: 0.5rem 1rem;
 }
 .img-fluid {
   width: 700px; /* Imposta direttamente la larghezza */

@@ -1,3 +1,5 @@
+import { addClickListenersToButtons } from '../components/settingsPanel.js';
+
 let btnCloseOpenNavbar = document.getElementById("btn-close-open-navbar");
 let btnSettings = document.getElementById("btn-page-settings");
 let mainOverlay = document.getElementById("main-overlay");
@@ -38,6 +40,8 @@ function openSettingsPanel() {
   settingsPanel.classList.toggle("display-none");
   settingsPanel.classList.toggle("display-block");
 }
+
+addClickListenersToButtons();
 
 btnCloseOpenNavbar.addEventListener("click", toggleNavbar);
 btnSettings.addEventListener("click", openSettingsPanel);
