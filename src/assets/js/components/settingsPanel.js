@@ -15,6 +15,7 @@ export function addClickListenersToButtons() {
   });
 }
 
+//TODO TO CONTINUE
 function settingsPanelContent(settingContent) {
   settingContent.innerHTML = "";
   settingContent.innerHTML += "";

@@ -65,10 +65,11 @@ To get started with Nexus, follow these simple steps:
 | Nav bar               | -  ❌  |
 | Footer                | -  🚧  |
 | Side bar              | -  ❌  |
-| Barba JS              | -  🚧  |
+| Barba JS              | -  ❌  |
 | Sistemare grafica     | -  🚧  |
 | Personalize scrollbar(nota: su firefox non sono supportate) | -  ❌  |
 | Utilizzare JSON | -  ❌  |
+| Contenuto settngs dinamico a seconda della scelta | -  🚧  |
 
 ## 🚧️ Little Fixes
 ❌ = Not Fixed yet <br>
