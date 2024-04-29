@@ -758,15 +758,40 @@ body {
 }
 .main-overlay .container-user-setting-panel {
   display: flex;
-  background-color: #eee;
+  background-color: rgb(20, 22, 46);
   position: fixed;
   width: 40%;
-  text-align: center;
+  justify-content: left;
   top: 50%;
   left: 50%;
-  padding: 20px;
   transform: translate(-50%, -50%);
   z-index: 1000;
+  color: #fdfdfd;
+}
+.main-overlay .container-user-setting-panel .setting-navbar {
+  background-color: #1c1f40;
+  height: 100%;
+}
+.main-overlay .container-user-setting-panel .setting-navbar .setting-title,
+.main-overlay .container-user-setting-panel .setting-navbar .setting-element {
+  display: flex;
+  padding: 0.5rem 2rem;
+  align-items: center;
+  justify-content: left;
+}
+.main-overlay .container-user-setting-panel .setting-navbar .setting-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.main-overlay .container-user-setting-panel .setting-navbar .setting-element .title-element {
+  font-weight: 800 700;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+.main-overlay .container-user-setting-panel .setting-navbar .setting-element:hover {
+  cursor: pointer;
+  background-color: #14162e;
 }
 .img-fluid {
   width: 700px; /* Imposta direttamente la larghezza */

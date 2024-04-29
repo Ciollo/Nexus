@@ -22,64 +22,63 @@
                 <div class="container-setting-page">
                     <!-- <i class='bx bx-cog icon-setting' id="btn-page-settings"></i> -->
                     <!-- TODO add functionality -->
-                    <i class='bx bx-dots-horizontal-rounded icon-setting' ></i> 
+                    <i class='bx bx-dots-horizontal-rounded icon-setting'></i>
                 </div>
             </header>
             <header class=" header-main no-cursor-effect">
-                        <nav class="navbar-side navbar-side-not-active" id="navbar-side">
-                            <ul class=" navbar-side-list">
-                                <li class="navbar-item">
-                                    <a class="nav-title">
-                                        <img src="/src/assets/images/Nexus_logo_no_bg.png" alt="title nexus"
-                                            class="title-img display-none" id="img-title">
-                                        <i class='bx bxs-chevrons-left btn-close-open-navbar btn-navbar-not-active btn-open-close-navbar'
-                                            id="btn-close-open-navbar"></i>
-                                    </a>
-                                </li>
-                                <li class="navbar-item">
-                                    <a class="nav-link" id="btn-page-settings">
-                                            <i class='bx bx-cog link-icon'></i>
-                                        <span class="nav-link-title display-none">
-                                            Settings
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="navbar-item">
-                                    <a class="nav-link" href="main.html">
-                                        <img src="/src/assets/images/nexus_logo.png" alt="user-pfp" class="link-img">
-                                        <span class="nav-link-title display-none">
-                                            Main
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="navbar-item">
-                                    <a class="nav-link" href="main.html">
-                                        <img src="/src/assets/images/nexus_logo.png" alt="user-pfp" class="link-img">
-                                        <span class="nav-link-title display-none">
-                                            Page 1
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="navbar-item">
-                                    <a class="nav-link" href="main.html">
-                                        <img src="/src/assets/images/nexus_logo.png" alt="user-pfp" class="link-img">
-                                        <span class="nav-link-title display-none">
-                                            Page 2
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="navbar-item">
-                                    <a class="nav-link" href="user.html">
-                                        <img src="/src/assets/images/default_pfp.jpg" alt="user-pfp"
-                                            class="user-pfp link-img">
-                                        <!-- TODO GOING TO DO A QUERY TO GET THE USER PFP-->
-                                        <span class="nav-link-title display-none">
-                                            UserName
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                <nav class="navbar-side navbar-side-not-active" id="navbar-side">
+                    <ul class=" navbar-side-list">
+                        <li class="navbar-item">
+                            <a class="nav-title">
+                                <img src="/src/assets/images/Nexus_logo_no_bg.png" alt="title nexus"
+                                    class="title-img display-none" id="img-title">
+                                <i class='bx bxs-chevrons-left btn-close-open-navbar btn-navbar-not-active btn-open-close-navbar'
+                                    id="btn-close-open-navbar"></i>
+                            </a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link" id="btn-page-settings">
+                                <i class='bx bx-cog link-icon'></i>
+                                <span class="nav-link-title display-none">
+                                    Settings
+                                </span>
+                            </a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link" href="main.html">
+                                <img src="/src/assets/images/nexus_logo.png" alt="user-pfp" class="link-img">
+                                <span class="nav-link-title display-none">
+                                    Main
+                                </span>
+                            </a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link" href="main.html">
+                                <img src="/src/assets/images/nexus_logo.png" alt="user-pfp" class="link-img">
+                                <span class="nav-link-title display-none">
+                                    Page 1
+                                </span>
+                            </a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link" href="main.html">
+                                <img src="/src/assets/images/nexus_logo.png" alt="user-pfp" class="link-img">
+                                <span class="nav-link-title display-none">
+                                    Page 2
+                                </span>
+                            </a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link" href="user.html">
+                                <img src="/src/assets/images/default_pfp.jpg" alt="user-pfp" class="user-pfp link-img">
+                                <!-- TODO GOING TO DO A QUERY TO GET THE USER PFP-->
+                                <span class="nav-link-title display-none">
+                                    UserName
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </header>
 
             <div class="main-page-content no-cursor-effect main-page-content-not-active">
@@ -102,12 +101,35 @@
         </div>
 
     </div>
-    <div class="main-overlay display-none" id="main-overlay">
+    <!-- <div class="main-overlay display-none" id="main-overlay">
         <div class="container-user-setting-panel display-none" id="container-user-settings-panel">
             <div class="setting-panel">
-            width: 100rem;
-            height: 100rem;
-            background-color: white;
+
+            </div>
+        </div>
+    </div> -->
+    <!-- TODO ONLY FOR DEV WHEN DONE DELETE THE SECTION BELOW-->
+    <div class="main-overlay display-block" id="main-overlay">
+        <div class="container-user-setting-panel display-block" id="container-user-settings-panel">
+            <div class="setting-navbar">
+                <div class="setting-title">
+                    Setting workspace
+                </div>
+                <div class="setting-element">
+                    <i class='bx bx-cog'></i>
+                    <span class="title-element">
+                        Settings
+                    </span>
+                </div>
+                <div class="setting-element">
+                    <i class='bx bxs-group' ></i>
+                    <span class="title-element">
+                        People
+                    </span>
+                </div>
+            </div>
+            <div class="setting-content">
+                ciao
             </div>
         </div>
     </div>
@@ -116,9 +138,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script type="module" src="../assets/js/pages/main.js"></script> -->
-    <!-- <script src="../assets/js/utils/cursor.js"></script> -->
-    <!-- <script src="https://unpkg.com/@barba/core"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
 
 </body>
 
