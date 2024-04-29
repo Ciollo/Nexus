@@ -506,6 +506,9 @@ body {
   font-size: 1.1rem;
   color: #fdfdfd;
 }
+.header-main .navbar-side-active {
+  width: 15rem;
+}
 .header-main .navbar-side-not-active {
   width: 6rem;
 }
@@ -743,14 +746,14 @@ body {
 }
 
 .main-page-content-active {
-  margin-left: 12.7rem;
+  margin-left: 15rem;
 }
 
 .main-overlay {
   position: fixed;
   inset: 0px;
   z-index: 999;
-  pointer-events: none;
+  pointer-events: visible;
   background-color: rgba(0, 0, 0, 0.4);
 }
 .main-overlay .container-user-setting-panel {

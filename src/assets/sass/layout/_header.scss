@@ -131,8 +131,7 @@
             justify-content: center;
             list-style: none;
             flex-direction: column;
-            // margin: 0 0rem;
-            padding-left: 0;
+            padding-left: 0; //sembra inutile ma a quanto pare toglie del padding di defalt
 
             .navbar-item {
                 // padding: 0rem 2rem;
@@ -230,7 +229,9 @@
         }
     }
 
-    .navbar-side-active {}
+    .navbar-side-active {
+        width: 15rem;
+    }
 
     .navbar-side-not-active {
         width: 6rem;

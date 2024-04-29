@@ -1,5 +1,6 @@
 let btnCloseOpenNavbar = document.getElementById("btn-close-open-navbar");
 let btnSettings = document.getElementById("btn-page-settings");
+let mainOverlay = document.getElementById("main-overlay");
 
 function toggleNavbar() {
   btnCloseOpenNavbar.classList.toggle("btn-navbar-not-active");
@@ -27,7 +28,6 @@ function toggleNavbar() {
 }
 
 function toggleOverlayVisibility() {
-  let mainOverlay = document.getElementById("main-overlay");
   mainOverlay.classList.toggle('display-none');
   mainOverlay.classList.toggle('display-block');
 }
@@ -41,3 +41,9 @@ function openSettingsPanel() {
 
 btnCloseOpenNavbar.addEventListener("click", toggleNavbar);
 btnSettings.addEventListener("click", openSettingsPanel);
+mainOverlay.addEventListener("click", function(event) {
+ let settingsPanel = document.getElementById("container-user-settings-panel");
+  if (!settingsPanel.contains(event.target)) {
+    toggleOverlayVisibility();
+  }
+});

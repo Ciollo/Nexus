@@ -113,7 +113,7 @@
 }
 
 .main-page-content-active {
-    margin-left: 12.7rem;
+    margin-left: 15rem;
 }
 
 
@@ -121,7 +121,8 @@
     position: fixed;
     inset: 0px;
     z-index: 999;
-    pointer-events: none;
+    // pointer-events: none;
+    pointer-events: visible;
     background-color: rgba(0, 0, 0, 0.4);
 
     .container-user-setting-panel {
