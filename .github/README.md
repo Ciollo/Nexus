@@ -94,6 +94,7 @@ To get started with Nexus, follow these simple steps:
 | Navbar togliere il bottone laterale per aprirlo e sostituirlo con un hover | -  💭  | - |
 | Togliere personlized cursor nelle pages? | - ✅   | Si risultavva troppo brutto toglierlo molte volte quanto passava in hover su molti elementi |
 | Cambiare dei colori? | -  💭  | - |
+| Inserire i file html all'interno del mysql? | -  💭  |
 
 
 ## 📄 Documentation

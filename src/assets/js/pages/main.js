@@ -1,8 +1,10 @@
 import { addClickListenersToButtons } from '../components/settingsPanel.js';
+import { addPage } from '../components/addPage.js';
 
 let btnCloseOpenNavbar = document.getElementById("btn-close-open-navbar");
 let btnSettings = document.getElementById("btn-page-settings");
 let mainOverlay = document.getElementById("main-overlay");
+let addPageBtn = document.getElementById("add-page-navbar-option");
 
 function toggleNavbar() {
   btnCloseOpenNavbar.classList.toggle("btn-navbar-not-active");
@@ -42,6 +44,7 @@ function openSettingsPanel() {
 }
 
 addClickListenersToButtons();
+// addPage();
 
 btnCloseOpenNavbar.addEventListener("click", toggleNavbar);
 btnSettings.addEventListener("click", openSettingsPanel);
@@ -51,3 +54,5 @@ mainOverlay.addEventListener("click", function(event) {
     toggleOverlayVisibility();
   }
 });
+
+addPageBtn.addEventListener("click", addPage);
