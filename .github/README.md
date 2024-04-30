@@ -95,6 +95,7 @@ To get started with Nexus, follow these simple steps:
 | Togliere personlized cursor nelle pages? | - ✅   | Si risultavva troppo brutto toglierlo molte volte quanto passava in hover su molti elementi |
 | Cambiare dei colori? | -  💭  | - |
 | Inserire i file html all'interno del mysql? | -  💭  |
+| Forse aggiungere di default le pages per l'utente ? | -  💭  |
 
 
 ## 📄 Documentation

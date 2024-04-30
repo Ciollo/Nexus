@@ -1,10 +1,12 @@
 import { addClickListenersToButtons } from '../components/settingsPanel.js';
 import { addPage } from '../components/addPage.js';
+import { openComponentPanel } from '../utils/addComponent.js';
 
 let btnCloseOpenNavbar = document.getElementById("btn-close-open-navbar");
 let btnSettings = document.getElementById("btn-page-settings");
 let mainOverlay = document.getElementById("main-overlay");
 let addPageBtn = document.getElementById("add-page-navbar-option");
+let userContent = document.getElementById("user-content");
 
 function toggleNavbar() {
   btnCloseOpenNavbar.classList.toggle("btn-navbar-not-active");
@@ -56,3 +58,15 @@ mainOverlay.addEventListener("click", function(event) {
 });
 
 addPageBtn.addEventListener("click", addPage);
+
+userContent.addEventListener('input', function(event) {
+  let newTextContent = event.target.textContent;
+
+  let lastTwoCharacters = newTextContent.slice(-2);
+  const triggerCharacter = '/+'; //TODO maybe dopo si cambia per farlo scegliere all'utente
+
+
+  if (lastTwoCharacters === triggerCharacter) {
+    openComponentPanel();
+  }
+});
