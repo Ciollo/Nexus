@@ -1,6 +1,6 @@
 import { addClickListenersToButtons } from '../components/settingsPanel.js';
 import { addPage } from '../components/addPage.js';
-import { openComponentPanel } from '../utils/addComponent.js';
+import { openComponentPanel, closeComponentPanel, isAddComponentTriggered} from '../utils/addComponent.js';
 
 let btnCloseOpenNavbar = document.getElementById("btn-close-open-navbar");
 let btnSettings = document.getElementById("btn-page-settings");
@@ -61,12 +61,11 @@ addPageBtn.addEventListener("click", addPage);
 
 userContent.addEventListener('input', function(event) {
   let newTextContent = event.target.textContent;
-
-  let lastTwoCharacters = newTextContent.slice(-2);
   const triggerCharacter = '/+'; //TODO maybe dopo si cambia per farlo scegliere all'utente
 
-
-  if (lastTwoCharacters === triggerCharacter) {
+  if (isAddComponentTriggered(newTextContent, triggerCharacter)) {
     openComponentPanel();
+  } else {
+    closeComponentPanel();
   }
 });

@@ -119,8 +119,9 @@
 }
 
 .header-main {
-
     .navbar-side {
+        width: 100%;
+
         position: fixed;
         height: 100vh;
         background-color: $default-navbar-side-color;
@@ -191,8 +192,9 @@
                 }
 
                 .nav-link {
-                // todo check padding
-                padding: 0rem 2rem;
+                    // todo check padding
+                    padding: 0rem 2rem;
+
                     &:visited {
                         color: inherit;
                     }
@@ -212,6 +214,7 @@
                         font-size: 2rem;
                         @include radiantColor();
                     }
+
                     .link-img {
                         width: 2rem;
                         height: 2rem;
@@ -224,7 +227,7 @@
                     }
                 }
 
-               
+
             }
         }
     }
@@ -247,9 +250,11 @@
     align-items: center;
     background-color: $default-background;
     margin-left: 6rem;
+
     .navbar-top-logo-title {
         display: flex;
         align-items: center;
+
         .title-img-navbar {
             margin-left: 1rem;
             width: 2.5rem;

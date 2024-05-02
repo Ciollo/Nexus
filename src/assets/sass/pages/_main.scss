@@ -120,6 +120,10 @@
     pointer-events: visible;
     background-color: $defaultMainOverlayColor;
 
+    .container-add-component {
+
+    }
+
     .container-user-setting-panel {
         display: flex;
         background-color: $defaultSettingPanelColor;

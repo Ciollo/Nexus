@@ -449,6 +449,7 @@ body {
 }
 
 .header-main .navbar-side {
+  width: 100%;
   position: fixed;
   height: 100vh;
   background-color: #1c1f40;
