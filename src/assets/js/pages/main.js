@@ -1,6 +1,10 @@
-import { addClickListenersToButtons } from '../components/settingsPanel.js';
-import { addPage } from '../components/addPage.js';
-import { openComponentPanel, closeComponentPanel, isAddComponentTriggered} from '../utils/addComponent.js';
+import { addClickListenersToButtons } from "../components/settingsPanel.js";
+import { addPage } from "../components/addPage.js";
+import {
+  openComponentPanel,
+  closeComponentPanel,
+  isAddComponentTriggered,
+} from "../utils/addComponent.js";
 
 let btnCloseOpenNavbar = document.getElementById("btn-close-open-navbar");
 let btnSettings = document.getElementById("btn-page-settings");
@@ -16,7 +20,7 @@ function toggleNavbar() {
   navbar.classList.toggle("navbar-side-not-active");
   navbar.classList.toggle("navbar-side-active");
 
-  let imgTitle = document.getElementById("img-title");
+  let imgTitle = document.getElementById("img-title-side-navbar");
   imgTitle.classList.toggle("display-none");
   imgTitle.classList.toggle("display-block");
 
@@ -30,17 +34,16 @@ function toggleNavbar() {
   let mainPageContent = document.querySelector(".main-page-content");
   mainPageContent.classList.toggle("main-page-content-not-active");
   mainPageContent.classList.toggle("main-page-content-active");
-
 }
 
 function toggleOverlayVisibility() {
-  mainOverlay.classList.toggle('display-none');
-  mainOverlay.classList.toggle('display-block');
+  mainOverlay.classList.toggle("display-none");
+  mainOverlay.classList.toggle("display-block");
 }
 
 function openSettingsPanel() {
   toggleOverlayVisibility();
-  let settingsPanel = document.getElementById("container-user-settings-panel");;
+  let settingsPanel = document.getElementById("container-user-settings-panel");
   settingsPanel.classList.toggle("display-none");
   settingsPanel.classList.toggle("display-block");
 }
@@ -50,8 +53,8 @@ addClickListenersToButtons();
 
 btnCloseOpenNavbar.addEventListener("click", toggleNavbar);
 btnSettings.addEventListener("click", openSettingsPanel);
-mainOverlay.addEventListener("click", function(event) {
- let settingsPanel = document.getElementById("container-user-settings-panel");
+mainOverlay.addEventListener("click", function (event) {
+  let settingsPanel = document.getElementById("container-user-settings-panel");
   if (!settingsPanel.contains(event.target)) {
     toggleOverlayVisibility();
   }
@@ -59,9 +62,9 @@ mainOverlay.addEventListener("click", function(event) {
 
 addPageBtn.addEventListener("click", addPage);
 
-userContent.addEventListener('input', function(event) {
+userContent.addEventListener("input", function (event) {
   let newTextContent = event.target.textContent;
-  const triggerCharacter = '/+'; //TODO maybe dopo si cambia per farlo scegliere all'utente
+  const triggerCharacter = "/+"; //TODO maybe dopo si cambia per farlo scegliere all'utente
 
   if (isAddComponentTriggered(newTextContent, triggerCharacter)) {
     openComponentPanel();

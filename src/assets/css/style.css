@@ -449,10 +449,22 @@ body {
 }
 
 .header-main .navbar-side {
-  width: 100%;
+  width: 6rem;
   position: fixed;
   height: 100vh;
   background-color: #1c1f40;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.header-main .navbar-side:hover {
+  width: 15rem;
+}
+.header-main .navbar-side:hover .img-title-side-navbar {
+  rotate: 360deg;
+  display: inline;
+}
+.header-main .navbar-side:hover .nav-link-title {
+  display: inline;
 }
 .header-main .navbar-side .navbar-side-list {
   height: 100%;
@@ -490,8 +502,9 @@ body {
 .header-main .navbar-side .navbar-side-list .navbar-item .nav-title {
   justify-content: center;
 }
-.header-main .navbar-side .navbar-side-list .navbar-item .nav-title .title-img {
-  width: 7rem;
+.header-main .navbar-side .navbar-side-list .navbar-item .nav-title .img-title-side-navbar {
+  width: 3rem;
+  transition: all 0.5s ease-in-out;
 }
 .header-main .navbar-side .navbar-side-list .navbar-item .nav-title .btn-close-open-navbar {
   font-size: 1.7rem;
@@ -538,12 +551,11 @@ body {
   height: 2rem;
 }
 .header-main .navbar-side .navbar-side-list .navbar-item .nav-link .nav-link-title {
-  margin-left: 1rem;
+  margin-left: 2.3rem;
   font-size: 1.1rem;
   color: #fdfdfd;
-}
-.header-main .navbar-side-active {
-  width: 15rem;
+  transition: 600ms;
+  white-space: nowrap;
 }
 .header-main .navbar-side-not-active {
   width: 6rem;

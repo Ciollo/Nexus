@@ -120,11 +120,27 @@
 
 .header-main {
     .navbar-side {
-        width: 100%;
-
+        // width: 100%;
+        width: 6rem;
         position: fixed;
         height: 100vh;
         background-color: $default-navbar-side-color;
+        // transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease;
+        overflow: hidden;
+
+        &:hover {
+            width: 15rem;
+            .img-title-side-navbar {
+                rotate: 360deg;
+                display: inline;
+            }
+
+            .nav-link-title {
+                display: inline;
+            }
+
+        }
 
         .navbar-side-list {
             height: 100%;
@@ -168,8 +184,12 @@
                 .nav-title {
                     justify-content: center;
 
-                    .title-img {
-                        width: 7rem;
+                    .img-title-side-navbar {
+                        width: 3rem;
+                        transition: all 0.5s ease-in-out;
+                        // &:hover {
+                        //     rotate: 360deg;
+                        // }
                     }
 
                     .btn-close-open-navbar {
@@ -221,9 +241,11 @@
                     }
 
                     .nav-link-title {
-                        margin-left: 1rem;
+                        margin-left: 2.3rem;
                         font-size: 1.1rem;
                         color: #fdfdfd;
+                        transition: 600ms;
+                        white-space: nowrap;
                     }
                 }
 
@@ -232,9 +254,9 @@
         }
     }
 
-    .navbar-side-active {
-        width: 15rem;
-    }
+    // .navbar-side-active {
+    //     width: 15rem;
+    // }
 
     .navbar-side-not-active {
         width: 6rem;
