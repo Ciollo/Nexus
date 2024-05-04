@@ -1,4 +1,5 @@
 import { isEmailValid } from "../utils/emailUtils.js";
+import { isPasswordRobust } from "../utils/passwordUtils.js";
 import { goToPage } from "../utils/goToPages.js";
 import { toggleViewPassword } from "../utils/formUtils.js";
 
@@ -7,6 +8,7 @@ var nexusLogo = document.getElementById("nexusLogo");
 var toggleViewPasswordElement = document.getElementById("toggleViewPassword");
 var btnContinueSignIn = document.getElementById("btn-continue");
 var userEmail = document.getElementById("userEmail");
+var userPassword = document.getElementById("userPassword");
 var linkSignUp = document.getElementById("link-sign-up");
 var btnGoToSignUp = document.getElementById("btnGoToSignUp");
 
@@ -49,6 +51,8 @@ function checkEmailValidation(userEmail) {
 function continueSignIn() {
   let userEmail = document.getElementById("userEmail");
   if (isEmailValid(userEmail.value)) {
+    //console.log(userEmail.value);
+
     let continueContainer = document.getElementById("continue-container");
     let signInContainer = document.getElementById("sign-in-container");
     let containerPassword = document.getElementById("container-password");
@@ -71,6 +75,26 @@ function continueSignIn() {
       userEmail.classList.remove("border-default");
     }
     userEmail.classList.add("border-error-red");
+  }
+}
+
+function checkPasswordValidation (userPassword){
+  console.log(userPassword.value);
+  if (isPasswordRobust(userPassword.value)) {
+    if (userPassword.classList.contains("border-error-red")) {
+      userPassword.classList.remove("border-error-red");
+    } else if (userPassword.classList.contains("border-default")) {
+      userPassword.classList.remove("border-default");
+    }
+
+    userPassword.classList.add("border-confirm-green");
+  } else {
+    if (userPassword.classList.contains("border-confirm-green")) {
+      userPassword.classList.remove("border-confirm-green");
+    } else if (userPassword.classList.contains("border-default")) {
+      userPassword.classList.remove("border-default");
+    }
+    userPassword.classList.add("border-error-red");
   }
 }
 
@@ -102,4 +126,8 @@ toggleViewPasswordElement.addEventListener("click", function () {
 btnContinueSignIn.addEventListener("click", continueSignIn);
 userEmail.addEventListener("input", function () {
   checkEmailValidation(userEmail);
+});
+
+userPassword.addEventListener("input", function () {
+  checkPasswordValidation(userPassword);
 });

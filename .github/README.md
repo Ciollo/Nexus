@@ -68,6 +68,7 @@ To get started with Nexus, follow these simple steps:
 | Side bar              | -  ❌  |
 | Barba JS              | -  ❌  |
 | Sistemare grafica     | -  🚧  |
+| check password        | -  🚧  |
 | Personalize scrollbar(nota: su firefox non sono supportate) | -  ❌  |
 | Utilizzare JSON | -  ❌  |
 | Contenuto settngs dinamico a seconda della scelta | -  🚧  |
