@@ -1,3 +1,16 @@
 {
-    "html-to-css-autocompletion.triggerCharacters": true
+    "html-to-css-autocompletion.triggerCharacters": true,
+    "liveSassCompile.settings.includeItems": [],
+	"liveSassCompile.settings.formats": [
+		{
+			"format": "expanded",
+			"extensionName": ".css",
+			"savePath": "~/../css"
+		},
+		{
+			"format": "compressed",
+			"extensionName": ".min.css",
+			"savePath": "~/../css"
+		}
+	],
 }
