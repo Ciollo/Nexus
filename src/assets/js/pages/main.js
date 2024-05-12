@@ -1,4 +1,3 @@
-// import { addClickListenersToButtons } from "../components/settingsPanel.js";
 import { addSettingPanel } from "../components/addSettingPanel.js";
 import {
 	openComponentPanel,
@@ -60,31 +59,39 @@ mainOverlay.addEventListener("click", function (event) {
 	}
 });
 
-userContent.addEventListener("input", function (event) {
-	let newTextContent = event.target.textContent;
-
-	const triggerCharacter = "/+";
-	console.log("ciao");
-
-	if (isAddComponentTriggered(newTextContent, triggerCharacter)) {
-		openNotionLikePanel();
-	} else {
-		closeComponentPanel();
+addInputEventListener(userContent);
+userContent.addEventListener("keydown", function (event) {
+	if (event.key === "Enter") {
+		console.log("Enter key pressed");
+		event.preventDefault(); 
+		let newDiv = createNewDiv("newDivId", "user-content");
+		userContent.appendChild(newDiv);
 	}
 });
 
-function createNotionLikePanel() {
+function addInputEventListener(element) {
+	element.addEventListener("input", function (event) {
+		let newTextContent = event.target.textContent;
+
+		const triggerCharacter = "/+";
+
+		if (isAddComponentTriggered(newTextContent, triggerCharacter)) {
+			openNotionLikePanel(document.activeElement);
+		} else {
+			closeComponentPanel();
+		}
+	});
+}
+function createNotionLikePanel(targetDiv) {
 	let mainOverlay = document.getElementById("main-overlay");
 
 	toggleOverlayVisibility();
-	// Create a new div for the panel
+
 	let panel = document.createElement("div");
 	panel.id = "notion-like-panel";
 
-	// Get the caret coordinates
 	const caretCoordinates = getCaretCoordinates();
 
-	// Add styles to the panel
 	panel.style.position = "fixed";
 	panel.style.left = `${caretCoordinates.x}px`;
 	panel.style.top = `${caretCoordinates.y}px`;
@@ -95,24 +102,21 @@ function createNotionLikePanel() {
 	panel.style.padding = "10px";
 	panel.style.overflow = "auto";
 
-	// Add the panel to the mainOverlay
 	mainOverlay.appendChild(panel);
 
-	// Add blocks to the panel
 	let blocks = [
 		{ type: "todo", text: "To Do" },
 		{ type: "toggleList", text: "Toggle List" },
 		{ type: "block", text: "Block 3" },
-	]; // Add your blocks here
+	]; 
 	blocks.forEach((block) => {
 		let blockElement = document.createElement("div");
 		blockElement.textContent = block.text;
-		blockElement.classList.add(block.type); // Add the block type as a class
+		blockElement.classList.add(block.type); 
 		blockElement.addEventListener("click", function () {
-			// Handle the click event here
+
 			console.log(`Clicked on ${block.text}`);
 
-			// Create the selected block in the userContent div
 			let newBlock;
 			if (block.type === "todo") {
 				newBlock = createTodoBlock(block.text);
@@ -122,24 +126,31 @@ function createNotionLikePanel() {
 			}
 			newBlock.classList.add(block.type);
 
-			// Replace the current div with the new block
-			userContent.replaceChild(newBlock, userContent.firstChild);
+			targetDiv.textContent = "";
+			targetDiv.appendChild(newBlock);
 
-			// Remove the panel and hide the overlay
+			let newEditableDiv = document.createElement("div");
+			newEditableDiv.contentEditable = "true";
+			newEditableDiv.classList.add("user-content");
+			addInputEventListener(newEditableDiv);
+
+			targetDiv.parentNode.insertBefore(newEditableDiv, targetDiv.nextSibling);
+
 			panel.remove();
 			toggleOverlayVisibility();
 		});
 		panel.appendChild(blockElement);
 	});
 }
-function openNotionLikePanel() {
+
+function openNotionLikePanel(targetDiv) {
 	let panel = document.getElementById("notion-like-panel");
 	if (panel) {
-		// If the panel already exists, remove it
+
 		panel.remove();
 	}
-	// Always create the panel
-	createNotionLikePanel();
+
+	createNotionLikePanel(targetDiv); 
 }
 
 function getCaretCoordinates() {
@@ -158,15 +169,24 @@ function getCaretCoordinates() {
 }
 
 function createTodoBlock(placeholder) {
-	let newBlock = document.createElement("div");
+	let newBlock = createNewDiv("todo", "todo");
+	newBlock.className += " invisible-background";
 	let checkbox = document.createElement("input");
 	checkbox.type = "checkbox";
 	checkbox.id = "todo";
 	let input = document.createElement("input");
 	input.type = "text";
 	input.placeholder = placeholder;
+	input.className = "todo-input-field"; 
 	newBlock.appendChild(checkbox);
 	newBlock.appendChild(input);
-	newBlock.classList.add("todo");
 	return newBlock;
+}
+
+function createNewDiv(id, className) {
+	let newDiv = document.createElement("div");
+	newDiv.id = id;
+	newDiv.className = className;
+	newDiv.contentEditable = "true";
+	return newDiv;
 }

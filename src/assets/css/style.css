@@ -884,6 +884,15 @@ body {
 .main-overlay .container-user-setting-panel .setting-content .setting-workspace-content-button .btn-setting-workspace {
   padding: 0.5rem 1rem;
 }
+.todo-input-field {
+  color: #fdfdfd;
+  background-color: transparent;
+  border: none;
+}
+.todo-input-field:focus {
+  outline: none;
+}
+
 .img-fluid {
   width: 700px; /* Imposta direttamente la larghezza */
   height: auto;

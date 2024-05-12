@@ -30,11 +30,10 @@
 
         .container-img-page {
 
-            //TODO GOING TO CHANGE to make it like notion
             .img-page {
                 width: 10rem;
                 height: 10rem;
-                border: 1px solid white; //TODO GOING TO CHANGE 
+                border: 1px solid white;
 
                 &:hover {
                     cursor: pointer;
@@ -71,9 +70,6 @@
         }
 
         .container-user-content {
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: center;
 
             height: 100%;
             overflow-wrap: break-word;
@@ -111,12 +107,11 @@
     margin-left: 15rem;
 }
 
-
 .main-overlay {
     position: fixed;
     inset: 0px;
     z-index: 999;
-    // pointer-events: none;
+
     pointer-events: visible;
     background-color: $defaultMainOverlayColor;
 
@@ -126,19 +121,16 @@
         display: flex;
         background-color: $defaultSettingPanelColor;
         position: fixed;
-        // width: 60%;
+
         width: 75rem;
         height: 40rem;
-        // height: 70%;
-        // text-align: center;
+
         justify-content: left;
-        top: 50%; // Change this to 50%
+        top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%); // Change this to -50%, -50%
-        z-index: 1000; //TODO not sure if this is the right z-index
+        transform: translate(-50%, -50%);
+        z-index: 1000;
         color: $default-font-color;
-        // border: 1px solid white;
-        // border-radius: 10px;
 
         .setting-navbar {
             background-color: $defaultNavbarSettingPanelColor;
@@ -218,8 +210,8 @@
                             width: 10rem;
                             height: 10rem;
                             cursor: pointer;
-                            object-fit: contain; //TODO TO SEE
-                            border: 1px solid white; //TODO GOING TO CHANGE
+                            object-fit: contain;
+                            border: 1px solid white;
                         }
                     }
                 }
@@ -237,7 +229,18 @@
 
     .setting-navbar,
     .container-user-setting-panel,
-    .setting-content {
-        // border-radius: 10px; //TODO FIX THIS 
+    .setting-content {}
+}
+
+.todo-input-field {
+    color: $default-font-color;
+
+    background-color: transparent;
+
+    border: none;
+
+    &:focus {
+        outline: none;
+
     }
 }
