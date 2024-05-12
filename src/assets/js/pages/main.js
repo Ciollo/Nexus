@@ -384,13 +384,21 @@ function saveBlocks() {
 		// Add the block object to the array
 		blockObjects.push(blockObject);
 	});
-	// Convert the block objects into a JSON string
-	let jsonString = JSON.stringify(blockObjects);
+	   let jsonString = JSON.stringify(blockObjects);
+ fetch('../includes/saveBlock.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: jsonString,
+    })
+    .then(response => response.text())
+    .then(data => console.log(data))
+    .catch((error) => {
+        console.error('Error:', error);
+    });
 
-	// Log the JSON string to the console
-	console.log(jsonString);
-
-	// Return the JSON string in case you want to use it elsewhere
+    // Return the JSON string in case you want to use it elsewhere
 	return jsonString;
 }
 var saveBlock = document.getElementById("save-blocks");
@@ -421,25 +429,42 @@ document.addEventListener("click", function (event) {
 	}
 });
 
+
+
 function selectImage(imagePath) {
-	// Update the source of the main image
-	document.querySelector(".img-page").src = imagePath;
-	// Close the panel
-	closeImagePanel();
+    // Update the source of the main image
+    document.querySelector(".img-page").src = imagePath;
+    // Close the panel
+    closeImagePanel();
 
-	// Create a JSON object with the src of the selected image
-	let imageObject = {
-		src: imagePath,
-	};
+    // Create a JSON object with the src of the selected image
+    let imageObject = {
+        src: imagePath,
+    };
 
-	// Convert the image object into a JSON string
-	let jsonString = JSON.stringify(imageObject);
+    // Convert the image object into a JSON string
+    let jsonString = JSON.stringify(imageObject);
 
-	// Log the JSON string to the console
-	console.log(jsonString);
+    // Log the JSON string to the console
+    console.log(jsonString);
 
-	// Return the JSON string in case you want to use it elsewhere
-	return jsonString;
+    // Send a request to the server to update the profile picture
+    fetch("../includes/updateProfilePicture.php", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: jsonString,
+    })
+    .then(response => response.text())
+    .then(data => console.log(data))
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+
+    console.log("Image selected: " + imagePath);
+    // Return the JSON string in case you want to use it elsewhere
+    return jsonString;
 }
 
 function closeImagePanel() {
