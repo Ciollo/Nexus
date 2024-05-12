@@ -5,6 +5,7 @@ import {
 	isAddComponentTriggered,
 } from "../utils/addComponent.js";
 
+const triggerCharacter = "/+";
 let btnSettings = document.getElementById("btn-page-settings");
 let mainOverlay = document.getElementById("main-overlay");
 let userContent = document.getElementById("user-content");
@@ -66,17 +67,14 @@ function addInputEventListener(element) {
 	element.addEventListener("input", function (event) {
 		let newTextContent = event.target.textContent;
 
-		const triggerCharacter = "/+";
-
 		if (isAddComponentTriggered(newTextContent, triggerCharacter)) {
-			// Replace the "/+" with an empty string
-			event.target.textContent = newTextContent.replace(triggerCharacter, "");
 			openNotionLikePanel(document.activeElement);
 		} else {
 			closeComponentPanel();
 		}
 	});
 }
+
 function createNotionLikePanel(targetDiv) {
 	let mainOverlay = document.getElementById("main-overlay");
 
@@ -120,22 +118,22 @@ function createNotionLikePanel(targetDiv) {
 			}
 			newBlock.classList.add(block.type);
 
+			// Replace the trigger character in the target div's text content
+			targetDiv.textContent = targetDiv.textContent.replace(
+				triggerCharacter,
+				""
+			);
+
 			// Insert the new block as a sibling to the target div
 			targetDiv.parentNode.insertBefore(newBlock, targetDiv.nextSibling);
 
-			// Check if the next sibling of the target div is a user-content div
-			if (
-				!targetDiv.nextSibling ||
-				targetDiv.nextSibling.className !== "user-content"
-			) {
-				let newEditableDiv = document.createElement("div");
-				newEditableDiv.contentEditable = "true";
-				newEditableDiv.classList.add("user-content");
-				addInputEventListener(newEditableDiv);
+			let newEditableDiv = document.createElement("div");
+			newEditableDiv.contentEditable = "true";
+			newEditableDiv.classList.add("user-content");
+			addInputEventListener(newEditableDiv);
 
-				// Insert the new editable div as a sibling to the new block
-				newBlock.parentNode.insertBefore(newEditableDiv, newBlock.nextSibling);
-			}
+			// Insert the new editable div as a sibling to the new block
+			newBlock.parentNode.insertBefore(newEditableDiv, newBlock.nextSibling);
 
 			panel.remove();
 			toggleOverlayVisibility();
