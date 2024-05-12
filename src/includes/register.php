@@ -1,5 +1,5 @@
 <?php
-include 'connect.php';
+include '../includes/connect.php';
 
 session_start();    
 
@@ -18,7 +18,8 @@ if (
     $account_creation_date = date("Y-m-d");
 
     if ($password !== $confirmPassword) {
-        echo "Le password non corrispondono";
+        $_SESSION['logged'] = false;
+        echo "<script>alert('Le password non corrispondono!'); window.location.href = '../pages/register.html';</script>";
     } else {
         $password = hash('sha256', $password);
         $email = strtolower($email);
@@ -27,7 +28,8 @@ if (
         $result = $conn->query($check_query);
 
         if ($result->num_rows > 0) {
-            echo "Questo utente esiste già nel database.";
+            $_SESSION['logged'] = false;
+            echo "<script>alert('Utente già registrato!'); window.location.href = '../pages/register.html';</script>";
         } else {
             $insert_query = "INSERT INTO Users (Email, Password, Username, Account_creation_date) 
             VALUES ('$email', '$password', '$username', '$account_creation_date')";
@@ -35,10 +37,10 @@ if (
             if ($conn->query($insert_query) === TRUE) {
                 $_SESSION['logged'] = true;
                 $_SESSION['email'] = $email;
-                echo "Utente registrato con successo nel database.";
                 header("refresh:3; url=../pages/main.html");
             } else {
-                echo "Errore durante l'inserimento dell'utente nel database: " . $conn->error;
+                $_SESSION['logged'] = false;
+                echo "<script>alert('Errore durante l'inserimento nel database!'); window.location.href = '../pages/register.html';</script>";
             }
         }
         $conn->close();
