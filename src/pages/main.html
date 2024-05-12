@@ -1,118 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="../assets/images/nexus_favicon.ico"
+		/>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+		<title>Main</title>
+	</head>
 
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" type="image/x-icon" href="../assets/images/nexus_favicon.ico">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <title>Main</title>
-</head>
-
-<body class="site-bg">
-    <div class="page-container">
-        <div class="content-wrap">
-            <header class="header-main-top" data-barba="wrapper" id="header-main-top">
-                <div class="navbar-top-logo-title">
-                    <img src="/src/assets/images/Nexus_logo_no_bg.png" alt="title nexus" class="title-img-navbar">
-            <div class="navbar-top-title-page">Title</div>
-                </div>
-                <div class="container-setting-page">
-                    <!-- <i class='bx bx-cog icon-setting' id="btn-page-settings"></i> -->
-                    <!-- TODO add functionality -->
-                    <i class='bx bx-dots-horizontal-rounded icon-setting'></i>
-                </div>
-            </header>
-            <header class=" header-main no-cursor-effect">
-                <nav class="navbar-side navbar-side-not-active" id="navbar-side">
-                    <ul class=" navbar-side-list">
-                        <li class="navbar-item">
-                            <a class="nav-title">
-                                <img src="/src/assets/images/Nexus_only_logo_no_bg.png" alt="title nexus"
-                                    class="img-title-side-navbar" id="img-title-side-navbar">
-                                    <!-- TODO MAYBE ADDING SOMETHING -->
-                                <!-- <i class='bx bxs-chevrons-left btn-close-open-navbar btn-navbar-not-active btn-open-close-navbar'
+	<body class="site-bg">
+		<div class="page-container">
+			<div class="content-wrap">
+				<header
+					class="header-main-top"
+					data-barba="wrapper"
+					id="header-main-top"
+				>
+					<div class="navbar-top-logo-title">
+						<img
+							src="/src/assets/images/Nexus_logo_no_bg.png"
+							alt="title nexus"
+							class="title-img-navbar"
+						/>
+						<div class="navbar-top-title-page">Title</div>
+					</div>
+					<div class="container-setting-page">
+						<!-- <i class='bx bx-cog icon-setting' id="btn-page-settings"></i> -->
+						<!-- TODO add functionality -->
+						<i class="bx bx-dots-horizontal-rounded icon-setting"></i>
+					</div>
+				</header>
+				<header class="header-main no-cursor-effect">
+					<nav class="navbar-side navbar-side-not-active" id="navbar-side">
+						<ul class="navbar-side-list">
+							<li class="navbar-item">
+								<a class="nav-title">
+									<img
+										src="/src/assets/images/Nexus_only_logo_no_bg.png"
+										alt="title nexus"
+										class="img-title-side-navbar"
+										id="img-title-side-navbar"
+									/>
+									<!-- TODO MAYBE ADDING SOMETHING -->
+									<!-- <i class='bx bxs-chevrons-left btn-close-open-navbar btn-navbar-not-active btn-open-close-navbar'
                                     id="btn-close-open-navbar"></i> -->
-                            </a>
-                        </li>
-                        <li class="navbar-item">
-                            <a class="nav-link" id="btn-page-settings">
-                                <i class='bx bx-cog link-icon'></i>
-                                <span class="nav-link-title display-none">
-                                    Settings
-                                </span>
-                            </a>
-                        </li>
-                        <li class="navbar-item">
-                            <a class="nav-link" href="main.html">
-                                <img src="/src/assets/images/nexus_logo.png" alt="user-pfp" class="link-img">
-                                <span class="nav-link-title display-none">
-                                    Main
-                                </span>
-                            </a>
-                        </li>
-                        <!-- TODO ADD FUNCTIONALITY -->
-                        <li class="navbar-item">
-                            <a class="nav-link" id="add-page-navbar-option">
-                                <i class='bx bx-add-to-queue link-icon'></i>
-                                <span class="nav-link-title display-none">
-                                    Add page
-                                </span>
-                            </a>
-                        </li>
-                        <li class="navbar-item">
-                            <a class="nav-link" href="user.html">
-                                <img src="/src/assets/images/default_pfp.jpg" alt="user-pfp" class="user-pfp link-img">
-                                <!-- TODO GOING TO DO A QUERY TO GET THE USER PFP-->
-                                <span class="nav-link-title display-none">
-                                    UserName
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+								</a>
+							</li>
+							<li class="navbar-item">
+								<a class="nav-link" id="btn-page-settings">
+									<i class="bx bx-cog link-icon"></i>
+									<span class="nav-link-title display-none"> Settings </span>
+								</a>
+							</li>
+							<li class="navbar-item">
+								<a class="nav-link" href="main.html">
+									<img
+										src="/src/assets/images/nexus_logo.png"
+										alt="user-pfp"
+										class="link-img"
+									/>
+									<span class="nav-link-title display-none"> Main </span>
+								</a>
+							</li>
+							<!-- TODO ADD FUNCTIONALITY -->
+							<li class="navbar-item">
+								<a class="nav-link" id="add-page-navbar-option">
+									<i class="bx bx-add-to-queue link-icon"></i>
+									<span class="nav-link-title display-none"> Add page </span>
+								</a>
+							</li>
+							<li class="navbar-item">
+								<a class="nav-link" href="user.html">
+									<img
+										src="/src/assets/images/default_pfp.jpg"
+										alt="user-pfp"
+										class="user-pfp link-img"
+									/>
+									<!-- TODO GOING TO DO A QUERY TO GET THE USER PFP-->
+									<span class="nav-link-title display-none"> UserName </span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</header>
 
-            <div class="main-page-content no-cursor-effect main-page-content-not-active">
-                <div class="container-banner">
-                    <img src="../assets/images/cat_macchiato.jpeg" alt="" class="banner">
-                </div>
-                <div class="container-user-page">
-                    <div class="container-img-page">
-                        <img src="../assets/images/nexus_logo.png" alt="nexus logo" class="img-page">
-                    </div>
-                    <div class="main-page-title">
-                        <div class="main-page-title-text" contenteditable="true" data-text="Write title..."></div>
-                    </div>
+				<div
+					class="main-page-content no-cursor-effect main-page-content-not-active"
+				>
+					<div class="container-banner">
+						<img
+							src="../assets/images/cat_macchiato.jpeg"
+							alt=""
+							class="banner"
+						/>
+					</div>
+					<div class="container-user-page">
+						<div class="container-img-page">
+							<img
+								src="../assets/images/nexus_logo.png"
+								alt="nexus logo"
+								class="img-page"
+							/>
+						</div>
+						<div class="main-page-title">
+							<div
+								class="main-page-title-text"
+								contenteditable="true"
+								data-text="Write title..."
+							></div>
+						</div>
 
-                    <div class="container-user-content">
-                        <div class="user-content" contenteditable="true" data-text="Write something..."
-                            id="user-content"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!-- <div class="main-overlay display-none" id="main-overlay">
+						<div class="container-user-content" id="container-user-content">
+							<div
+								class="user-content"
+								contenteditable="true"
+								data-text="Write something..."
+								id="user-content"
+							></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="main-overlay display-none" id="main-overlay">
         <div class="container-user-setting-panel display-none" id="container-user-settings-panel">
             <div class="setting-panel">
 
             </div>
         </div>
     </div> -->
-    <!-- TODO ONLY FOR DEV WHEN DONE DELETE THE SECTION BELOW-->
-    <div class="main-overlay display-none" id="main-overlay">
-        <!-- <div class="container-add-component">
+		<!-- TODO ONLY FOR DEV WHEN DONE DELETE THE SECTION BELOW-->
+		<div class="main-overlay display-none" id="main-overlay">
+			<!-- <div class="container-add-component">
             <div class="container-components-overview">
                 ciao
             </div>
         </div> -->
-        <!-- <div class="main-overlay display-block" id="main-overlay"> -->
-            <!-- move this to js to add the code inside the overlay -->
-        <!-- <div class="container-user-setting-panel display-block" id="container-user-settings-panel">
+			<!-- <div class="main-overlay display-block" id="main-overlay"> -->
+			<!-- move this to js to add the code inside the overlay -->
+			<!-- <div class="container-user-setting-panel display-block" id="container-user-settings-panel">
             <div class="setting-navbar">
                 <div class="setting-title">
                     Setting workspace
@@ -140,11 +175,9 @@
                 </div>
             </div>
         </div> -->
-    </div>
+		</div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="module" src="../assets/js/pages/main.js"></script>
-
-</body>
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script type="module" src="../assets/js/pages/main.js"></script>
+	</body>
 </html>

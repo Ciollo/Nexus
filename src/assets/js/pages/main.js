@@ -51,6 +51,7 @@ function addClickListenersToButtons() {
 		});
 	});
 }
+
 mainOverlay.addEventListener("click", function (event) {
 	let notionPanel = document.getElementById("notion-like-panel");
 	if (notionPanel && !notionPanel.contains(event.target)) {
@@ -60,14 +61,6 @@ mainOverlay.addEventListener("click", function (event) {
 });
 
 addInputEventListener(userContent);
-userContent.addEventListener("keydown", function (event) {
-	if (event.key === "Enter") {
-		console.log("Enter key pressed");
-		event.preventDefault(); 
-		let newDiv = createNewDiv("newDivId", "user-content");
-		userContent.appendChild(newDiv);
-	}
-});
 
 function addInputEventListener(element) {
 	element.addEventListener("input", function (event) {
@@ -82,6 +75,7 @@ function addInputEventListener(element) {
 		}
 	});
 }
+
 function createNotionLikePanel(targetDiv) {
 	let mainOverlay = document.getElementById("main-overlay");
 
@@ -108,13 +102,12 @@ function createNotionLikePanel(targetDiv) {
 		{ type: "todo", text: "To Do" },
 		{ type: "toggleList", text: "Toggle List" },
 		{ type: "block", text: "Block 3" },
-	]; 
+	];
 	blocks.forEach((block) => {
 		let blockElement = document.createElement("div");
 		blockElement.textContent = block.text;
-		blockElement.classList.add(block.type); 
+		blockElement.classList.add(block.type);
 		blockElement.addEventListener("click", function () {
-
 			console.log(`Clicked on ${block.text}`);
 
 			let newBlock;
@@ -146,11 +139,10 @@ function createNotionLikePanel(targetDiv) {
 function openNotionLikePanel(targetDiv) {
 	let panel = document.getElementById("notion-like-panel");
 	if (panel) {
-
 		panel.remove();
 	}
 
-	createNotionLikePanel(targetDiv); 
+	createNotionLikePanel(targetDiv);
 }
 
 function getCaretCoordinates() {
@@ -177,9 +169,25 @@ function createTodoBlock(placeholder) {
 	let input = document.createElement("input");
 	input.type = "text";
 	input.placeholder = placeholder;
-	input.className = "todo-input-field"; 
+	input.className = "todo-input-field";
 	newBlock.appendChild(checkbox);
 	newBlock.appendChild(input);
+
+	// input.addEventListener("blur", function () {
+	// 	if (input.value.trim() === "") {
+	// 		let newDiv = createNewDiv("div", "editable");
+	// 		newBlock.parentNode.replaceChild(newDiv, newBlock);
+	// 		let textNode = document.createTextNode("");
+	// 		newDiv.appendChild(textNode);
+	// 		let range = document.createRange();
+	// 		range.setStart(textNode, 0);
+	// 		range.setEnd(textNode, 0);
+	// 		let selection = window.getSelection();
+	// 		selection.removeAllRanges();
+	// 		selection.addRange(range);
+	// 	}
+	// });
+
 	return newBlock;
 }
 
