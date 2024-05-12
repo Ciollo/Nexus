@@ -113,11 +113,6 @@ linkSignUp.addEventListener("click", function () {
   goToPage("register.html");
 });
 
-// todo TOGLIERE QUANDO PUBBLICATA LA PAGINE
-btnSignIn.addEventListener("click", function () {
-  goToPage("main.html");
-});
-
 toggleViewPasswordElement.addEventListener("click", function () {
   let userPassword = document.getElementById("userPassword");
   toggleViewPassword(userPassword, toggleViewPasswordElement);
@@ -126,8 +121,4 @@ toggleViewPasswordElement.addEventListener("click", function () {
 btnContinueSignIn.addEventListener("click", continueSignIn);
 userEmail.addEventListener("input", function () {
   checkEmailValidation(userEmail);
-});
-
-userPassword.addEventListener("input", function () {
-  checkPasswordValidation(userPassword);
 });
