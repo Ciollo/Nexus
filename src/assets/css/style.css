@@ -661,6 +661,16 @@ body {
   font-size: 70px;
   text-shadow: 0 0 1px rgb(13, 176, 246), 0 0 100px rgb(20, 22, 46), 0 0 200px rgb(13, 176, 246), 0 0 200px rgb(20, 22, 46), 0 0 300px rgb(13, 176, 246), 0 0 300px rgb(20, 22, 46);
 }
+@media (min-width: 768px) {
+  .title-nexus {
+    font-size: 100px;
+  }
+}
+@media (min-width: 992px) {
+  .title-nexus {
+    font-size: 140px;
+  }
+}
 
 .typing,
 .typed-cursor {
@@ -686,29 +696,56 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  font-size: 140px;
+  font-size: 70px;
   font-weight: 400;
   letter-spacing: 0.025em;
+}
+@media (min-width: 768px) {
+  .container-title-nexus .title-nexus {
+    font-size: 100px;
+  }
+}
+@media (min-width: 992px) {
+  .container-title-nexus .title-nexus {
+    font-size: 140px;
+  }
 }
 
 .container-logo-nexus {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150px;
-  margin-top: 50px;
+  height: 100px;
+  margin-top: 30px;
+}
+@media (min-width: 768px) {
+  .container-logo-nexus {
+    height: 150px;
+    margin-top: 50px;
+  }
 }
 
 .container-btn-start-journey {
-  margin-top: 100px;
+  margin-top: 50px;
+}
+@media (min-width: 768px) {
+  .container-btn-start-journey {
+    margin-top: 100px;
+  }
 }
 
 .btn-start-journey {
-  width: 250px;
-  height: 40px;
+  width: 200px;
+  height: 30px;
 }
 .btn-start-journey:hover {
   box-shadow: 0 0 10px rgb(13, 176, 246), 0 0 40px rgb(13, 176, 246), 0 0 80px rgb(13, 176, 246);
+}
+@media (min-width: 768px) {
+  .btn-start-journey {
+    width: 250px;
+    height: 40px;
+  }
 }
 
 .navbar-side {
