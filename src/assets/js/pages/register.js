@@ -1,3 +1,4 @@
+import { isEmailValid } from "../utils/emailUtils.js";
 import { goToPage } from "../utils/goToPages.js";
 
 var linkSignIn = document.getElementById("link-sign-in");
@@ -13,23 +14,63 @@ $(document).ready(function () {
   }, 750);
 });
 
-function continueSignUp() {
-  var containerUserPassword = document.getElementById(
-    "container-user-password"
-  );
-  var containerUserUsername = document.getElementById(
-    "container-user-username"
-  );
-  var containerUserConfirmPassword = document.getElementById(
-    "container-user-confirm-password"
-  );
+function checkEmailValidation(userEmail) {
+	if (isEmailValid(userEmail.value)) {
+		if (userEmail.classList.contains("border-error-red")) {
+			userEmail.classList.remove("border-error-red");
+		} else if (userEmail.classList.contains("border-default")) {
+			userEmail.classList.remove("border-default");
+		}
 
-  containerUserUsername.hidden = false;
-  containerUserPassword.hidden = false;
-  containerUserConfirmPassword.hidden = false;
-  btnContinueSignUp.classList.remove("btn-continue");
-  btnContinueSignUp.classList.add("btn-sign-up");
-  btnContinueSignUp.innerHTML = "Sign Up";
+		userEmail.classList.add("border-confirm-green");
+	} else {
+		if (userEmail.classList.contains("border-confirm-green")) {
+			userEmail.classList.remove("border-confirm-green");
+		} else if (userEmail.classList.contains("border-default")) {
+			userEmail.classList.remove("border-default");
+		}
+		userEmail.classList.add("border-error-red");
+	}
+}
+
+function continueSignUp() {
+
+  let userEmail = document.getElementById("userEmail");
+  if (isEmailValid(userEmail.value)) {
+
+    var containerUserPassword = document.getElementById(
+      "container-user-password"
+    );
+    var containerUserUsername = document.getElementById(
+      "container-user-username"
+    );
+    var containerUserConfirmPassword = document.getElementById(
+      "container-user-confirm-password"
+    );
+
+    containerUserPassword.classList.remove("hidden");
+    containerUserConfirmPassword.classList.remove("hidden");
+    containerUserUsername.classList.remove("hidden");
+    btnContinueSignUp.classList.remove("btn-continue");
+    btnContinueSignUp.classList.add("btn-sign-up");
+    btnContinueSignUp.innerHTML = "Sign Up";
+
+    if (userEmail.classList.contains("border-error-red")) {
+      userEmail.classList.remove("border-error-red");
+    } else if (userEmail.classList.contains("border-default")) {
+      userEmail.classList.remove("border-default");
+    }
+
+    userEmail.classList.add("border-confirm-green");
+  } else {
+    if (userEmail.classList.contains("border-confirm-green")) {
+      userEmail.classList.remove("border-confirm-green");
+    } else if (userEmail.classList.contains("border-default")) {
+      userEmail.classList.remove("border-default");
+    }
+    userEmail.classList.add("border-error-red");
+  }
+
 }
 
 function toggleViewPassword(toggleElement, passwordInput) {
@@ -61,3 +102,6 @@ toggleViewConfirmPassword.addEventListener("click", function () {
 });
 
 btnContinueSignUp.addEventListener("click", continueSignUp);
+userEmail.addEventListener("input", function () {
+	checkEmailValidation(userEmail);
+});
