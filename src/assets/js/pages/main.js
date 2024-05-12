@@ -453,3 +453,50 @@ images.forEach(function (image) {
 		selectImage(this.src);
 	});
 });
+
+// When the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get all images with the class 'selected-image'
+    let images = document.querySelectorAll(".selected-image");
+
+    // Add an event listener to each image
+    images.forEach(function(image) {
+        image.addEventListener("click", function() {
+            // When an image is clicked, get its 'src' attribute
+            let selectedSrc = this.getAttribute("src");
+
+            // Get all other images with the class 'pageImg'
+            let allImages = document.querySelectorAll(".pageImg");
+
+            // Update the 'src' attribute of every other image
+            allImages.forEach(function(img) {
+                img.setAttribute("src", selectedSrc);
+            });
+        });
+    });
+});
+
+// When the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the contenteditable div
+    let titleDiv = document.querySelector(".main-page-title-text");
+
+    // Get the navbar title div and the nav link title span
+    let navbarTitleDiv = document.querySelector(".navbar-top-title-page");
+    let navLinkTitleSpan = document.querySelector(".title-Page");
+
+    // Add an event listener for the 'input' event
+    titleDiv.addEventListener("input", function() {
+        // When the content changes, create a JSON object with the new title
+        let titleJson = JSON.stringify({ title: this.textContent });
+
+        // Log the JSON string to the console
+        console.log(titleJson);
+
+        // Also update the content of the navbar title div and the nav link title span
+        navbarTitleDiv.textContent = this.textContent;
+        navLinkTitleSpan.textContent = this.textContent;
+
+        // You can also use the JSON string elsewhere in your code
+    });
+});
