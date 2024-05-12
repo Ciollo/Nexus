@@ -777,7 +777,7 @@ body {
 .main-page-content .container-user-page .container-img-page .img-page {
   width: 10rem;
   height: 10rem;
-  border: 1px solid white;
+  border: 0.5px solid white;
 }
 .main-page-content .container-user-page .container-img-page .img-page:hover {
   cursor: pointer;

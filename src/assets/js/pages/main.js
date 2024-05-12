@@ -108,7 +108,7 @@ function createNotionLikePanel(targetDiv) {
 		blockElement.textContent = block.text;
 		blockElement.classList.add(block.type);
 		blockElement.addEventListener("click", function () {
-			console.log(`Clicked on ${block.text}`);
+			// console.log(`Clicked on ${block.text}`);
 
 			let newBlock;
 
@@ -140,7 +140,8 @@ function createNotionLikePanel(targetDiv) {
 			newBlock.classList.add(block.type);
 			newBlock.classList.add("block-class");
 			newBlock.setAttribute("type", block.type); // Add the 'type' as an attribute to the new block
-			console.log(newBlock);
+			// console.log(block.type);
+			// console.log(newBlock);
 
 			// Replace the trigger character in the target div's text content
 			targetDiv.textContent = targetDiv.textContent.replace(
@@ -353,7 +354,6 @@ function createNewListItem() {
 }
 
 function saveBlocks() {
-	// Select the blocks from the container-user-content div
 	let container = document.getElementById("container-user-content");
 	let blocks = container.querySelectorAll(".block-class"); // replace '.block-class' with the actual class of your blocks
 
@@ -361,17 +361,29 @@ function saveBlocks() {
 	let blockObjects = [];
 
 	// Iterate over the blocks
+
 	blocks.forEach((block) => {
-		// Create an object for the block
+		let blockType = block.getAttribute("type");
+		let inputContent = "";
+
+		if (blockType === "todo") {
+			let inputField = block.querySelector("input[type='text']");
+			inputContent = inputField ? inputField.value : "";
+		} else if (blockType === "toggleList") {
+			let button = block.querySelector("button.toggle-list-button");
+			if (button) {
+				inputContent = button.textContent.replace(/[>V]/g, "").trim();
+			}
+		}
+
 		let blockObject = {
-			type: block.getAttribute("data-type"), // replace 'data-type' with the actual attribute that holds the block type
-			text: block.textContent,
+			type: blockType,
+			text: inputContent,
 		};
 
 		// Add the block object to the array
 		blockObjects.push(blockObject);
 	});
-
 	// Convert the block objects into a JSON string
 	let jsonString = JSON.stringify(blockObjects);
 
@@ -385,4 +397,59 @@ var saveBlock = document.getElementById("save-blocks");
 
 saveBlock.addEventListener("click", function () {
 	saveBlocks();
+});
+
+let img = document.querySelector(".img-page");
+let imagePanel = document.getElementById("image-panel");
+
+img.addEventListener("contextmenu", function (event) {
+	// Prevent the default context menu from showing
+	event.preventDefault();
+
+	// Open the image selection panel
+	imagePanel.style.display = "block";
+});
+
+document.addEventListener("click", function (event) {
+	// Check if the click was outside the image panel
+	if (
+		!imagePanel.contains(event.target) &&
+		imagePanel.style.display === "block"
+	) {
+		// Close the panel
+		closeImagePanel();
+	}
+});
+
+function selectImage(imagePath) {
+	// Update the source of the main image
+	document.querySelector(".img-page").src = imagePath;
+	// Close the panel
+	closeImagePanel();
+
+	// Create a JSON object with the src of the selected image
+	let imageObject = {
+		src: imagePath,
+	};
+
+	// Convert the image object into a JSON string
+	let jsonString = JSON.stringify(imageObject);
+
+	// Log the JSON string to the console
+	console.log(jsonString);
+
+	// Return the JSON string in case you want to use it elsewhere
+	return jsonString;
+}
+
+function closeImagePanel() {
+	imagePanel.style.display = "none";
+}
+
+let images = document.querySelectorAll(".selected-image");
+
+images.forEach(function (image) {
+	image.addEventListener("click", function () {
+		selectImage(this.src);
+	});
 });
