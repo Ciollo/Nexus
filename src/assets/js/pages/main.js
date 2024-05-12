@@ -112,6 +112,16 @@ function createNotionLikePanel(targetDiv) {
 			let newBlock;
 			if (block.type === "todo") {
 				newBlock = createTodoBlock(block.text);
+			} else if (block.type === "toggleList") {
+				let toggleListName = window.prompt(
+					"Enter the name for the toggle list:"
+				);
+				if (toggleListName) {
+					// Check if user entered a name
+					newBlock = createToggleListBlock(toggleListName);
+				} else {
+					return; // Exit function if user cancels
+				}
 			} else {
 				newBlock = document.createElement("div");
 				newBlock.textContent = block.text;
@@ -172,27 +182,24 @@ function createTodoBlock(placeholder) {
 	let checkbox = document.createElement("input");
 	checkbox.type = "checkbox";
 	checkbox.id = "todo";
+
+	// Add event listener to toggle checkbox state
+	checkbox.addEventListener("click", function () {
+		if (checkbox.checked) {
+			// Checkbox is checked
+			console.log("Checkbox is checked");
+		} else {
+			// Checkbox is unchecked
+			console.log("Checkbox is unchecked");
+		}
+	});
+
 	let input = document.createElement("input");
 	input.type = "text";
 	input.placeholder = placeholder;
 	input.className = "todo-input-field";
 	newBlock.appendChild(checkbox);
 	newBlock.appendChild(input);
-
-	// input.addEventListener("blur", function () {
-	// 	if (input.value.trim() === "") {
-	// 		let newDiv = createNewDiv("div", "editable");
-	// 		newBlock.parentNode.replaceChild(newDiv, newBlock);
-	// 		let textNode = document.createTextNode("");
-	// 		newDiv.appendChild(textNode);
-	// 		let range = document.createRange();
-	// 		range.setStart(textNode, 0);
-	// 		range.setEnd(textNode, 0);
-	// 		let selection = window.getSelection();
-	// 		selection.removeAllRanges();
-	// 		selection.addRange(range);
-	// 	}
-	// });
 
 	return newBlock;
 }
@@ -203,4 +210,103 @@ function createNewDiv(id, className) {
 	newDiv.className = className;
 	newDiv.contentEditable = "true";
 	return newDiv;
+}
+
+function createToggleListBlock(title) {
+	let newBlock = createNewDiv("toggle-list", "toggle-list");
+	let isOpened = false; // Variable to track if the toggle list is opened or closed
+
+	// Create the button to toggle visibility
+	let toggleButton = document.createElement("button");
+	toggleButton.textContent = `> ${title}`; // Add ">" symbol before the title
+	toggleButton.className = "toggle-list-button";
+	toggleButton.style.backgroundColor = "transparent"; // Set button background color to transparent
+	toggleButton.style.border = "none"; // Remove button border
+	toggleButton.style.cursor = "pointer"; // Change cursor to pointer on hover
+	toggleButton.addEventListener("click", function () {
+		let listItems = newBlock.querySelectorAll(".toggle-list-item");
+		listItems.forEach((item) => {
+			item.classList.toggle("hidden");
+		});
+
+		// Toggle between ">" and "V" symbols
+		isOpened = !isOpened;
+		toggleButton.textContent = `${isOpened ? "V" : ">"} ${title}`;
+	});
+	newBlock.appendChild(toggleButton);
+
+	newBlock.addEventListener("contextmenu", function (event) {
+		event.preventDefault(); // Prevent the default context menu from appearing
+
+		let contextMenu = document.createElement("div");
+		contextMenu.className = "context-menu";
+		contextMenu.innerHTML = `
+        <div class="context-menu-item">Edit</div>
+        <div class="context-menu-item">Delete</div>
+    `;
+
+		contextMenu.style.position = "fixed";
+		contextMenu.style.left = `${event.clientX}px`;
+		contextMenu.style.top = `${event.clientY}px`;
+
+		let editOption = contextMenu.querySelector(
+			".context-menu-item:nth-child(1)"
+		);
+		let deleteOption = contextMenu.querySelector(
+			".context-menu-item:nth-child(2)"
+		);
+
+		editOption.addEventListener("click", function () {
+			// Implement edit action here
+			let titleElement = newBlock.querySelector(".toggle-list-button");
+			let titleText = titleElement.textContent;
+			let inputField = document.createElement("input");
+			inputField.type = "text";
+			inputField.value = titleText.substring(2); // Exclude the ">" symbol
+			inputField.className = "edit-title-input";
+			inputField.addEventListener("blur", function () {
+				// When the input field loses focus, update the title text
+				let newText = inputField.value;
+				titleElement.textContent = `${isOpened ? "V" : ">"} ${newText}`; // Add ">" or "V" symbol before the new text
+				inputField.remove();
+			});
+			titleElement.textContent = "";
+			titleElement.appendChild(inputField);
+			inputField.focus(); // Automatically focus on the input field
+			// Hide the context menu after clicking "Edit"
+			contextMenu.remove();
+		});
+
+		deleteOption.addEventListener("click", function () {
+			// Implement delete action here
+			console.log("Delete option clicked");
+			// Hide the context menu after clicking "Delete"
+			contextMenu.remove();
+		});
+
+		// Append the context menu to the body
+		document.body.appendChild(contextMenu);
+
+		// Close the context menu when clicking outside of it
+		document.addEventListener("click", function (e) {
+			if (!contextMenu.contains(e.target)) {
+				contextMenu.remove();
+			}
+		});
+	});
+
+	let listItem1 = createNewListItem();
+	newBlock.appendChild(listItem1);
+
+	return newBlock;
+}
+
+function createNewListItem() {
+	let listItem = createNewDiv("toggle-list-item", "toggle-list-item hidden");
+	let input = document.createElement("input");
+	input.type = "text";
+	input.placeholder = "Enter item text";
+	input.className = "toggle-list-input";
+	listItem.appendChild(input);
+	return listItem;
 }

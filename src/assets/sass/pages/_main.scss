@@ -244,3 +244,32 @@
 
     }
 }
+
+.toggle-list-button {
+    border: none;
+    cursor: pointer;
+    color: $default-font-color;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.toggle-list-input {
+    background-color: transparent;
+    color: $default-font-color;
+    border: none;
+}
+
+.context-menu {
+    background: darken($color: $default-background, $amount: 5);
+    color: $default-font-color;
+    padding: 0.5rem 0.5rem;
+
+    .context-menu-item {
+        padding: 0.5rem 1rem;
+
+        &:hover {
+            background: darken($color: $default-background, $amount: 10);
+            cursor: pointer;
+        }
+    }
+}

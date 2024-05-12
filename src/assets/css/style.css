@@ -930,6 +930,33 @@ body {
   outline: none;
 }
 
+.toggle-list-button {
+  border: none;
+  cursor: pointer;
+  color: #fdfdfd;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.toggle-list-input {
+  background-color: transparent;
+  color: #fdfdfd;
+  border: none;
+}
+
+.context-menu {
+  background: #0c0e1c;
+  color: #fdfdfd;
+  padding: 0.5rem 0.5rem;
+}
+.context-menu .context-menu-item {
+  padding: 0.5rem 1rem;
+}
+.context-menu .context-menu-item:hover {
+  background: #05050a;
+  cursor: pointer;
+}
+
 .img-fluid {
   width: 700px; /* Imposta direttamente la larghezza */
   height: auto;
