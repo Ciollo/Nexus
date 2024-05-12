@@ -69,13 +69,14 @@ function addInputEventListener(element) {
 		const triggerCharacter = "/+";
 
 		if (isAddComponentTriggered(newTextContent, triggerCharacter)) {
+			// Replace the "/+" with an empty string
+			event.target.textContent = newTextContent.replace(triggerCharacter, "");
 			openNotionLikePanel(document.activeElement);
 		} else {
 			closeComponentPanel();
 		}
 	});
 }
-
 function createNotionLikePanel(targetDiv) {
 	let mainOverlay = document.getElementById("main-overlay");
 
@@ -119,15 +120,22 @@ function createNotionLikePanel(targetDiv) {
 			}
 			newBlock.classList.add(block.type);
 
-			targetDiv.textContent = "";
-			targetDiv.appendChild(newBlock);
+			// Insert the new block as a sibling to the target div
+			targetDiv.parentNode.insertBefore(newBlock, targetDiv.nextSibling);
 
-			let newEditableDiv = document.createElement("div");
-			newEditableDiv.contentEditable = "true";
-			newEditableDiv.classList.add("user-content");
-			addInputEventListener(newEditableDiv);
+			// Check if the next sibling of the target div is a user-content div
+			if (
+				!targetDiv.nextSibling ||
+				targetDiv.nextSibling.className !== "user-content"
+			) {
+				let newEditableDiv = document.createElement("div");
+				newEditableDiv.contentEditable = "true";
+				newEditableDiv.classList.add("user-content");
+				addInputEventListener(newEditableDiv);
 
-			targetDiv.parentNode.insertBefore(newEditableDiv, targetDiv.nextSibling);
+				// Insert the new editable div as a sibling to the new block
+				newBlock.parentNode.insertBefore(newEditableDiv, newBlock.nextSibling);
+			}
 
 			panel.remove();
 			toggleOverlayVisibility();
