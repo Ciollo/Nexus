@@ -76,80 +76,111 @@ function addInputEventListener(element) {
 }
 
 function createNotionLikePanel(targetDiv) {
-	let mainOverlay = document.getElementById("main-overlay");
+    let mainOverlay = document.getElementById("main-overlay");
 
-	toggleOverlayVisibility();
+    toggleOverlayVisibility();
 
-	let panel = document.createElement("div");
-	panel.id = "notion-like-panel";
+    let panel = document.createElement("div");
+    panel.id = "notion-like-panel";
 
-	const caretCoordinates = getCaretCoordinates();
+    const caretCoordinates = getCaretCoordinates();
 
-	panel.style.position = "fixed";
-	panel.style.left = `${caretCoordinates.x}px`;
-	panel.style.top = `${caretCoordinates.y}px`;
-	panel.style.width = "300px";
-	panel.style.height = "300px";
-	panel.style.backgroundColor = "#f5f5f5";
-	panel.style.border = "1px solid #ddd";
-	panel.style.padding = "10px";
-	panel.style.overflow = "auto";
+    panel.style.position = "fixed";
+    panel.style.left = `${caretCoordinates.x}px`;
+    panel.style.top = `${caretCoordinates.y}px`;
+    panel.style.width = "300px";
+    panel.style.height = "300px";
+    panel.style.backgroundColor = "#f5f5f5";
+    panel.style.border = "1px solid #ddd";
+    panel.style.padding = "10px";
+    panel.style.overflow = "auto";
 
-	mainOverlay.appendChild(panel);
+    mainOverlay.appendChild(panel);
 
-	let blocks = [
-		{ type: "todo", text: "To Do" },
-		{ type: "toggleList", text: "Toggle List" },
-		{ type: "block", text: "Block 3" },
-	];
-	blocks.forEach((block) => {
-		let blockElement = document.createElement("div");
-		blockElement.textContent = block.text;
-		blockElement.classList.add(block.type);
-		blockElement.addEventListener("click", function () {
-			console.log(`Clicked on ${block.text}`);
+    let blocks = [
+        { type: "todo", text: "To Do" },
+        { type: "toggleList", text: "Toggle List" },
+        { type: "unorderedList", text: "Unordered List" }, // Added option for unordered list
+        { type: "orderedList", text: "Ordered List" }, // Added option for ordered list
+    ];
+    blocks.forEach((block) => {
+        let blockElement = document.createElement("div");
+        blockElement.textContent = block.text;
+        blockElement.classList.add(block.type);
+        blockElement.addEventListener("click", function () {
+            console.log(`Clicked on ${block.text}`);
 
-			let newBlock;
-			if (block.type === "todo") {
-				newBlock = createTodoBlock(block.text);
-			} else if (block.type === "toggleList") {
-				let toggleListName = window.prompt(
-					"Enter the name for the toggle list:"
-				);
-				if (toggleListName) {
-					// Check if user entered a name
-					newBlock = createToggleListBlock(toggleListName);
-				} else {
-					return; // Exit function if user cancels
-				}
-			} else {
-				newBlock = document.createElement("div");
-				newBlock.textContent = block.text;
-			}
-			newBlock.classList.add(block.type);
+            let newBlock;
+            if (block.type === "todo") {
+                newBlock = createTodoBlock(block.text);
+            } else if (block.type === "toggleList") {
+                let toggleListName = window.prompt(
+                    "Enter the name for the toggle list:"
+                );
+                if (toggleListName) {
+                    // Check if user entered a name
+                    newBlock = createToggleListBlock(toggleListName);
+                } else {
+                    return; // Exit function if user cancels
+                }
+            } else if (block.type === "unorderedList" || block.type === "orderedList") {
+                newBlock = createListBlock(block.text, block.type === "unorderedList" ? "ul" : "ol");
+            } else {
+                newBlock = document.createElement("div");
+                newBlock.textContent = block.text;
+            }
+            newBlock.classList.add(block.type);
 
-			// Replace the trigger character in the target div's text content
-			targetDiv.textContent = targetDiv.textContent.replace(
-				triggerCharacter,
-				""
-			);
+            // Replace the trigger character in the target div's text content
+            targetDiv.textContent = targetDiv.textContent.replace(
+                triggerCharacter,
+                ""
+            );
 
-			// Insert the new block as a sibling to the target div
-			targetDiv.parentNode.insertBefore(newBlock, targetDiv.nextSibling);
+            // Insert the new block as a sibling to the target div
+            targetDiv.parentNode.insertBefore(newBlock, targetDiv.nextSibling);
 
-			let newEditableDiv = document.createElement("div");
-			newEditableDiv.contentEditable = "true";
-			newEditableDiv.classList.add("user-content");
-			addInputEventListener(newEditableDiv);
+            let newEditableDiv = document.createElement("div");
+            newEditableDiv.contentEditable = "true";
+            newEditableDiv.classList.add("user-content");
+            addInputEventListener(newEditableDiv);
 
-			// Insert the new editable div as a sibling to the new block
-			newBlock.parentNode.insertBefore(newEditableDiv, newBlock.nextSibling);
+            // Insert the new editable div as a sibling to the new block
+            newBlock.parentNode.insertBefore(newEditableDiv, newBlock.nextSibling);
 
-			panel.remove();
-			toggleOverlayVisibility();
-		});
-		panel.appendChild(blockElement);
-	});
+            panel.remove();
+            toggleOverlayVisibility();
+        });
+        panel.appendChild(blockElement);
+    });
+}
+
+
+// Function to create a list block
+function createListBlock(title, listType) {
+    let newBlock = createNewDiv("list-block", "list-block");
+    let list = document.createElement(listType);
+    let numItems = parseInt(prompt("Enter the number of items for the list:"));
+    if (isNaN(numItems) || numItems <= 0) {
+        return null; // Exit function if the user enters an invalid number
+    }
+    for (let i = 0; i < numItems; i++) {
+        let itemText = prompt(`Enter text for item ${i + 1}:`);
+        if (itemText.trim() === "") {
+            continue; // Skip empty items
+        }
+        list.appendChild(createListItem(itemText));
+    }
+    newBlock.appendChild(list);
+    return newBlock;
+}
+
+
+// Function to create a list item
+function createListItem(text) {
+	let listItem = document.createElement("li");
+	listItem.textContent = text;
+	return listItem;
 }
 
 function openNotionLikePanel(targetDiv) {
