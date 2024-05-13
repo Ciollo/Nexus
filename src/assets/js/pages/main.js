@@ -100,15 +100,14 @@ function createNotionLikePanel(targetDiv) {
 	let blocks = [
 		{ type: "todo", text: "To Do" },
 		{ type: "toggleList", text: "Toggle List" },
-		{ type: "unorderedList", text: "Unordered List" }, // Added option for unordered list
-		{ type: "orderedList", text: "Ordered List" }, // Added option for ordered list
+		{ type: "unorderedList", text: "Unordered List" }, 
+		{ type: "orderedList", text: "Ordered List" }, 
 	];
 	blocks.forEach((block) => {
 		let blockElement = document.createElement("div");
 		blockElement.textContent = block.text;
 		blockElement.classList.add(block.type);
 		blockElement.addEventListener("click", function () {
-			// console.log(`Clicked on ${block.text}`);
 
 			let newBlock;
 
@@ -119,10 +118,10 @@ function createNotionLikePanel(targetDiv) {
 					"Enter the name for the toggle list:"
 				);
 				if (toggleListName) {
-					// Check if user entered a name
+
 					newBlock = createToggleListBlock(toggleListName);
 				} else {
-					return; // Exit function if user cancels
+					return; 
 				}
 			} else if (
 				block.type === "unorderedList" ||
@@ -139,17 +138,13 @@ function createNotionLikePanel(targetDiv) {
 
 			newBlock.classList.add(block.type);
 			newBlock.classList.add("block-class");
-			newBlock.setAttribute("type", block.type); // Add the 'type' as an attribute to the new block
-			// console.log(block.type);
-			// console.log(newBlock);
+			newBlock.setAttribute("type", block.type); 
 
-			// Replace the trigger character in the target div's text content
 			targetDiv.textContent = targetDiv.textContent.replace(
 				triggerCharacter,
 				""
 			);
 
-			// Insert the new block as a sibling to the target div
 			targetDiv.parentNode.insertBefore(newBlock, targetDiv.nextSibling);
 
 			let newEditableDiv = document.createElement("div");
@@ -157,29 +152,27 @@ function createNotionLikePanel(targetDiv) {
 			newEditableDiv.classList.add("user-content");
 			addInputEventListener(newEditableDiv);
 
-			// Insert the new editable div as a sibling to the new block
 			newBlock.parentNode.insertBefore(newEditableDiv, newBlock.nextSibling);
 
 			panel.remove();
 			toggleOverlayVisibility();
-			// Save the blocks after a new one is added
+
 		});
 		panel.appendChild(blockElement);
 	});
 }
 
-// Function to create a list block
 function createListBlock(title, listType) {
 	let newBlock = createNewDiv("list-block", "list-block");
 	let list = document.createElement(listType);
 	let numItems = parseInt(prompt("Enter the number of items for the list:"));
 	if (isNaN(numItems) || numItems <= 0) {
-		return null; // Exit function if the user enters an invalid number
+		return null; 
 	}
 	for (let i = 0; i < numItems; i++) {
 		let itemText = prompt(`Enter text for item ${i + 1}:`);
 		if (itemText.trim() === "") {
-			continue; // Skip empty items
+			continue; 
 		}
 		list.appendChild(createListItem(itemText));
 	}
@@ -187,7 +180,6 @@ function createListBlock(title, listType) {
 	return newBlock;
 }
 
-// Function to create a list item
 function createListItem(text) {
 	let listItem = document.createElement("li");
 	listItem.textContent = text;
@@ -225,13 +217,12 @@ function createTodoBlock(placeholder) {
 	checkbox.type = "checkbox";
 	checkbox.id = "todo";
 
-	// Add event listener to toggle checkbox state
 	checkbox.addEventListener("click", function () {
 		if (checkbox.checked) {
-			// Checkbox is checked
+
 			console.log("Checkbox is checked");
 		} else {
-			// Checkbox is unchecked
+
 			console.log("Checkbox is unchecked");
 		}
 	});
@@ -256,29 +247,27 @@ function createNewDiv(id, className) {
 
 function createToggleListBlock(title) {
 	let newBlock = createNewDiv("toggle-list", "toggle-list");
-	let isOpened = false; // Variable to track if the toggle list is opened or closed
+	let isOpened = false; 
 
-	// Create the button to toggle visibility
 	let toggleButton = document.createElement("button");
-	toggleButton.textContent = `> ${title}`; // Add ">" symbol before the title
+	toggleButton.textContent = `> ${title}`; 
 	toggleButton.className = "toggle-list-button";
-	toggleButton.style.backgroundColor = "transparent"; // Set button background color to transparent
-	toggleButton.style.border = "none"; // Remove button border
-	toggleButton.style.cursor = "pointer"; // Change cursor to pointer on hover
+	toggleButton.style.backgroundColor = "transparent"; 
+	toggleButton.style.border = "none"; 
+	toggleButton.style.cursor = "pointer"; 
 	toggleButton.addEventListener("click", function () {
 		let listItems = newBlock.querySelectorAll(".toggle-list-item");
 		listItems.forEach((item) => {
 			item.classList.toggle("hidden");
 		});
 
-		// Toggle between ">" and "V" symbols
 		isOpened = !isOpened;
 		toggleButton.textContent = `${isOpened ? "V" : ">"} ${title}`;
 	});
 	newBlock.appendChild(toggleButton);
 
 	newBlock.addEventListener("contextmenu", function (event) {
-		event.preventDefault(); // Prevent the default context menu from appearing
+		event.preventDefault(); 
 
 		let contextMenu = document.createElement("div");
 		contextMenu.className = "context-menu";
@@ -299,37 +288,35 @@ function createToggleListBlock(title) {
 		);
 
 		editOption.addEventListener("click", function () {
-			// Implement edit action here
+
 			let titleElement = newBlock.querySelector(".toggle-list-button");
 			let titleText = titleElement.textContent;
 			let inputField = document.createElement("input");
 			inputField.type = "text";
-			inputField.value = titleText.substring(2); // Exclude the ">" symbol
+			inputField.value = titleText.substring(2); 
 			inputField.className = "edit-title-input";
 			inputField.addEventListener("blur", function () {
-				// When the input field loses focus, update the title text
+
 				let newText = inputField.value;
-				titleElement.textContent = `${isOpened ? "V" : ">"} ${newText}`; // Add ">" or "V" symbol before the new text
+				titleElement.textContent = `${isOpened ? "V" : ">"} ${newText}`; 
 				inputField.remove();
 			});
 			titleElement.textContent = "";
 			titleElement.appendChild(inputField);
-			inputField.focus(); // Automatically focus on the input field
-			// Hide the context menu after clicking "Edit"
+			inputField.focus(); 
+
 			contextMenu.remove();
 		});
 
 		deleteOption.addEventListener("click", function () {
-			// Implement delete action here
+
 			console.log("Delete option clicked");
-			// Hide the context menu after clicking "Delete"
+
 			contextMenu.remove();
 		});
 
-		// Append the context menu to the body
 		document.body.appendChild(contextMenu);
 
-		// Close the context menu when clicking outside of it
 		document.addEventListener("click", function (e) {
 			if (!contextMenu.contains(e.target)) {
 				contextMenu.remove();
@@ -355,12 +342,9 @@ function createNewListItem() {
 
 function saveBlocks() {
 	let container = document.getElementById("container-user-content");
-	let blocks = container.querySelectorAll(".block-class"); // replace '.block-class' with the actual class of your blocks
+	let blocks = container.querySelectorAll(".block-class"); 
 
-	// Initialize an empty array to hold the block objects
 	let blockObjects = [];
-
-	// Iterate over the blocks
 
 	blocks.forEach((block) => {
 		let blockType = block.getAttribute("type");
@@ -381,7 +365,6 @@ function saveBlocks() {
 			text: inputContent,
 		};
 
-		// Add the block object to the array
 		blockObjects.push(blockObject);
 	});
 	   let jsonString = JSON.stringify(blockObjects);
@@ -398,7 +381,6 @@ function saveBlocks() {
         console.error('Error:', error);
     });
 
-    // Return the JSON string in case you want to use it elsewhere
 	return jsonString;
 }
 var saveBlock = document.getElementById("save-blocks");
@@ -411,44 +393,37 @@ let img = document.querySelector(".img-page");
 let imagePanel = document.getElementById("image-panel");
 
 img.addEventListener("contextmenu", function (event) {
-	// Prevent the default context menu from showing
+
 	event.preventDefault();
 
-	// Open the image selection panel
 	imagePanel.style.display = "block";
 });
 
 document.addEventListener("click", function (event) {
-	// Check if the click was outside the image panel
+
 	if (
 		!imagePanel.contains(event.target) &&
 		imagePanel.style.display === "block"
 	) {
-		// Close the panel
+
 		closeImagePanel();
 	}
 });
 
-
-
 function selectImage(imagePath) {
-    // Update the source of the main image
+
     document.querySelector(".img-page").src = imagePath;
-    // Close the panel
+
     closeImagePanel();
 
-    // Create a JSON object with the src of the selected image
     let imageObject = {
         src: imagePath,
     };
 
-    // Convert the image object into a JSON string
     let jsonString = JSON.stringify(imageObject);
 
-    // Log the JSON string to the console
     console.log(jsonString);
 
-    // Send a request to the server to update the profile picture
     fetch("../includes/updateProfilePicture.php", {
         method: 'POST',
         headers: {
@@ -463,7 +438,7 @@ function selectImage(imagePath) {
     });
 
     console.log("Image selected: " + imagePath);
-    // Return the JSON string in case you want to use it elsewhere
+
     return jsonString;
 }
 
@@ -479,21 +454,17 @@ images.forEach(function (image) {
 	});
 });
 
-// When the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function() {
-    // Get all images with the class 'selected-image'
+
     let images = document.querySelectorAll(".selected-image");
 
-    // Add an event listener to each image
     images.forEach(function(image) {
         image.addEventListener("click", function() {
-            // When an image is clicked, get its 'src' attribute
+
             let selectedSrc = this.getAttribute("src");
 
-            // Get all other images with the class 'pageImg'
             let allImages = document.querySelectorAll(".pageImg");
 
-            // Update the 'src' attribute of every other image
             allImages.forEach(function(img) {
                 img.setAttribute("src", selectedSrc);
             });
@@ -501,28 +472,22 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// When the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function() {
-    // Get the contenteditable div
+
     let titleDiv = document.querySelector(".main-page-title-text");
 
-    // Get the navbar title div and the nav link title span
     let navbarTitleDiv = document.querySelector(".navbar-top-title-page");
     let navLinkTitleSpan = document.querySelector(".title-Page");
 
-    // Add an event listener for the 'input' event
     titleDiv.addEventListener("input", function() {
-        // When the content changes, create a JSON object with the new title
+
         let titleJson = JSON.stringify({ title: this.textContent });
 
-        // Log the JSON string to the console
         console.log(titleJson);
 
-        // Also update the content of the navbar title div and the nav link title span
         navbarTitleDiv.textContent = this.textContent;
         navLinkTitleSpan.textContent = this.textContent;
 
-        // You can also use the JSON string elsewhere in your code
     });
 });
 
@@ -530,7 +495,7 @@ var userContents = Array.from(document.querySelectorAll('.user-content'));
 
 document.querySelector('.container-user-content').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
-        event.preventDefault(); // Prevents the default action of the enter key
+        event.preventDefault(); 
         var newDiv = document.createElement('div');
         newDiv.className = 'user-content';
 		newDiv.className += ' block-class';
@@ -539,7 +504,6 @@ document.querySelector('.container-user-content').addEventListener('keydown', fu
         document.querySelector('#container-user-content').appendChild(newDiv);
         userContents.push(newDiv);
 
-        // Add focus event listener
         newDiv.addEventListener('focus', function() {
             if (this.innerText === this.dataset.text) {
                 this.innerText = '';
@@ -547,7 +511,7 @@ document.querySelector('.container-user-content').addEventListener('keydown', fu
         });
     }
     else if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
-        event.preventDefault(); // Prevents the default action of the arrow keys
+        event.preventDefault(); 
         var currentIndex = userContents.findIndex(div => div === document.activeElement);
         if (currentIndex !== -1) {
             var nextIndex = event.key === 'ArrowUp' ? currentIndex - 1 : currentIndex + 1;
