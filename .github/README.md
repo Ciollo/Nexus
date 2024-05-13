@@ -50,10 +50,10 @@ To get started with Nexus, follow these simple steps:
 
 | Features              | Status |
 | --------------        | ------ |
-| Database              | -  ❌  |
-| Pages                 | -  ❌  |
+| Database              | -  🚧  |
+| Pages                 | -  🚧  |
 | Note taking           | -  ❌  |
-| Todo                  | -  ❌  |
+| Todo                  | -  🚧  |
 | GUI                   | -  ❌  |
 | Multi-User            | -  ❌  |
 | Responsive            | -  ❌  |
@@ -63,15 +63,15 @@ To get started with Nexus, follow these simple steps:
 | Online publication    | -  ❌  |
 | Dark mode             | -  ❌  |
 | Settings              | -  ❌  |
-| Nav bar               | -  ❌  |
+| Nav bar               | -  ✅ |
 | Footer                | -  🚧  |
-| Side bar              | -  ❌  |
+| Side bar              | -  ✅  |
 | Barba JS              | -  ❌  |
 | Sistemare grafica     | -  🚧  |
 | Check password        | -  🚧  |
 | Picture profile       | -  ❌  |
 | Personalize scrollbar(nota: su firefox non sono supportate) | -  ❌  |
-| Utilizzare JSON | -  ❌  |
+| Utilizzare JSON | -  🚧  |
 | Contenuto settngs dinamico a seconda della scelta | -  🚧  |
 
 ## 🚧️ Little Fixes
@@ -80,7 +80,7 @@ To get started with Nexus, follow these simple steps:
 ✅ = Fixed    
 | Features        | Status | Description |
 | --------------  | ------ | ----------- |
-| Controllo password durante register | -  ❌  | - |
+| Controllo password durante register | -  ✅   | - |
 | Cursor in localhost non funziona | -  ❌  | - |
 | Spostare navbar main in laterale | - ✅    | - |
 | Aggiungere bottoni per la modificare del banner e immagine page | -  ❌  | - |
