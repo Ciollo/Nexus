@@ -51,8 +51,13 @@
                     </div>
                     <form method="post" action="../includes/login.php"> 
                         <div class="container-input-form">
-                            <label class="label-input-form">Workspace's name</label>
-                            <input type="text" class="input-form border-default" name="emailUtente" id="workspaceName"
+                            <label class="label-input-form">Page's name</label>
+                            <input type="text" class="input-form border-default" name="title"
+                                aria-describedby="emailHelp" placeholder="Workspace name" required>
+                        </div>
+                        <div class="container-input-form">
+                            <label class="label-input-form">Description</label>
+                            <input type="text" class="input-form border-default" name="description" 
                                 aria-describedby="emailHelp" placeholder="Workspace name" required>
                         </div>
                         <div id="continue-container" class="container-btn-form">
