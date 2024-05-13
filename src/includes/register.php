@@ -37,7 +37,7 @@ if (
             if ($conn->query($insert_query) === TRUE) {
                 $_SESSION['logged'] = true;
                 $_SESSION['email'] = $email;
-                header("Location: ../pages/main.html");
+                header("Location: ../pages/insertWorkspaceName.html");
             } else {
                 $_SESSION['logged'] = false;
                 echo "<script>alert('Errore durante l'inserimento nel database!'); window.location.href = '../pages/register.html';</script>";
