@@ -48,12 +48,12 @@ function continueSignUp() {
       "container-user-confirm-password"
     );
 
+    let signUpContainer = document.getElementById("sign-up-container");
     containerUserPassword.classList.remove("hidden");
     containerUserConfirmPassword.classList.remove("hidden");
     containerUserUsername.classList.remove("hidden");
-    btnContinueSignUp.classList.remove("btn-continue");
-    btnContinueSignUp.classList.add("btn-sign-up");
-    btnContinueSignUp.innerHTML = "Sign Up";
+    signUpContainer.classList.remove("hidden");
+    btnContinueSignUp.classList.add("hidden");
 
     if (userEmail.classList.contains("border-error-red")) {
       userEmail.classList.remove("border-error-red");
