@@ -31,7 +31,7 @@
         font-size: 14px;
         font-weight: lighter;
         padding: 10px 0px 10px 15px;
-        width: 350px;
+        width: 60%;
         border: 100px solid none;
 
         &:focus {
@@ -58,6 +58,7 @@
     display: flex;
     justify-content: center;
 
+    .btn-sign-up,
     .btn-continue,
     .btn-sign-in {
         width: 100%;

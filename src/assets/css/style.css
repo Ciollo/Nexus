@@ -56,7 +56,9 @@
 
 * {
   font-family: "Mulish", sans-serif;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 html,
@@ -206,7 +208,7 @@ body {
   font-size: 14px;
   font-weight: lighter;
   padding: 10px 0px 10px 15px;
-  width: 350px;
+  width: 60%;
   border: 100px solid none;
 }
 .container-input-form .input-form:focus {
@@ -232,6 +234,7 @@ body {
   display: flex;
   justify-content: center;
 }
+.container-btn-form .btn-sign-up,
 .container-btn-form .btn-continue,
 .container-btn-form .btn-sign-in {
   width: 100%;
@@ -579,7 +582,8 @@ body {
   margin-left: 1rem;
   width: 2.5rem;
   height: 2.5rem;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   border: 1px solid white;
 }
 .header-main-top .navbar-top-logo-title .navbar-top-title-page {
@@ -651,6 +655,7 @@ body {
 }
 
 .img-splash-screen {
+  max-width: -moz-fit-content;
   max-width: fit-content;
   width: 70%;
   height: auto;
@@ -768,7 +773,8 @@ body {
 .main-page-content .container-banner .banner {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main-page-content .container-user-page {
   padding-left: 10rem;
@@ -893,7 +899,8 @@ body {
 .main-overlay .container-user-setting-panel .setting-content .setting-home-screen .img-setting-home-screen {
   width: 25rem;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .main-overlay .container-user-setting-panel .setting-content .setting-workspace-content .setting-workspace-content-title {
   font-size: 1.5rem;
@@ -912,7 +919,8 @@ body {
   width: 10rem;
   height: 10rem;
   cursor: pointer;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   border: 1px solid white;
 }
 .main-overlay .container-user-setting-panel .setting-content .setting-workspace-content-button {
