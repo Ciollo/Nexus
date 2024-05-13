@@ -11,20 +11,28 @@ if (
     $title = $_POST['title'];
     $description = $_POST['description'];
     $creation_date = date("Y-m-d");
-    $last_modification = date("Y-m-d H:i:s"); // Assume last modification is current time
-    $position_within_workspace = 0; // Set position as default value for now
+    $last_modification = date("Y-m-d H:i:s"); 
+    $userEmail = $_SESSION['email'];
+    $image_path = "../assets/images/pagePhoto/nexus_logo.png";
+
+    $query =  "SELECT `ID` FROM `users` WHERE `Email` = '$userEmail' LIMIT 1";
+    $result = $conn->query($query);
     
-    // Perform any additional validation if needed
-    
-    $insert_query = "INSERT INTO Pages (Title, Description, Creation_date, Last_modification, Position_within_workspace) 
-                     VALUES ('$title', '$description', '$creation_date', '$last_modification', '$position_within_workspace')";
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $userID = $row['ID']; 
+        
+        $insert_query = "INSERT INTO Pages (Title, Description, Creation_date, Last_modification, Image_path, ID_user) 
+                         VALUES ('$title', '$description', '$creation_date', '$last_modification', '$image_path', '$userID')";
+        
+        if ($conn->query($insert_query) === TRUE) {
+			header("Location: ../pages/main.html");
+        } else {
+			echo "<script>alert('Errore durante l'inserimento nel database!'); window.location.href = '../pages/insertPageName.html';</script>";
             
-    if ($conn->query($insert_query) === TRUE) {
-        echo "New record created successfully";
-        // Redirect or perform any other action after successful insertion
+        }
     } else {
-        echo "Error: " . $insert_query . "<br>" . $conn->error;
-        // Handle error condition
+		echo "<script>alert('Utente non trovato!'); window.location.href = '../pages/insertPageName.html';</script>";
     }
     
     $conn->close();

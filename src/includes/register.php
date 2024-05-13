@@ -23,7 +23,7 @@ if (
     } else {
         $password = hash('sha256', $password);
         $email = strtolower($email);
-        // check if username is already in
+        
         $check_query = "SELECT * FROM users WHERE email = '$email' OR username = '$username'";
         $result = $conn->query($check_query);
 
