@@ -525,3 +525,35 @@ document.addEventListener("DOMContentLoaded", function() {
         // You can also use the JSON string elsewhere in your code
     });
 });
+
+var userContents = Array.from(document.querySelectorAll('.user-content'));
+
+document.querySelector('.container-user-content').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Prevents the default action of the enter key
+        var newDiv = document.createElement('div');
+        newDiv.className = 'user-content';
+		newDiv.className += ' block-class';
+        newDiv.contentEditable = 'true';
+		      newDiv.setAttribute('type', 'paragraph'); 
+        document.querySelector('#container-user-content').appendChild(newDiv);
+        userContents.push(newDiv);
+
+        // Add focus event listener
+        newDiv.addEventListener('focus', function() {
+            if (this.innerText === this.dataset.text) {
+                this.innerText = '';
+            }
+        });
+    }
+    else if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
+        event.preventDefault(); // Prevents the default action of the arrow keys
+        var currentIndex = userContents.findIndex(div => div === document.activeElement);
+        if (currentIndex !== -1) {
+            var nextIndex = event.key === 'ArrowUp' ? currentIndex - 1 : currentIndex + 1;
+            if (nextIndex >= 0 && nextIndex < userContents.length) {
+                userContents[nextIndex].focus();
+            }
+        }
+    }
+});
