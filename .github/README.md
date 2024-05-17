@@ -48,56 +48,55 @@ To get started with Nexus, follow these simple steps:
 🚧 = In Progress    <br>
 ✅ = Implemented    
 
-| Features              | Status |
-| --------------        | ------ |
-| Database              | -  🚧  |
-| Pages                 | -  🚧  |
-| Note taking           | -  ❌  |
-| Todo                  | -  🚧  |
-| GUI                   | -  ❌  |
-| Multi-User            | -  ❌  |
-| Responsive            | -  ❌  |
-| Login                 | -  🚧  |
-| Register              | -  🚧  |
-| Splash screen         | -  ✅  |
-| Online publication    | -  ❌  |
-| Dark mode             | -  ❌  |
-| Settings              | -  ❌  |
-| Nav bar               | -  ✅ |
-| Footer                | -  🚧  |
-| Side bar              | -  ✅  |
-| Barba JS              | -  ❌  |
-| Sistemare grafica     | -  🚧  |
-| Check password        | -  🚧  |
-| Picture profile       | -  ❌  |
-| Personalize scrollbar(nota: su firefox non sono supportate) | -  ❌  |
-| Utilizzare JSON | -  🚧  |
-| Contenuto settngs dinamico a seconda della scelta | -  🚧  |
+| Features                                                    | Status |
+|-------------------------------------------------------------|--------|
+| Database                                                    | -  🚧  |
+| Pages                                                       | -  🚧  |
+| Note taking                                                 | -  ❌   |
+| Todo                                                        | -  🚧  |
+| GUI                                                         | -  ❌   |
+| Multi-User                                                  | -  ❌   |
+| Responsive                                                  | -  ❌   |
+| Login                                                       | -  🚧  |
+| Register                                                    | -  🚧  |
+| Splash screen                                               | -  ✅   |
+| Online publication                                          | -  ❌   |
+| Dark mode                                                   | -  ❌   |
+| Settings                                                    | -  ❌   |
+| Nav bar                                                     | -  ✅   |
+| Footer                                                      | -  🚧  |
+| Side bar                                                    | -  ✅   |
+| Barba JS                                                    | -  ❌   |
+| Sistemare grafica                                           | -  🚧  |
+| Check password                                              | -  🚧  |
+| Picture profile                                             | -  ❌   |
+| Personalize scrollbar(nota: su firefox non sono supportate) | -  ❌   |
+| Utilizzare JSON                                             | -  🚧  |
+| Contenuto settings dinamico a seconda della scelta          | -  🚧  |
 
 ## 🚧️ Little Fixes
 ❌ = Not Fixed yet <br>
 🚧 = On working    <br>
 ✅ = Fixed    
-| Features        | Status | Description |
-| --------------  | ------ | ----------- |
-| Controllo password durante register | -  ✅   | - |
-| Cursor in localhost non funziona | -  ❌  | - |
-| Spostare navbar main in laterale | - ✅    | - |
-| Aggiungere bottoni per la modificare del banner e immagine page | -  ❌  | - |
-| Cambiare tutti i px con rem| -  ❌  | - |
-| div content editable br quando al limite | -  ❌  | - |
-| quanto si creano elements hanno id uguale | -  ❌  | - |
+| Features                                                        | Status | Description |
+|-----------------------------------------------------------------|--------|-------------|
+| Controllo password durante register                             | -  ✅   | -           |
+| Spostare navbar main in laterale                                | - ✅    | -           |
+| Aggiungere bottoni per la modificare del banner e immagine page | -  ❌   | -           |
+| Cambiare tutti i px con rem                                     | -  ❌   | -           |
+| div content editable br quando al limite                        | -  ❌   | -           |
+| quando si creano elements hanno id uguale                       | -  ❌   | -           |
 
 ## 💭 Thoughts
 ❌ = Nah <br>
 💭 = Have to think. <br>
 ✅ = Going to do
 
-| Features        | Status | Description |
-| --------------  | ------ | ----------- |
-| Navbar togliere il bottone laterale per aprirlo e sostituirlo con un hover | -  💭  | - |
-| Togliere personlized cursor nelle pages? | - ✅   | Si risultavva troppo brutto toglierlo molte volte quanto passava in hover su molti elementi |
-| Cambiare dei colori? | -  💭  | - |
+| Features                                                                   | Status | Description                                                                                |
+|----------------------------------------------------------------------------|--------|--------------------------------------------------------------------------------------------|
+| Navbar togliere il bottone laterale per aprirlo e sostituirlo con un hover | -  💭  | -                                                                                          |
+| Togliere cursore personalizzato nelle pages?                               | - ✅    | Si risultava troppo brutto toglierlo molte volte quanto passava in hover su molti elementi |
+| Cambiare dei colori?                                                       | -  💭  | -                                                                                          |
 | Inserire i file html all'interno del mysql? | -  💭  |
 | Forse aggiungere di default le pages per l'utente ? | -  💭  |
 
@@ -118,9 +117,9 @@ Contributions are welcome! If you're interested in contributing to Nexus, please
 
 <div align = center>
 
-| ![Ciollo](https://raw.githubusercontent.com/Ciollo/Ciollo-Resources/main/cat_macchiato_150x150.png) | ![NicoMezzaa](https://raw.githubusercontent.com/Ciollo/Ciollo-Resources/main/mezzapfp_150x150.png)		|
-|:------------------------------------------------------------------------------------------------------------------------:	|:----------------------------------------------------------------------------------------------------:	|
-|                                                         **Ciollo**                                                         |                                            **NicoMezza**                                           |
+| ![Ciollo](https://raw.githubusercontent.com/Ciollo/Ciollo-Resources/main/cat_macchiato_150x150.png) | ![NicoMezzaa](https://raw.githubusercontent.com/Ciollo/Ciollo-Resources/main/mezzapfp_150x150.png) |
+|:---------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------:|
+|                                             **Ciollo**                                              |                                           **NicoMezza**                                            |
 
 </div>
 

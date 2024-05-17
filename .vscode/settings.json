@@ -1,6 +1,6 @@
 {
-    "html-to-css-autocompletion.triggerCharacters": true,
-    "liveSassCompile.settings.includeItems": [],
+	"html-to-css-autocompletion.triggerCharacters": true,
+	"liveSassCompile.settings.includeItems": [],
 	"liveSassCompile.settings.formats": [
 		{
 			"format": "expanded",
@@ -13,4 +13,6 @@
 			"savePath": "~/../css"
 		}
 	],
+	"cSpell.language": "en,it",
+	"cSpell.words": ["Ciollo"]
 }
