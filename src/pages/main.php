@@ -26,11 +26,13 @@
 					id="header-main-top"
 				>
 					<div class="navbar-top-logo-title">
-						<img
-							src="/src/assets/images/Nexus_logo_no_bg.png"
-							alt="title nexus"
-							class="title-img-navbar pageImg"
-						/>
+						<?php
+						session_start();
+						if (isset($_SESSION['image_path'])) {
+							$image_path = $_SESSION['image_path'];
+							echo "<img src='$image_path' alt='title nexus' class='title-img-navbar pageImg' />";
+						} 
+						?>
 						<div class="navbar-top-title-page">Title</div>
 					</div>
 					<div class="container-setting-page">
@@ -63,11 +65,12 @@
 							</li>
 							<li class="navbar-item">
 								<a class="nav-link" href="main.html">
-									<img
-										src="../assets/images/Nexus_logo_resized.png"
-										alt="user-pfp"
-										class="link-img pageImg"
-									/>
+									<?php
+										if (isset($_SESSION['image_path'])) {
+											$image_path = $_SESSION['image_path'];
+											echo "<img src='$image_path' alt='user-pfp' class='link-img pageImg' />";
+										} 
+									?>
 									<span class="nav-link-title display-none title-Page">
 										Main
 									</span>
@@ -107,11 +110,12 @@
 					</div>
 					<div class="container-user-page">
 						<div class="container-img-page">
-							<img
-								src="../assets/images/nexus_logo.png"
-								alt="nexus logo"
-								class="img-page pageImg"
-							/>
+							<?php
+							if (isset($_SESSION['image_path'])) {
+								$image_path = $_SESSION['image_path'];
+								echo "<img src='$image_path' alt='nexus logo' class='img-page pageImg' />";
+							} 
+							?>
 						</div>
 						<div class="main-page-title">
 							<div

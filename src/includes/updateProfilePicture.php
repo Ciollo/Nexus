@@ -13,18 +13,19 @@ $imagePath = substr($imagePath, strpos($imagePath, "/images/pagephoto/"));
 print_r($imagePath);
 
 // Assume the user email is stored in a session variable
-$userEmail = $_SESSION['email'];
+$id_page = $_SESSION['id_page'];
 
-// Query to get the user ID
-$result = $conn->query("SELECT `ID` FROM `users` WHERE `Email` = '$userEmail' LIMIT 1");
+// Query to get the page ID
+//$result = $conn->query("SELECT `ID` FROM `users` WHERE `Email` = '$userEmail' LIMIT 1");
+//$result = $conn->query("SELECT `ID` FROM `users` WHERE `Email` = '$userEmail' LIMIT 1");
 
 // Fetch the result
-$row = $result->fetch_assoc();
-$userId = $row['ID'];
+//$row = $result->fetch_assoc();
+//$userId = $row['ID'];
 
 // Query to update the profile picture
-$conn->query("UPDATE `users` SET `pathPfp` = '$imagePath' WHERE `ID` = $userId");
-
+$conn->query("UPDATE `pages` SET `Image_path` = '$imagePath' WHERE `ID` = $id_page");
+$_SESSION['image_path'] = $imagePath;
 // Close the connection
 $conn->close();
 ?>
