@@ -1,0 +1,45 @@
+@use '../abstracts'as *;
+
+.toggle-list-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.selection-block-panel {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 10px;
+    overflow: auto;
+}
+
+.list-block {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.todo-block {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+
+    .todo-input-field {
+        color: $default-font-color;
+        font-size: 16px;
+
+        background-color: transparent;
+
+        border: none;
+
+        &:focus {
+            outline: none;
+
+        }
+    }
+}

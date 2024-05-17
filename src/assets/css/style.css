@@ -56,9 +56,7 @@
 
 * {
   font-family: "Mulish", sans-serif;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 html,
@@ -331,6 +329,45 @@ body {
   margin-bottom: 20px;
 }
 
+.toggle-list-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.selection-block-panel {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 10px;
+  overflow: auto;
+}
+
+.list-block {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.todo-block {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.todo-block .todo-input-field {
+  color: #fdfdfd;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+}
+.todo-block .todo-input-field:focus {
+  outline: none;
+}
+
 .footer {
   display: flex;
   position: absolute;
@@ -582,8 +619,7 @@ body {
   margin-left: 1rem;
   width: 2.5rem;
   height: 2.5rem;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   border: 1px solid white;
 }
 .header-main-top .navbar-top-logo-title .navbar-top-title-page {
@@ -655,7 +691,6 @@ body {
 }
 
 .img-splash-screen {
-  max-width: -moz-fit-content;
   max-width: fit-content;
   width: 70%;
   height: auto;
@@ -773,8 +808,7 @@ body {
 .main-page-content .container-banner .banner {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .main-page-content .container-user-page {
   padding-left: 10rem;
@@ -899,8 +933,7 @@ body {
 .main-overlay .container-user-setting-panel .setting-content .setting-home-screen .img-setting-home-screen {
   width: 25rem;
   height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .main-overlay .container-user-setting-panel .setting-content .setting-workspace-content .setting-workspace-content-title {
   font-size: 1.5rem;
@@ -919,8 +952,7 @@ body {
   width: 10rem;
   height: 10rem;
   cursor: pointer;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   border: 1px solid white;
 }
 .main-overlay .container-user-setting-panel .setting-content .setting-workspace-content-button {
@@ -928,14 +960,6 @@ body {
 }
 .main-overlay .container-user-setting-panel .setting-content .setting-workspace-content-button .btn-setting-workspace {
   padding: 0.5rem 1rem;
-}
-.todo-input-field {
-  color: #fdfdfd;
-  background-color: transparent;
-  border: none;
-}
-.todo-input-field:focus {
-  outline: none;
 }
 
 .toggle-list-button {

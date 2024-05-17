@@ -86,6 +86,7 @@ To get started with Nexus, follow these simple steps:
 | Aggiungere bottoni per la modificare del banner e immagine page | -  ❌  | - |
 | Cambiare tutti i px con rem| -  ❌  | - |
 | div content editable br quando al limite | -  ❌  | - |
+| quanto si creano elements hanno id uguale | -  ❌  | - |
 
 ## 💭 Thoughts
 ❌ = Nah <br>

@@ -227,22 +227,9 @@
         }
     }
 
-    .setting-navbar,
-    .container-user-setting-panel,
-    .setting-content {}
-}
-
-.todo-input-field {
-    color: $default-font-color;
-
-    background-color: transparent;
-
-    border: none;
-
-    &:focus {
-        outline: none;
-
-    }
+    // .setting-navbar,
+    // .container-user-setting-panel,
+    // .setting-content {}
 }
 
 .toggle-list-button {
