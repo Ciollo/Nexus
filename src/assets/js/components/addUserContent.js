@@ -3,7 +3,7 @@ import { TRIGGER_CHARACTER } from "../utils/constants.js";
 import { getCaretCoordinates } from "../utils/coordinates.js";
 
 export function openSelectionBlockPanel(currentFocusDiv) {
-	let selectionBlockPanel = document.getElementById("blockSelectionPanel");
+	let selectionBlockPanel = document.getElementById("block-selection-panel");
 	if (selectionBlockPanel) {
 		selectionBlockPanel.remove();
 	}
@@ -15,7 +15,7 @@ function createSelectionBlockPanel(currentFocusDiv) {
 	let mainOverlay = document.getElementById("main-overlay");
 
 	let selectionBlockPanel = document.createElement("div");
-	selectionBlockPanel.id = "blockSelectionPanel";
+	selectionBlockPanel.id = "block-selection-panel";
 
 	const caretCoordinates = getCaretCoordinates();
 
@@ -36,6 +36,7 @@ function createSelectionBlockPanel(currentFocusDiv) {
 	blocks.forEach((block) => {
 		let blockElement = document.createElement("div");
 		blockElement.textContent = block.text;
+        blockElement.classList.add("block-element");
 		blockElement.classList.add(block.type);
 		blockElement.addEventListener("click", function () {
 			let newBlock = createBlock(block);
@@ -68,14 +69,73 @@ function createSelectionBlockPanel(currentFocusDiv) {
 	});
 }
 
+function createNewTitleSection(placeholder) {
+	let newBlock = createNewDiv(
+		"section-title-container",
+		"section-title-container"
+	);
+
+	let input = createNewDiv("section-title", "section-title");
+	input.setAttribute("data-placeholder", placeholder);
+	input.contentEditable = true;
+	input.textContent = placeholder; // set the initial text to the placeholder
+
+	input.addEventListener("focus", function () {
+		if (input.textContent === placeholder) {
+			input.textContent = "";
+		}
+	});
+
+	input.addEventListener("blur", function () {
+		if (input.textContent === "") {
+			input.textContent = placeholder;
+		}
+	});
+
+	newBlock.contentEditable = false;
+	newBlock.appendChild(input);
+
+	return newBlock;
+}
+
+function createNewSubTitleSection(placeholder) {
+	let newBlock = createNewDiv(
+		"section-sub-title-container",
+		"section-sub-title-container"
+	);
+
+	let input = createNewDiv("section-sub-title", "section-sub-title");
+	input.setAttribute("data-placeholder", placeholder);
+	input.contentEditable = true;
+	input.textContent = placeholder; // set the initial text to the placeholder
+
+	input.addEventListener("focus", function () {
+		if (input.textContent === placeholder) {
+			input.textContent = "";
+		}
+	});
+
+	input.addEventListener("blur", function () {
+		if (input.textContent === "") {
+			input.textContent = placeholder;
+		}
+	});
+
+	newBlock.contentEditable = false;
+	newBlock.appendChild(input);
+
+	return newBlock;
+}
 function createBlock(block) {
 	let newBlock;
 
 	switch (block.type) {
-		case "subTitle":
-            break;
 		case "title":
-            break;
+			newBlock = createNewTitleSection(block.text);
+			break;
+		case "subTitle":
+			newBlock = createNewSubTitleSection(block.text);
+			break;
 		case "todo":
 			newBlock = createTodoBlock(block.text);
 			newBlock.classList.add("todo-block");
@@ -132,28 +192,28 @@ function createListItem(text) {
 }
 
 function createTodoBlock(placeholder) {
-    let newBlock = createNewDiv("todo", "todo");
-    let checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
+	let newBlock = createNewDiv("todo", "todo");
+	let checkbox = document.createElement("input");
+	checkbox.type = "checkbox";
 
-    checkbox.addEventListener("click", function (event) {
-        event.stopPropagation();
-    });
+	checkbox.addEventListener("click", function (event) {
+		event.stopPropagation();
+	});
 
-    let input = document.createElement("input");
-    input.type = "text";
-    input.placeholder = placeholder;
-    input.className = "todo-input-field";
+	let input = document.createElement("input");
+	input.type = "text";
+	input.placeholder = placeholder;
+	input.className = "todo-input-field";
 
-    input.addEventListener("click", function (event) {
-        event.stopPropagation();
-    });
+	input.addEventListener("click", function (event) {
+		event.stopPropagation();
+	});
 
-    newBlock.contentEditable = false;
-    newBlock.appendChild(checkbox);
-    newBlock.appendChild(input);
+	newBlock.contentEditable = false;
+	newBlock.appendChild(checkbox);
+	newBlock.appendChild(input);
 
-    return newBlock;
+	return newBlock;
 }
 
 function createNewDiv(id, className) {

@@ -27,6 +27,7 @@
     .container-user-page {
         padding-left: 10rem;
         padding-right: 10rem;
+        color: $default-font-color;
 
         .container-img-page {
 
@@ -58,13 +59,17 @@
                     outline: none;
                 }
 
-                &:empty::after {
-                    content: attr(data-text);
-                    color: $default-placeholder-color;
+                &:empty::before {
+                    content: attr(data-placeholder);
+                    color: #888;
                 }
 
                 &:hover {
                     cursor: text;
+                }
+
+                &.placeholder {
+                    color: $default-placeholder-color;
                 }
             }
         }
@@ -87,6 +92,10 @@
 
                 &:empty::after {
                     content: attr(data-text);
+                    color: $default-placeholder-color;
+                }
+
+                &.placeholder {
                     color: $default-placeholder-color;
                 }
 

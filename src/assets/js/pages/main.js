@@ -18,6 +18,7 @@ var userContents = Array.from(document.querySelectorAll(".user-content"));
 let img = document.querySelector(".img-page");
 let imagePanel = document.getElementById("image-panel");
 let images = document.querySelectorAll(".selected-image");
+let pageTitle = document.getElementById("page-title");
 
 // Functions
 export function toggleOverlayVisibility() {
@@ -166,6 +167,7 @@ document
 					this.innerText = "";
 				}
 			});
+			newDiv.focus();
 		} else if (event.key === "ArrowUp" || event.key === "ArrowDown") {
 			event.preventDefault();
 			var currentIndex = userContents.findIndex(
@@ -231,3 +233,43 @@ function addInputEventListener(element) {
 	});
 }
 addInputEventListener(userContent);
+
+pageTitle.addEventListener("blur", function () {
+	if (pageTitle.textContent === "") {
+		pageTitle.textContent = pageTitle.getAttribute("data-placeholder");
+		pageTitle.classList.add("placeholder");
+	}
+});
+
+userContent.addEventListener("blur", function () {
+	if (userContent.textContent === "") {
+		userContent.textContent = userContent.getAttribute("data-text");
+		userContent.classList.add("placeholder");
+	}
+});
+
+userContent.addEventListener("focus", function () {
+	if (userContent.textContent === userContent.getAttribute("data-text")) {
+		userContent.textContent = "";
+	}
+});
+
+userContent.addEventListener("blur", function () {
+	if (userContent.textContent === "") {
+		userContent.textContent = userContent.getAttribute("data-text");
+	}
+});
+
+pageTitle.addEventListener("keydown", function () {
+    if (pageTitle.classList.contains("placeholder")) {
+        pageTitle.textContent = "";
+        pageTitle.classList.remove("placeholder");
+    }
+});
+
+userContent.addEventListener("keydown", function () {
+    if (userContent.classList.contains("placeholder")) {
+        userContent.textContent = "";
+        userContent.classList.remove("placeholder");
+    }
+});
