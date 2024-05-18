@@ -24,7 +24,7 @@ $id_page = $_SESSION['id_page'];
 //$userId = $row['ID'];
 
 // Query to update the profile picture
-$conn->query("UPDATE `pages` SET `Image_path` = '$imagePath' WHERE `ID` = $id_page");
+$conn->query("UPDATE `pages` SET `Image_path` = '$imagePath', Last_modification=NOW() WHERE `ID` = $id_page");
 $_SESSION['image_path'] = $imagePath;
 // Close the connection
 $conn->close();
