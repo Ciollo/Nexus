@@ -29,9 +29,9 @@ function createSelectionBlockPanel(currentFocusDiv) {
 		{ type: "sectionTitle", text: "Title" },
 		{ type: "subTitle", text: "Sub Title" },
 		{ type: "todo", text: "To Do" },
-		{ type: "toggleList", text: "Toggle List" },
-		{ type: "unorderedList", text: "Unordered List" },
-		{ type: "orderedList", text: "Ordered List" },
+		// { type: "toggleList", text: "Toggle List" },
+		// { type: "unorderedList", text: "Unordered List" },
+		// { type: "orderedList", text: "Ordered List" },
 	];
 	blocks.forEach((block) => {
 		let blockElement = document.createElement("div");
