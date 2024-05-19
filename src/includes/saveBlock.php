@@ -31,6 +31,9 @@ function insertBlocks($conn, $data, $id_page) {
         case 'paragraph':
             $idType = TYPE_PARGRAPH;
             break;
+        case 'ul':
+            $idType = TYPE_UNORDERED_LIST;
+            break;
         default:
             echo "Invalid type: $type";
             break;
@@ -49,6 +52,7 @@ const TYPE_TODO = 1;
 const TYPE_TITLE = 2;
 const TYPE_PARGRAPH = 3;
 const TYPE_SUB_TITLE = 4;
+const TYPE_UNORDERED_LIST = 5;
 
 $data = json_decode(file_get_contents('php://input'), true);
 $id_page = $_SESSION['id_page']; // Get id_page from session

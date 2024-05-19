@@ -145,6 +145,12 @@ require '../includes/loadPageBlocks.php';
 								<div id="section-sub-title-container" class="section-sub-title-container subTitle block-class" contenteditable="false" type="subTitle">
 									<div id="section-sub-title" class="section-sub-title" contenteditable="true" data-placeholder="Sub Title"><?= htmlspecialchars($block['Content']) ?: 'Sub Title' ?></div>
 								</div>
+							<?php elseif ($block['ID_type_of_block'] == 5) : ?>
+								<div id="list-block" class="list-block ul block-class" contenteditable="true" type="ul">
+									<ul>
+										<li><?= htmlspecialchars($block['Content']) ?></li>
+									</ul>
+								</div>
 							<?php endif; ?>
 						<?php endforeach; ?>
 					</div>

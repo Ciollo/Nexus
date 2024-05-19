@@ -29,8 +29,8 @@ function createSelectionBlockPanel(currentFocusDiv) {
 		{ type: "sectionTitle", text: "Title" },
 		{ type: "subTitle", text: "Sub Title" },
 		{ type: "todo", text: "To Do" },
+		{ type: "unorderedList", text: "Unordered List" },
 		// { type: "toggleList", text: "Toggle List" },
-		// { type: "unorderedList", text: "Unordered List" },
 		// { type: "orderedList", text: "Ordered List" },
 	];
 	blocks.forEach((block) => {
@@ -141,17 +141,22 @@ function createBlock(block) {
             newBlock = createTodoBlock(block.text);
             newBlock.classList.add("todo-block");
             break;
-        case "toggleList":
-            let toggleListName = window.prompt("Enter the name for the toggle list:");
-            if (toggleListName) {
-                newBlock = createToggleListBlock(toggleListName);
-            }
-            break;
+        // case "toggleList":
+        //     let toggleListName = window.prompt("Enter the name for the toggle list:");
+        //     if (toggleListName) {
+        //         newBlock = createToggleListBlock(toggleListName);
+        //     }
+        //     break;
         case "unorderedList":
-        case "orderedList":
+        // case "orderedList":
+            // newBlock = createListBlock(
+            //     block.text,
+            //     block.type === "unorderedList" ? "ul" : "ol"
+            // );
+
             newBlock = createListBlock(
                 block.text,
-                block.type === "unorderedList" ? "ul" : "ol"
+                block.type = "ul" 
             );
             break;
         default:
@@ -227,21 +232,14 @@ export function createContextMenu(event, newBlock) {
 }
 
 function createListBlock(title, listType) {
-	let newBlock = createNewDiv("list-block", "list-block");
-	let list = document.createElement(listType);
-	let numItems = parseInt(prompt("Enter the number of items for the list:"));
-	if (isNaN(numItems) || numItems <= 0) {
-		return null;
-	}
-	for (let i = 0; i < numItems; i++) {
-		let itemText = prompt(`Enter text for item ${i + 1}:`);
-		if (itemText.trim() === "") {
-			continue;
-		}
-		list.appendChild(createListItem(itemText));
-	}
-	newBlock.appendChild(list);
-	return newBlock;
+    let newBlock = createNewDiv("list-block", "list-block");
+    let list = document.createElement(listType);
+    let itemText = prompt(`Enter text for the item:`);
+    if (itemText.trim() !== "") {
+        list.appendChild(createListItem(itemText));
+    }
+    newBlock.appendChild(list);
+    return newBlock;
 }
 
 function createListItem(text) {

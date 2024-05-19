@@ -71,6 +71,13 @@ function saveBlocks() {
 			case 'paragraph':
 				inputContent = block.textContent;
 				break;
+			case 'ul':
+    console.log("Unordered List");
+    let listItems = block.querySelectorAll("li");
+    inputContent = Array.from(listItems).map(li => li.textContent)[0];
+	console.log(inputContent);
+	
+    break;
 			default:
 				console.log("Block type not found" + blockType);
 				break;
