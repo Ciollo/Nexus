@@ -7,6 +7,7 @@ import {
 
 import { openSelectionBlockPanel } from "../components/addUserContent.js";
 import { TRIGGER_CHARACTER } from "../utils/constants.js";
+import { createContextMenu } from "../components/addUserContent.js";
 
 // Const & Variables
 let btnSettings = document.getElementById("btn-page-settings");
@@ -252,31 +253,31 @@ function addUserContentEventListeners(element) {
 				closeComponentPanel();
 			}
 		});
-		element.addEventListener("blur", function () {
-			if (element.textContent === "") {
-				element.textContent = element.getAttribute("data-text");
-				element.classList.add("placeholder");
-			}
-		});
+		// element.addEventListener("blur", function () {
+		// 	if (element.textContent === "") {
+		// 		element.textContent = element.getAttribute("data-text");
+		// 		element.classList.add("placeholder");
+		// 	}
+		// });
 
-		element.addEventListener("focus", function () {
-			if (element.textContent === element.getAttribute("data-text")) {
-				element.textContent = "";
-			}
-		});
+		// element.addEventListener("focus", function () {
+		// 	if (element.textContent === element.getAttribute("data-text")) {
+		// 		element.textContent = "";
+		// 	}
+		// });
 
-		element.addEventListener("blur", function () {
-			if (element.textContent === "") {
-				element.textContent = element.getAttribute("data-text");
-			}
-		});
+		// element.addEventListener("blur", function () {
+		// 	if (element.textContent === "") {
+		// 		element.textContent = element.getAttribute("data-text");
+		// 	}
+		// });
 
-		element.addEventListener("keydown", function () {
-			if (element.classList.contains("placeholder")) {
-				element.textContent = "";
-				element.classList.remove("placeholder");
-			}
-		});
+		// element.addEventListener("keydown", function () {
+		// 	if (element.classList.contains("placeholder")) {
+		// 		element.textContent = "";
+		// 		element.classList.remove("placeholder");
+		// 	}
+		// });
 }
 
 // addUserContentEventListeners(userContent);
@@ -294,4 +295,15 @@ pageTitle.addEventListener("keydown", function () {
 		pageTitle.textContent = "";
 		pageTitle.classList.remove("placeholder");
 	}
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    let blocks = document.querySelectorAll(".block-class");
+
+    blocks.forEach((block) => {
+        block.addEventListener("contextmenu", function(event) {
+            event.preventDefault();
+            createContextMenu(event, block);
+        });
+    });
 });

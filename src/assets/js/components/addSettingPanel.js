@@ -322,4 +322,3 @@ function upgradePanelContent(settingContent) {
 function confirmCancel() {
   window.location.href = 'main.php';
 }
-

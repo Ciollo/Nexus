@@ -46,26 +46,28 @@
                             Nexus
                         </span>
                     </div>
-                    <form method="post" action="../includes/login.php"> 
-                        <div class="container-input-form">
-                            <label class="label-input-form">Email:</label>
-                            <input type="email" class="input-form border-default" name="emailUtente" id="userEmail"
-                                aria-describedby="emailHelp" placeholder="Your Email" required>
-                            <i class='bx bx-at'></i>
-                        </div>
-                        <div id="container-password" class="container-input-form hidden">
-                            <label class="label-input-form">Password:</label>
-                            <input type="password" class="form-control input-form" name="password" id="userPassword"
-                                placeholder="Your Password" maxlength="32" required>
-                            <i class='bx bxs-hide' id="toggleViewPassword"></i>
-                        </div>
-                        <div id="continue-container" class="container-btn-form">
-                            <button class="btn-default btn-continue" id="btn-continue">Continue</button>
-                        </div>
-                        <div class="container-btn-form hidden" id="sign-in-container">
-                            <button class="btn-default btn-sign-in" id="btn-sign-in">Sign in</button>
-                        </div>
-                    </form>
+                   <form method="post" action="../includes/login.php"> 
+    <div class="container-input-form">
+        <label class="label-input-form">Email:</label>
+        <input type="email" class="input-form border-default" name="emailUtente" id="userEmail"
+            aria-describedby="emailHelp" placeholder="Your Email" required>
+        <i class='bx bx-at'></i>
+    </div>
+    <div id="container-password" class="container-input-form hidden">
+        <label class="label-input-form">Password:</label>
+        <input type="password" class="form-control input-form" name="password" id="userPassword"
+            placeholder="Your Password" maxlength="32" required>
+        <i class='bx bxs-hide' id="toggleViewPassword"></i>
+    </div>
+    <div id="continue-container" class="container-btn-form">
+        <button class="btn-default btn-continue" id="btn-continue">Continue</button>
+    </div>
+    <div class="container-btn-form hidden" id="sign-in-container">
+        <button class="btn-default btn-sign-in" id="btn-sign-in">Sign in</button>
+    </div>
+</form>
+
+
                         <p class="lbl-no-account">
                             Don't have an account? <a href="register.html" id="link-sign-up" class="link-sign-up">Sign
                                 Up</a>
@@ -88,6 +90,15 @@
     </div>
 
     <div class="cursor-light"></div>
+
+    <script>
+document.getElementById('btn-continue').addEventListener('click', function(event) {
+    event.preventDefault(); // Impedisce l'invio del form
+    document.getElementById('container-password').classList.remove('hidden');
+    document.getElementById('sign-in-container').classList.remove('hidden');
+    document.getElementById('continue-container').classList.add('hidden');
+});
+</script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

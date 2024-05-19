@@ -80,6 +80,12 @@ require '../includes/loadPageBlocks.php';
 								?>
 							</a>
 						</li>
+					<li class="navbar-item">
+							<a class="nav-link" href="home.html">
+									<img src='../assets/images/Nexus_logo_resized.png' alt='user-pfp' class='link-img pageImg' />
+									<span class='nav-link-title'> Home </span>
+							</a>
+						</li>
 						<!-- TODO ADD FUNCTIONALITY -->
 						<!-- <li class="navbar-item">
 								<a class="nav-link" id="add-page-navbar-option">
