@@ -95,7 +95,7 @@ For detailed documentation on how to use Nexus, contact us privately for more in
 
 ## 📩 Feedback and Support
 
-We value your feedback! If you have any questions, suggestions, or encounter any issues while using Nexus, please don't hesitate to [contact our support team]([nico.mezza7@gmail.com](https://www.instagram.com/nicomezzaa/)).
+We value your feedback! If you have any questions, suggestions, or encounter any issues while using Nexus, please don't hesitate to [contact our support team].
 
 ## 🤝 Contributing
 
