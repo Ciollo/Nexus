@@ -31,7 +31,6 @@ Welcome to Nexus, your ultimate productivity companion! Nexus is a versatile not
 - **Notes**: Capture your thoughts, ideas, and important information effortlessly.
 - **Tasks**: Keep track of your tasks and manage your to-do lists efficiently.
 - **Projects**: Organize your work into projects to maintain clarity and focus.
-- **Collaboration**: Share notes, tasks, and projects with teammates for seamless collaboration.
 - **Customization**: Customize your workspace with colors, tags, and labels to suit your preferences.
 - **Cross-Platform**: Access Nexus from your desktop, browser, or mobile device, ensuring you stay productive wherever you go.
 
@@ -39,10 +38,9 @@ Welcome to Nexus, your ultimate productivity companion! Nexus is a versatile not
 
 To get started with Nexus, follow these simple steps:
 
-1. **Sign Up**: Create an account on Nexus by visiting [nexusapp.com](https://www.nexusapp.com) or downloading the Nexus app from your app store.
+1. **Sign Up**: Create an account on Nexus and get to work taking advantage of the spectacular features of Nexus.
 2. **Explore Features**: Familiarize yourself with the different features of Nexus, including notes, tasks, and projects.
 3. **Create Your Workspace**: Set up your workspace by organizing your notes, tasks, and projects according to your workflow.
-4. **Invite Collaborators**: If you're working with a team, invite collaborators to share and collaborate on notes and projects.
 5. **Start Productivity**: Begin using Nexus to capture ideas, manage tasks, and enhance your productivity!
 
 ## ⚒️ Implementation
@@ -52,34 +50,24 @@ To get started with Nexus, follow these simple steps:
 
 | Features                                                    | Status |
 |-------------------------------------------------------------|--------|
-| Database                                                    | -  🚧  |
-| Pages                                                       | -  🚧  |
-| Note taking                                                 | -  ❌   |
-| Todo                                                        | -  🚧  |
-| GUI                                                         | -  ❌   |
-| Multi-User                                                  | -  ❌   |
-| Responsive                                                  | -  ❌   |
-| Login                                                       | -  🚧  |
-| Register                                                    | -  🚧  |
+| Database                                                    | -  ✅  |
+| Pages                                                       | -  ✅  |
+| Note taking                                                 | -  ✅   |
+| Todo                                                        | -  ✅  |
+| GUI                                                         | -  ✅   |
+| Login                                                       | -  ✅  |
+| Register                                                    | -  ✅  |
 | Splash screen                                               | -  ✅   |
-| Online publication                                          | -  ❌   |
-| Dark mode                                                   | -  ❌   |
-| Settings                                                    | -  ❌   |
+| Settings                                                    | -  ✅   |
 | Nav bar                                                     | -  ✅   |
-| Footer                                                      | -  🚧  |
+| Footer                                                      | -  ✅  |
 | Side bar                                                    | -  ✅   |
-| Barba JS                                                    | -  ❌   |
-| Sistemare grafica                                           | -  🚧  |
-| Check password                                              | -  🚧  |
-| Picture profile                                             | -  ❌   |
-| Personalize scrollbar(nota: su firefox non sono supportate) | -  ❌   |
-| Utilizzare JSON                                             | -  🚧  |
-| Contenuto settings dinamico a seconda della scelta          | -  🚧  |
-| Caricamento dinamico della pagina dell'utente          | -  🚧  |
-| Aggiungere logout          | -  ❌  |
-| Aggiungere eliminazione blocco          | -  ❌ |
-| aggiungere alert salvataggio completato          | -  ❌ |
-| choose path img?          | -  ❌ |
+| Utilizzare JSON                                             | -  ✅  |
+| Contenuto settings dinamico a seconda della scelta          | -  ✅  |
+| Aggiungere logout          | -  ✅  |
+| Aggiungere eliminazione blocco          | -  ✅ |
+| aggiungere alert salvataggio completato          | -  ✅ |
+| choose path img?          | - ✅  |
 
 ## 🚧️ Little Fixes
 ❌ = Not Fixed yet <br>
@@ -89,11 +77,6 @@ To get started with Nexus, follow these simple steps:
 |-----------------------------------------------------------------|--------|-------------|
 | Controllo password durante register                             | -  ✅   | -           |
 | Spostare navbar main in laterale                                | - ✅    | -           |
-| Aggiungere bottoni per la modificare del banner e immagine page | -  ❌   | -           |
-| Cambiare tutti i px con rem                                     | -  ❌   | -           |
-| div content editable br quando al limite                        | -  ❌   | -           |
-| quando si creano elements hanno id uguale                       | -  ❌   | -           |
-| controllare per ogni pagina tutti gli error e sistemarli                       | -  ❌   | -           |
 
 ## 💭 Thoughts
 ❌ = Nah <br>
@@ -104,19 +87,15 @@ To get started with Nexus, follow these simple steps:
 |----------------------------------------------------------------------------|--------|--------------------------------------------------------------------------------------------|
 | Navbar togliere il bottone laterale per aprirlo e sostituirlo con un hover | -  💭  | -                                                                                          |
 | Togliere cursore personalizzato nelle pages?                               | - ✅    | Si risultava troppo brutto toglierlo molte volte quanto passava in hover su molti elementi |
-| Cambiare dei colori?                                                       | -  💭  | -                                                                                          |
-| Inserire i file html all'interno del mysql? | -  💭  |
-| Forse aggiungere di default le pages per l'utente ? | -  💭  |
-| in localhost non funzionano i link esterni, toglierli? | -  💭  |
-
+| Cambiare dei colori?                                                       | -  ✅  | No vanno bene cosi, penso che i colori scelti siano funzionali e adeguati per tutti |                                                                                         |
 
 ## 📄 Documentation
 
-For detailed documentation on how to use Nexus, refer to the [User Guide](https://www.nexusapp.com/docs) available on our website.
+For detailed documentation on how to use Nexus, contact us privately for more information.
 
 ## 📩 Feedback and Support
 
-We value your feedback! If you have any questions, suggestions, or encounter any issues while using Nexus, please don't hesitate to [contact our support team](mailto:support@nexusapp.com).
+We value your feedback! If you have any questions, suggestions, or encounter any issues while using Nexus, please don't hesitate to [contact our support team](nico.mezza7@gmail.com).
 
 ## 🤝 Contributing
 
