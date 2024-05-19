@@ -11,7 +11,7 @@ function deleteBlocks($conn, $id_page) {
 
 function insertBlocks($conn, $data, $id_page) {
     $stmt = $conn->prepare("INSERT INTO `blocks` (`ID_type_of_block`, `Content`, `ID_pages`, `position_within_the_page`) VALUES (?, ?, ?, ?)");
-    $position = 0; // Initialize position counter
+    $position = 0; 
 
     foreach ($data as $item) {
         $type = $item['type'];
@@ -42,7 +42,7 @@ function insertBlocks($conn, $data, $id_page) {
         $stmt->bind_param("isii", $idType, $text, $id_page, $position);
         $stmt->execute();
 
-        $position++; // Increment position counter
+        $position++; 
     }
 
     $stmt->close();
@@ -55,7 +55,7 @@ const TYPE_SUB_TITLE = 4;
 const TYPE_UNORDERED_LIST = 5;
 
 $data = json_decode(file_get_contents('php://input'), true);
-$id_page = $_SESSION['id_page']; // Get id_page from session
+$id_page = $_SESSION['id_page']; 
 
 deleteBlocks($conn, $id_page);
 insertBlocks($conn, $data, $id_page);
