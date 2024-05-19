@@ -105,7 +105,7 @@ function navBarSetUp() {
 		goToPage("home.html");
 	});
 	btnGoToSignUp.addEventListener("click", function () {
-		goToPage("register.html");
+		goToPage("home.html");
 	});
 }
 

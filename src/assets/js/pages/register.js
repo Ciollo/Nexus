@@ -8,6 +8,10 @@ var btnContinueSignUp = document.getElementById("btn-continue");
 var nexusLogo = document.getElementById("nexusLogo");
 var toggleViewConfirmPassword = document.getElementById("toggleViewConfirmPassword");
 
+document.getElementById("btnGoToSignIn").addEventListener("click", function() {
+  window.location.href = "home.html";
+});
+
 $(document).ready(function () {
   setTimeout(function () {
     $("body").animate({ opacity: 1 }, 1000);
