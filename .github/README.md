@@ -10,14 +10,16 @@
 
 ![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
-    \item ()
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![BootStrap]( 	https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![MySql](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 ![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 
-[![Badge License]][License] 
+[![Badge License]][License]
+
+[Badge License]: https://img.shields.io/badge/license-GPT--3-blue
+[License]: https://openai.com/research/ai-openai-gpt-3-license
 
 <br>
 Welcome to Nexus, your ultimate productivity companion! Nexus is a versatile note-taking and organization app designed to help you streamline your workflow, capture ideas, and stay organized.
