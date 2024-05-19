@@ -95,11 +95,11 @@ For detailed documentation on how to use Nexus, contact us privately for more in
 
 ## 📩 Feedback and Support
 
-We value your feedback! If you have any questions, suggestions, or encounter any issues while using Nexus, please don't hesitate to [contact our support team](nico.mezza7@gmail.com).
+We value your feedback! If you have any questions, suggestions, or encounter any issues while using Nexus, please don't hesitate to [contact our support team]([nico.mezza7@gmail.com](https://www.instagram.com/nicomezzaa/)).
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you're interested in contributing to Nexus, please refer to our [Contribution Guidelines](CONTRIBUTING.md) for more information.
+Contributions are welcome! If you're interested in contributing to Nexus, please contact us privately for more information.
 
 ## 👥 Credits
 
@@ -116,12 +116,6 @@ Contributions are welcome! If you're interested in contributing to Nexus, please
 <div style="margin: 10px;">
     <a href="https://ko-fi.com/ciollo" target="_blank">
         <img src="https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Ko-Fi" width="200">
-    </a>
-</div>
-
-<div style="margin: 10px;">
-    <a>
-        <img src="https://raw.githubusercontent.com/Ciollo/Ciollo-Resources/main/OnlyFans_logo_resized.png?token=GHSAT0AAAAAACN4BSR7CHBPEMWQJBPO7PLQZRBSMBQ" alt="OnlyFans" width="200">
     </a>
 </div>
 
