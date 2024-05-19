@@ -20,6 +20,7 @@ if (!isset($_POST['emailUtente']) || !isset($_POST['password'])) {
         $row = $result->fetch_assoc();
         $userID = $row['ID'];
 
+        $_SESSION['user_id'] = $userID;
         $_SESSION['username'] = $row['Username'];
         $_SESSION['logged'] = true;
         $_SESSION['email'] = $email;
