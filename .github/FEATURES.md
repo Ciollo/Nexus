@@ -5,18 +5,15 @@
 
 | Features              | Status |
 | --------------        | ------ |
-| Database              | -  ❌  |
-| Pages                 | -  ❌  |
-| Note taking           | -  ❌  |
-| Todo                  | -  ❌  |
-| GUI                   | -  ❌  |
-| Multi-User            | -  ❌  |
-| Login                 | -  🚧  |
-| Register              | -  🚧  |
+| Database              | -  ✅  |
+| Pages                 | -  ✅  |
+| Note taking           | -  ✅  |
+| Todo                  | -  ✅  |
+| GUI                   | -  ✅  |
+| Login                 | -  ✅  |
+| Register              | -  ✅  |
 | Splash screen         | -  ✅  |
-| Online publication    | -  ❌  |
-| Dark mode             | -  ❌  |
-| Settings              | -  ❌  |
-| Nav bar               | -  ❌  |
-| Footer                | -  🚧  |
-| Side bar              | -  ❌  |
+| Settings              | -  ✅  |
+| Nav bar               | -  ✅  |
+| Footer                | -  ✅  |
+| Side bar              | -  ✅  |
