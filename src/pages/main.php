@@ -12,6 +12,7 @@ function getUserPages($userId, $conn) {
 require '../includes/connect.php'; // Assicurati che $conn sia la tua connessione al database
 
 $userId = $_SESSION['user_id']; // Assicurati che l'ID utente sia salvato nella sessione
+// echo "User ID: $userId";
 $pages = getUserPages($userId, $conn);
 ?>
 
