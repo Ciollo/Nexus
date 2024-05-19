@@ -85,7 +85,6 @@ To get started with Nexus, follow these simple steps:
 
 | Features                                                                   | Status | Description                                                                                |
 |----------------------------------------------------------------------------|--------|--------------------------------------------------------------------------------------------|
-| Navbar togliere il bottone laterale per aprirlo e sostituirlo con un hover | -  💭  | -                                                                                          |
 | Togliere cursore personalizzato nelle pages?                               | - ✅    | Si risultava troppo brutto toglierlo molte volte quanto passava in hover su molti elementi |
 | Cambiare dei colori?                                                       | -  ✅  | No vanno bene cosi, penso che i colori scelti siano funzionali e adeguati per tutti |                                                                                         |
 
