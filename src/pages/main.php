@@ -12,7 +12,12 @@ require '../includes/loadPageBlocks.php';
 	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 	<link rel="icon" type="image/x-icon$_SESSION['id_page']" href="../assets/images/nexus_favicon.ico" />
 	<link rel="stylesheet" href="../assets/css/style.css" />
-	<title>Main</title>
+	<?php
+					if (isset($_SESSION['pageTitle'])) {
+						$title = $_SESSION['pageTitle'];
+						echo "<title>$title</title>";
+					}
+	?>
 </head>
 
 <body class="site-bg">
@@ -165,5 +170,4 @@ require '../includes/loadPageBlocks.php';
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script type="module" src="../assets/js/pages/main.js"></script>
 </body>
-
 </html>

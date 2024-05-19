@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
-/* FONT NON FUNZIONANTI SU LOCALHOST */
-/* @font-face {
+@font-face {
   font-family: "Computer Modern";
   src: url("http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf");
 }
@@ -19,8 +18,7 @@
   src: url("http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunbxo.otf");
   font-weight: bold;
   font-style: italic, oblique;
-} */
-
+}
 .border-confirm-green {
   border: 1px solid;
   border-color: #00FF00;
@@ -1044,13 +1042,24 @@ body {
   border: none;
 }
 
+.color-submenu {
+  background: #0c0e1c;
+  color: #fdfdfd;
+}
+.color-submenu .color-option {
+  padding: 0.5rem 0.5rem;
+}
+.color-submenu .color-option:hover {
+  background: #05050a;
+  cursor: pointer;
+}
+
 .context-menu {
   background: #0c0e1c;
   color: #fdfdfd;
-  padding: 0.5rem 0.5rem;
 }
 .context-menu .context-menu-item {
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
 }
 .context-menu .context-menu-item:hover {
   background: #05050a;

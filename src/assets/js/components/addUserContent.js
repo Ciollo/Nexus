@@ -36,7 +36,7 @@ function createSelectionBlockPanel(currentFocusDiv) {
 	blocks.forEach((block) => {
 		let blockElement = document.createElement("div");
 		blockElement.textContent = block.text;
-        blockElement.classList.add("block-element");
+		blockElement.classList.add("block-element");
 		blockElement.classList.add(block.type);
 		blockElement.addEventListener("click", function () {
 			let newBlock = createBlock(block);
@@ -164,6 +164,63 @@ function createBlock(block) {
 	newBlock.classList.add(block.type);
 	newBlock.classList.add("block-class");
 	newBlock.setAttribute("type", block.type);
+
+newBlock.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+
+  let contextMenu = document.createElement("div");
+  contextMenu.className = "context-menu";
+  contextMenu.innerHTML = `
+    <div class="context-menu-item">
+      Color
+      <div class="color-submenu" style="position: absolute; left: 100%; top: 0; display: none;">
+	     <div class="color-option" style="color: red;">Rosso</div>
+<div class="color-option" style="color: blue;">Blu</div>
+<div class="color-option" style="color: green;">Verde</div>
+<div class="color-option" style="color: yellow;">Giallo</div>
+<div class="color-option" style="color: purple;">Viola</div>
+<div class="color-option" style="color: orange;">Arancione</div>
+      </div>
+    </div>
+    <div class="context-menu-item">Elimina</div>
+  `;
+
+  contextMenu.style.position = "fixed";
+  contextMenu.style.left = `${event.clientX}px`;
+  contextMenu.style.top = `${event.clientY}px`;
+
+  document.body.appendChild(contextMenu);
+
+  let colorOption = contextMenu.querySelector(".context-menu-item:nth-child(1)");
+  let deleteOption = contextMenu.querySelector(".context-menu-item:nth-child(2)");
+  let colorSubmenu = colorOption.querySelector(".color-submenu");
+
+  colorOption.addEventListener("mouseover", function () {
+    colorSubmenu.style.display = "block";
+  });
+
+  colorOption.addEventListener("mouseout", function () {
+    colorSubmenu.style.display = "none";
+  });
+
+  colorSubmenu.querySelectorAll(".color-option").forEach((colorOption) => {
+    colorOption.addEventListener("click", function () {
+      newBlock.style.color = colorOption.style.color;
+      contextMenu.remove();
+    });
+  });
+
+  deleteOption.addEventListener("click", function () {
+    newBlock.remove();
+    contextMenu.remove();
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!contextMenu.contains(e.target)) {
+      contextMenu.remove();
+    }
+  });
+});
 
 	return newBlock;
 }
