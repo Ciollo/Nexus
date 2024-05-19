@@ -1,4 +1,3 @@
-// Import
 import { addSettingPanel } from "../components/addSettingPanel.js";
 import {
 	openComponentPanel,
@@ -12,7 +11,10 @@ import { TRIGGER_CHARACTER } from "../utils/constants.js";
 // Const & Variables
 let btnSettings = document.getElementById("btn-page-settings");
 let mainOverlay = document.getElementById("main-overlay");
-let userContent = document.getElementById("user-content");
+
+// let userContent = document.querySelectorAll("user-content");
+let userContent = document.querySelectorAll(".user-content");
+
 var saveBlock = document.getElementById("save-blocks");
 var userContents = Array.from(document.querySelectorAll(".user-content"));
 let img = document.querySelector(".img-page");
@@ -32,6 +34,7 @@ function openSettingsPanel() {
 }
 
 function saveBlocks() {
+	console.log("Saving blocks...");
 	let container = document.getElementById("container-user-content");
 	let blocks = container.querySelectorAll(".block-class");
 
@@ -41,14 +44,23 @@ function saveBlocks() {
 		let blockType = block.getAttribute("type");
 		let inputContent = "";
 
-		if (blockType === "todo") {
-			let inputField = block.querySelector("input[type='text']");
-			inputContent = inputField ? inputField.value : "";
-		} else if (blockType === "toggleList") {
-			let button = block.querySelector("button.toggle-list-button");
-			if (button) {
-				inputContent = button.textContent.replace(/[>V]/g, "").trim();
-			}
+		switch (blockType) {
+			case "todo":
+				let inputField = block.querySelector("input[type='text']");
+				inputContent = inputField ? inputField.value : "";
+				break;
+			case "toggleList":
+				let button = block.querySelector("button.toggle-list-button");
+				if (button) {
+					inputContent = button.textContent.replace(/[>V]/g, "").trim();
+				}
+				break;
+			case 'sectionTitle':
+				inputContent = block.textContent;
+				break;
+			default:
+				console.log("Block type not found" + blockType);
+				break;
 		}
 
 		let blockObject = {
@@ -167,6 +179,11 @@ document
 					this.innerText = "";
 				}
 			});
+
+			userContent = document.querySelectorAll(".user-content");
+
+			userContent.forEach(addUserContentEventListeners);
+
 			newDiv.focus();
 		} else if (event.key === "ArrowUp" || event.key === "ArrowDown") {
 			event.preventDefault();
@@ -187,11 +204,11 @@ saveBlock.addEventListener("click", function () {
 	saveBlocks();
 });
 
-img.addEventListener("contextmenu", function (event) {
-	event.preventDefault();
+// img.addEventListener("contextmenu", function (event) {
+// 	event.preventDefault();
 
-	imagePanel.style.display = "block";
-});
+// 	imagePanel.style.display = "block";
+// });
 
 document.addEventListener("click", function (event) {
 	if (
@@ -220,19 +237,46 @@ mainOverlay.addEventListener("click", function (event) {
 	}
 });
 
-function addInputEventListener(element) {
-	element.addEventListener("input", function (event) {
-		let newTextContent = event.target.textContent;
+function addUserContentEventListeners(element) {
+		element.addEventListener("input", function () {
+			let newTextContent = event.target.textContent;
 
-		if (isAddComponentTriggered(newTextContent, TRIGGER_CHARACTER)) {
-			toggleOverlayVisibility();
-			openSelectionBlockPanel(document.activeElement);
-		} else {
-			closeComponentPanel();
-		}
-	});
+			if (isAddComponentTriggered(newTextContent, TRIGGER_CHARACTER)) {
+				toggleOverlayVisibility();
+				openSelectionBlockPanel(document.activeElement);
+			} else {
+				closeComponentPanel();
+			}
+		});
+		element.addEventListener("blur", function () {
+			if (element.textContent === "") {
+				element.textContent = element.getAttribute("data-text");
+				element.classList.add("placeholder");
+			}
+		});
+
+		element.addEventListener("focus", function () {
+			if (element.textContent === element.getAttribute("data-text")) {
+				element.textContent = "";
+			}
+		});
+
+		element.addEventListener("blur", function () {
+			if (element.textContent === "") {
+				element.textContent = element.getAttribute("data-text");
+			}
+		});
+
+		element.addEventListener("keydown", function () {
+			if (element.classList.contains("placeholder")) {
+				element.textContent = "";
+				element.classList.remove("placeholder");
+			}
+		});
 }
-addInputEventListener(userContent);
+
+// addUserContentEventListeners(userContent);
+userContent.forEach(addUserContentEventListeners);
 
 pageTitle.addEventListener("blur", function () {
 	if (pageTitle.textContent === "") {
@@ -241,35 +285,9 @@ pageTitle.addEventListener("blur", function () {
 	}
 });
 
-userContent.addEventListener("blur", function () {
-	if (userContent.textContent === "") {
-		userContent.textContent = userContent.getAttribute("data-text");
-		userContent.classList.add("placeholder");
-	}
-});
-
-userContent.addEventListener("focus", function () {
-	if (userContent.textContent === userContent.getAttribute("data-text")) {
-		userContent.textContent = "";
-	}
-});
-
-userContent.addEventListener("blur", function () {
-	if (userContent.textContent === "") {
-		userContent.textContent = userContent.getAttribute("data-text");
-	}
-});
-
 pageTitle.addEventListener("keydown", function () {
-    if (pageTitle.classList.contains("placeholder")) {
-        pageTitle.textContent = "";
-        pageTitle.classList.remove("placeholder");
-    }
-});
-
-userContent.addEventListener("keydown", function () {
-    if (userContent.classList.contains("placeholder")) {
-        userContent.textContent = "";
-        userContent.classList.remove("placeholder");
-    }
+	if (pageTitle.classList.contains("placeholder")) {
+		pageTitle.textContent = "";
+		pageTitle.classList.remove("placeholder");
+	}
 });

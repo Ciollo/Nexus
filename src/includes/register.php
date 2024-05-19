@@ -36,6 +36,7 @@ if (
             VALUES ('$email', '$password', '$username', '$account_creation_date')";
             
             if ($conn->query($insert_query) === TRUE) {
+                $_SESSION['username'] = $username;
                 $_SESSION['logged'] = true;
                 $_SESSION['email'] = $email;
                 $_SESSION['password'] = $originalPassword;

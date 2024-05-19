@@ -73,12 +73,13 @@ To get started with Nexus, follow these simple steps:
 | Personalize scrollbar(nota: su firefox non sono supportate) | -  ❌   |
 | Utilizzare JSON                                             | -  🚧  |
 | Contenuto settings dinamico a seconda della scelta          | -  🚧  |
+| Caricamento dinamico della pagina dell'utente          | -  🚧  |
 
 ## 🚧️ Little Fixes
 ❌ = Not Fixed yet <br>
 🚧 = On working    <br>
 ✅ = Fixed    
-| Features                                                        | Status | Description |
+| Fixes                                                        | Status | Description |
 |-----------------------------------------------------------------|--------|-------------|
 | Controllo password durante register                             | -  ✅   | -           |
 | Spostare navbar main in laterale                                | - ✅    | -           |
@@ -99,6 +100,7 @@ To get started with Nexus, follow these simple steps:
 | Cambiare dei colori?                                                       | -  💭  | -                                                                                          |
 | Inserire i file html all'interno del mysql? | -  💭  |
 | Forse aggiungere di default le pages per l'utente ? | -  💭  |
+| in localhost non funzionano i font personalizzati, toglierli? | -  💭  |
 
 
 ## 📄 Documentation

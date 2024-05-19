@@ -79,7 +79,6 @@ function continueSignIn() {
 }
 
 function checkPasswordValidation(userPassword) {
-	console.log(userPassword.value);
 	if (isPasswordRobust(userPassword.value)) {
 		if (userPassword.classList.contains("border-error-red")) {
 			userPassword.classList.remove("border-error-red");

@@ -64,7 +64,7 @@
 								</a>
 							</li>
 							<li class="navbar-item">
-								<a class="nav-link" href="main.html">
+								<a class="nav-link" href="main.php">
 									<?php
 										if (isset($_SESSION['image_path'])) {
 											$image_path = $_SESSION['image_path'];
@@ -90,8 +90,7 @@
 										alt="user-pfp"
 										class="user-pfp link-img"
 									/>
-									<!-- TODO GOING TO DO A QUERY TO GET THE USER PFP-->
-									<span class="nav-link-title display-none"> UserName </span>
+								<span class="nav-link-title display-none"> <?php echo $_SESSION['username']; ?> </span>
 								</a>
 							</li>
 						</ul>

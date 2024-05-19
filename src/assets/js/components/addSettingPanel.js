@@ -42,15 +42,12 @@ function addClickListenersToButtons() {
       switch (button.id) {
         case "setting-element-setting":
           settingsPanelContent(settingContent);
-          console.log("Setting button clicked");
           break;
         case "setting-element-people":
           userPanelContent(settingContent);
-          console.log("Setting button clicked");
           break;
         case "setting-element-upgrade":
           upgradePanelContent(settingContent); 
-          console.log("Setting button clicked");
           break;
         default:
           console.error("Button not found");

@@ -26,7 +26,7 @@ function createSelectionBlockPanel(currentFocusDiv) {
 	mainOverlay.appendChild(selectionBlockPanel);
 
 	let blocks = [
-		{ type: "title", text: "Title" },
+		{ type: "sectionTitle", text: "Title" },
 		{ type: "subTitle", text: "Sub Title" },
 		{ type: "todo", text: "To Do" },
 		{ type: "toggleList", text: "Toggle List" },
@@ -130,7 +130,7 @@ function createBlock(block) {
 	let newBlock;
 
 	switch (block.type) {
-		case "title":
+		case "sectionTitle":
 			newBlock = createNewTitleSection(block.text);
 			break;
 		case "subTitle":
@@ -283,7 +283,6 @@ function createToggleListBlock(title) {
 		});
 
 		deleteOption.addEventListener("click", function () {
-			console.log("Delete option clicked");
 
 			contextMenu.remove();
 		});

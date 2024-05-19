@@ -1,29 +1,51 @@
 <?php
+session_start();
 require 'connect.php';
-$data = json_decode(file_get_contents('php://input'), true);
 
-$n = 0;
-foreach ($data as $item) {
-    $type = $item['type'];
-    $text = $item['text'];
-
-    $idType;
-    switch($type) {
-    case 'todo':
-        $idType = 1;
-        break;
-    }
-
-    $query = "INSERT INTO `blocks` (`ID_type_of_block`, `Content`, `position_within_the_page`) VALUES ('$idType', '$text', '$n')";  
-
-    $res = $conn->query($query);
-
-    // Bind the parameters to the SQL statement
-    // $stmt->bind_param('is', $idType, $text);
-
-    $n++;
+function deleteBlocks($conn, $id_page) {
+    $deleteStmt = $conn->prepare("DELETE FROM `blocks` WHERE `ID_pages` = ?");
+    $deleteStmt->bind_param("i", $id_page);
+    $deleteStmt->execute();
+    $deleteStmt->close();
 }
 
-// Close the statement and the connection
+function insertBlocks($conn, $data, $id_page) {
+    $stmt = $conn->prepare("INSERT INTO `blocks` (`ID_type_of_block`, `Content`, `ID_pages`, `position_within_the_page`) VALUES (?, ?, ?, ?)");
+    $position = 0; // Initialize position counter
+
+    foreach ($data as $item) {
+        $type = $item['type'];
+        $text = $item['text'];
+
+        $idType = null;
+        switch($type) {
+        case 'todo':
+            $idType = TYPE_TODO;
+            break;
+        case 'sectionTitle':
+            $idType = TYPE_TITLE;
+            break;
+        default:
+            echo "Invalid type: $type";
+            break;
+        }
+
+        $stmt->bind_param("isii", $idType, $text, $id_page, $position);
+        $stmt->execute();
+
+        $position++; // Increment position counter
+    }
+
+    $stmt->close();
+}
+
+const TYPE_TODO = 1;
+const TYPE_TITLE = 2;
+$data = json_decode(file_get_contents('php://input'), true);
+$id_page = $_SESSION['id_page']; // Get id_page from session
+
+deleteBlocks($conn, $id_page);
+insertBlocks($conn, $data, $id_page);
+
 $conn->close();
 ?>
