@@ -55,6 +55,7 @@ function createSelectionBlockPanel(currentFocusDiv) {
 				currentFocusDiv.nextSibling
 			);
 
+			// TODO to implement div after block
 			// let newEditableDiv = document.createElement("div");
 			// newEditableDiv.contentEditable = "true";
 			// newEditableDiv.classList.add("user-content");

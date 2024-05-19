@@ -28,6 +28,7 @@ if (
         if ($conn->query($insert_query) === TRUE) {
             $_SESSION['id_page'] = $conn->insert_id;
             $_SESSION['image_path'] = $image_path;
+            $_SESSION['pageTitle'] = $title;
             header("Location: ../pages/main.php");
         } else {
 			echo "<script>alert('Errore durante l'inserimento nel database!'); window.location.href = '../pages/insertPageName.html';</script>";

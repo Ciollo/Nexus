@@ -27,7 +27,7 @@ if (!isset($_POST['emailUtente']) || !isset($_POST['password'])) {
 
         // aggiungi la query join per prendere l'ID della pagina principale dell'utente
         $mainPageQuery = "
-            SELECT pages.ID AS pageID, pages.Image_path AS imagePath 
+            SELECT pages.ID AS pageID, pages.Image_path AS imagePath, pages.Title AS title
             FROM pages 
             JOIN users ON pages.ID_user = users.ID 
             WHERE users.ID = $userID 
@@ -40,9 +40,11 @@ if (!isset($_POST['emailUtente']) || !isset($_POST['password'])) {
             $mainPageRow = $mainPageResult->fetch_assoc();
             $mainPageID = $mainPageRow['pageID'];
             $mainPageImagePath = $mainPageRow['imagePath'];
+            $pageTitle = $mainPageRow['title'];
 
             $_SESSION['id_page'] = $mainPageID;
             $_SESSION['image_path'] = $mainPageImagePath;
+            $_SESSION['pageTitle'] = $pageTitle;
         }
 
         header("Location: ../pages/main.php");

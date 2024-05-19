@@ -27,22 +27,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo json_encode(['success' => false, 'message' => 'No changes detected']);
             exit; // Interrompi l'esecuzione dello script
         }
-    }
+        // Aggiorna i dati nel database
+        $updateQuery = "UPDATE Pages SET Title='$newTitle', Description='$newDescription', Last_modification=NOW() WHERE ID='$pageID'";
+        $result = $conn->query($updateQuery);
 
-    // Aggiorna i dati nel database
-    $updateQuery = "UPDATE Pages SET Title='$newTitle', Description='$newDescription', Last_modification=NOW() WHERE ID='$pageID'";
-    $result = $conn->query($updateQuery);
-
-    // Verifica se l'aggiornamento è stato eseguito con successo
-    if ($result === TRUE) {
-        // Invia una risposta di conferma al frontend
-        echo json_encode(['success' => true, 'message' => 'Page updated successfully']);
-    } else {
-        // Invia una risposta di errore al frontend
-        echo json_encode(['success' => false, 'message' => 'Failed to update page']);
+        // Verifica se l'aggiornamento è stato eseguito con successo
+        if ($result === TRUE) {
+            // Invia una risposta di conferma al frontend
+            $_SESSION['pageTitle'] = $newTitle; // Aggiorna il titolo della pagina nella sessione
+            // $_SESSION['image_path'] = $imagePath; // Aggiorna il percorso dell'immagine nella sessione
+            echo json_encode(['success' => true, 'message' => 'Page updated successfully']);
+            header("Refresh:0");
+        } else {
+            // Invia una risposta di errore al frontend
+            echo json_encode(['success' => false, 'message' => 'Failed to update page']);
+        }
     }
 } else {
     // Invia una risposta di errore se la richiesta non è una richiesta POST
     echo json_encode(['success' => false, 'message' => 'Invalid request method']);
 }
-?>

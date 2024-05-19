@@ -25,6 +25,9 @@ function insertBlocks($conn, $data, $id_page) {
         case 'sectionTitle':
             $idType = TYPE_TITLE;
             break;
+        case 'paragraph':
+            $idType = TYPE_PARGRAPH;
+            break;
         default:
             echo "Invalid type: $type";
             break;
@@ -41,6 +44,8 @@ function insertBlocks($conn, $data, $id_page) {
 
 const TYPE_TODO = 1;
 const TYPE_TITLE = 2;
+const TYPE_PARGRAPH = 3;
+
 $data = json_decode(file_get_contents('php://input'), true);
 $id_page = $_SESSION['id_page']; // Get id_page from session
 

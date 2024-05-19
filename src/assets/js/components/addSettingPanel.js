@@ -47,7 +47,7 @@ function addClickListenersToButtons() {
           userPanelContent(settingContent);
           break;
         case "setting-element-upgrade":
-          upgradePanelContent(settingContent); 
+          upgradePanelContent(settingContent);
           break;
         default:
           console.error("Button not found");
@@ -128,30 +128,36 @@ function settingsPanelContent(settingContent) {
     const newTitle = document.getElementById('input-setting-workspace-name').value;
     const newDescription = document.getElementById('textarea-setting-workspace-description').value;
 
-    if (newTitle !== originalTitle || newDescription !== originalDescription){
+    if (newTitle !== originalTitle || newDescription !== originalDescription) {
       const newData = {
-      title: newTitle,
-      description: newDescription
-    };
+        title: newTitle,
+        description: newDescription
+      };
 
-    // Effettua una richiesta AJAX per aggiornare i dati nel backend
-    fetch('../includes/updatePage.php', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(newData)
-    })
-      .then(response => response.json())
-      .then(data => {
-        if (data.error) {
-          console.error('Error updating page:', data.error);
-        } else {
-          alert('Update successful!');
-          window.location.href = 'main.php';
-        }
+      // console.log(newData);
+      // Effettua una richiesta AJAX per aggiornare i dati nel backend
+
+      fetch('../includes/updatePageSettings.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newData)
       })
-      .catch(error => console.error('Error updating page:', error));
+        .then(response => response.text())  // Ottieni la risposta come testo
+        .then(text => {
+          console.log(text);  // Stampa la risposta
+          return JSON.parse(text);  // Poi prova a analizzarla come JSON
+        })
+        .then(data => {
+          if (data.error) {
+            console.error('Error updating page:', data.error);
+          } else {
+            alert('Update successful!');
+            window.location.href = 'main.php';
+          }
+        })
+        .catch(error => console.error('Error updating page:', error));
     }
   }
 
@@ -266,7 +272,7 @@ function setupUserPanel() {
 
 function logout() {
   const confirmation = confirm("Are you sure you want to log out?");
-  
+
   if (confirmation) {
     window.location.href = '../includes/logout.php';
   }
@@ -316,3 +322,4 @@ function upgradePanelContent(settingContent) {
 function confirmCancel() {
   window.location.href = 'main.php';
 }
+

@@ -58,6 +58,10 @@ function saveBlocks() {
 			case 'sectionTitle':
 				inputContent = block.textContent;
 				break;
+
+			case 'paragraph':
+				inputContent = block.textContent;
+				break;
 			default:
 				console.log("Block type not found" + blockType);
 				break;

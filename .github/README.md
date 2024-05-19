@@ -74,6 +74,10 @@ To get started with Nexus, follow these simple steps:
 | Utilizzare JSON                                             | -  🚧  |
 | Contenuto settings dinamico a seconda della scelta          | -  🚧  |
 | Caricamento dinamico della pagina dell'utente          | -  🚧  |
+| Aggiungere logout          | -  ❌  |
+| Aggiungere eliminazione blocco          | -  ❌ |
+| aggiungere alert salvataggio completato          | -  ❌ |
+| choose path img?          | -  ❌ |
 
 ## 🚧️ Little Fixes
 ❌ = Not Fixed yet <br>
@@ -87,6 +91,7 @@ To get started with Nexus, follow these simple steps:
 | Cambiare tutti i px con rem                                     | -  ❌   | -           |
 | div content editable br quando al limite                        | -  ❌   | -           |
 | quando si creano elements hanno id uguale                       | -  ❌   | -           |
+| controllare per ogni pagina tutti gli error e sistemarli                       | -  ❌   | -           |
 
 ## 💭 Thoughts
 ❌ = Nah <br>
@@ -100,7 +105,7 @@ To get started with Nexus, follow these simple steps:
 | Cambiare dei colori?                                                       | -  💭  | -                                                                                          |
 | Inserire i file html all'interno del mysql? | -  💭  |
 | Forse aggiungere di default le pages per l'utente ? | -  💭  |
-| in localhost non funzionano i font personalizzati, toglierli? | -  💭  |
+| in localhost non funzionano i link esterni, toglierli? | -  💭  |
 
 
 ## 📄 Documentation
