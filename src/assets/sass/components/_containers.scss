@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.content-wrap {
+    // padding-bottom: 10.5rem;
+    /* Footer height */
+}
+
+
+.centered-container-page{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-content {
+    animation: anmFadeIn 0.5s ;
+}
+
+.hidden {
+    display: none;
+}

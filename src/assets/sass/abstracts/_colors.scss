@@ -1,0 +1,48 @@
+$radiantLogoColor: linear-gradient(90deg, rgb(79, 95, 229), rgb(13, 176, 246));
+$invertedRadiantLogoColor: linear-gradient(90deg, rgb(13, 176, 246), rgb(79, 95, 229));
+
+$logoColor: rgb(13, 176, 246);
+
+$default-background: rgba(20, 22, 46, 1);
+$default-box-shadow-color:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+$default-font-color: #fdfdfd;
+$default-nav-color: #aaaaaa;
+
+$default-placeholder-color: #9999;
+
+$cardDefaultColor: rgb(255, 255, 255);
+
+$confirmGreen: #00FF00;
+$errorRed: #FF0000;
+$borderDefaultColor: #000000;
+
+$linkColorDefault: #0b57d0;
+
+// $default-navbar-side-color: #40405c;
+$default-navbar-side-color: lighten($default-background, 5%);
+
+$defaultMainOverlayColor: rgba(0, 0, 0, 0.4);
+
+$defaultSettingPanelColor: $default-background;
+
+$defaultNavbarSettingPanelColor: lighten($defaultSettingPanelColor, 5%);
+$defaultNavbarSettingElementHoverColor : darken($defaultNavbarSettingPanelColor, 5%);
+
+$breakLineColor: rgba(255, 255, 255, 0.781);
+
+// $cancelColor: rgb(255, 0, 0);
+$cancelColor: $errorRed;
+
+$borderButtonTransparent: rgb(255, 255, 255, 0.2);
+@mixin radiantColor() {
+  background-image: $radiantLogoColor;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+
+

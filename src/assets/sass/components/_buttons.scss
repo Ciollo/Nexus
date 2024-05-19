@@ -1,0 +1,87 @@
+// TODO DA RIGUARDARE
+@use "../abstracts"as *;
+
+@mixin btn() {
+    height: auto;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    letter-spacing: 0.025em;
+    padding: 5px 0px 5px 0px;
+    font-weight: bold;
+    color: $default-font-color;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+    background-size: 200% 100%;
+
+    //TODO LOOK AT THIS
+    &:hover {
+        background-position: 100% 0;
+        transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    }
+}
+
+@mixin btnDefaultGradient($backgroundColor : $radiantLogoColor) {
+    @include btn();
+    background-image: $backgroundColor;
+}
+ 
+@mixin btnDefault($backgroundColor : $radiantLogoColor) {
+    @include btn();
+    background-color: $backgroundColor;
+}
+// TODO see this
+@mixin btnAccess() {
+    background-co: $radiantLogoColor;
+    height: auto;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    letter-spacing: 0.025em;
+    padding: 5px 0px 5px 0px;
+    font-weight: bold;
+    color: $default-font-color;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+    background-size: 200% 100%;
+
+    &:hover {
+        background-position: 100% 0;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    }
+}
+
+.btn-sign-in,
+.btn-continue,
+.btn-sign-up {
+    @include btnAccess();
+}
+
+.btn-go-to-sign-in,
+.btn-go-to-sign-up {
+    @include btnAccess();
+}
+
+.btn-default {
+    @include btnDefaultGradient();
+}
+
+.btn-cancel {
+    @include btnDefault(transparent);
+    border: 1px solid $borderButtonTransparent;
+    &:hover {
+        background-color: darken($borderButtonTransparent, 50%)
+    }
+}

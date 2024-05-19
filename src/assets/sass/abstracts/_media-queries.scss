@@ -1,0 +1,59 @@
+$breakpoints: ('small': 576px,
+    'medium': 768px,
+    'large': 992px,
+    'xlarge': 1200px);
+
+// Mixin for responsive design
+@mixin respond-to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "Invalid breakpoint: #{$breakpoint}.";
+    }
+}
+
+// .container-title-nexus {
+//     .title-nexus {
+//         font-size: 70px;
+
+//         @include respond-to('medium') {
+//             font-size: 100px;
+//         }
+
+//         @include respond-to('large') {
+//             font-size: 140px;
+//         }
+//     }
+// }
+
+// .container-logo-nexus {
+//     height: 100px;
+//     margin-top: 30px;
+
+//     @include respond-to('medium') {
+//         height: 150px;
+//         margin-top: 50px;
+//     }
+// }
+
+// .container-btn-start-journey {
+//     margin-top: 50px;
+
+//     @include respond-to('medium') {
+//         margin-top: 100px;
+//     }
+// }
+
+// .btn-start-journey {
+//     width: 200px;
+//     height: 30px;
+
+//     @include respond-to('medium') {
+//         width: 250px;
+//         height: 40px;
+//     }
+// }

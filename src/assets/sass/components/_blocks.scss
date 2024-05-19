@@ -1,0 +1,104 @@
+@use '../abstracts'as *;
+
+.toggle-list-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.selection-block-panel {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background: lighten($color: $default-background, $amount: 5);
+
+    border: 2px solid lighten($color: $default-background, $amount: 10);
+    border-radius: 10px;
+    padding: 10px;
+    overflow: auto;
+
+    .block-element {
+        font-size: 1rem;
+        color: $default-font-color;
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        border-bottom: 1px solid $default-background;
+
+        &:hover {
+            cursor: pointer;
+            background-color: lighten($color: $default-background, $amount: 10);
+        }
+
+        .block-element-icon {
+            width: 2rem;
+            height: 2rem;
+            object-fit: contain;
+            border: 1px solid white;
+        }
+
+        .block-element-title {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-left: 1rem;
+        }
+    }
+}
+
+.list-block {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.todo-block {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+
+    .todo-input-field {
+        color: $default-font-color;
+        font-size: 16px;
+
+        background-color: transparent;
+
+        border: none;
+
+        &:focus {
+            outline: none;
+
+        }
+    }
+}
+
+.section-sub-title,
+.section-title {
+
+    background-color: transparent;
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+}
+
+
+.section-sub-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+
+}
+
+[section-title][data-placeholder]:empty:before {
+    content: attr(data-placeholder);
+    color: #888;
+}

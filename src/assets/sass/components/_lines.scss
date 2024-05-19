@@ -1,0 +1,7 @@
+@use '../abstracts' as *;
+
+.breakLine {
+  border-top: 1px solid $breakLineColor;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

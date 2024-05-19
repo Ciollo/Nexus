@@ -1,0 +1,12 @@
+@use "../abstracts" as *;
+@mixin linkChangeAccess() {
+    color: $invertedRadiantLogoColor;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration-line: none;
+
+}
+
+.link-sign-up, .link-sign-in{
+    @include linkChangeAccess();
+}

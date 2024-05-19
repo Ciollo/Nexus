@@ -1,0 +1,106 @@
+@use '../abstracts'as *;
+
+$title-font-size: 70px;
+$logo-height: 100px;
+$logo-margin-top: 30px;
+$btn-margin-top: 50px;
+$btn-width: 200px;
+$btn-height: 30px;
+
+.title-nexus {
+    color: $radiantLogoColor;
+    font-size: $title-font-size;
+
+    @include respond-to('medium') {
+        font-size: 100px;
+    }
+
+    @include respond-to('large') {
+        font-size: 140px;
+    }
+
+    text-shadow: 0 0 1px $logoColor,
+    0 0 100px $default-background,
+    0 0 200px $logoColor,
+    0 0 200px $default-background,
+    0 0 300px $logoColor,
+    0 0 300px $default-background;
+}
+
+.typing,
+.typed-cursor {
+    color: white;
+    font-size: $title-font-size;
+    text-shadow:
+        0px 0px 10px $logoColor;
+}
+
+.container-title-nexus,
+.container-typing {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+}
+
+.container-title-nexus {
+    .title-nexus {
+        background-image: $radiantLogoColor;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        font-size: 70px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+
+        @include respond-to('medium') {
+            font-size: 100px;
+        }
+
+        @include respond-to('large') {
+            font-size: 140px;
+        }
+    }
+}
+
+.container-logo-nexus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $logo-height;
+    margin-top: $logo-margin-top;
+
+    @include respond-to('medium') {
+        height: 150px;
+        margin-top: 50px;
+    }
+}
+
+.container-btn-start-journey {
+    margin-top: $btn-margin-top;
+
+    @include respond-to('medium') {
+        margin-top: 100px;
+    }
+}
+
+.btn-start-journey {
+    width: $btn-width;
+    height: $btn-height;
+
+    &:hover {
+        box-shadow:
+            0 0 10px $logoColor,
+            0 0 40px $logoColor,
+            0 0 80px $logoColor;
+    }
+
+    @include respond-to('medium') {
+        width: 250px;
+        height: 40px;
+    }
+}

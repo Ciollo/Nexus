@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+
+@mixin accessCard() {
+    background-color: $cardDefaultColor;
+    box-shadow: $default-box-shadow-color;
+    width: 100%; 
+    max-width: 400px; 
+    height: auto;
+    padding: 15px 15px 10px 15px; /* Si, lo so che bastava scrivere padding: 15px*/
+    border: none;
+    border-radius: 10px;
+}
+

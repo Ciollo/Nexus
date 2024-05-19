@@ -1,0 +1,81 @@
+@use "../abstracts" as *;
+
+@mixin bxIconInput() {
+    position: absolute;
+    top: 43%;
+    right: 14px;
+    transform: translateY(-27%);
+}
+
+.logo-form {
+    width: 150px;
+    height: auto;
+}
+
+.container-input-form {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 14px;
+
+    .label-input-form {
+        display: flex;
+        width: 100px;
+        align-items: center;
+        margin-left: 3px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .input-form {
+        font-size: 14px;
+        font-weight: lighter;
+        padding: 10px 0px 10px 15px;
+        width: 60%;
+        border: 100px solid none;
+
+        &:focus {
+            font-weight: 400;
+            outline: none;
+        }
+    }
+
+    .bx-at,
+    .bxs-hide,
+    .bx-user,
+    .bxs-show {
+        @include bxIconInput();
+    }
+
+    .bxs-hide,
+    .bxs-show {
+        cursor: pointer;
+    }
+}
+
+.container-btn-form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+    .btn-sign-up,
+    .btn-continue,
+    .btn-sign-in {
+        width: 100%;
+    }
+}
+
+.lbl-no-account {
+    margin-top: 15px;
+    text-align: center;
+
+    .link-sign-up {
+        font-weight: 600;
+        cursor: pointer;
+        color: $linkColorDefault;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            font-weight: 700;
+        }
+    }
+}

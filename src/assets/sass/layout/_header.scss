@@ -1,0 +1,309 @@
+@use '../abstracts'as *;
+
+@mixin navBarIcon() {
+    background-image: $radiantLogoColor;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-size: 2.5rem;
+    cursor: pointer;
+
+    &:hover {
+        text-shadow:
+            0 0 1px $logoColor,
+            0 0 70px $logoColor,
+    }
+}
+
+.header {
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // height: 80px;
+    height: auto;
+
+    .container-logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        // position: relative;
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+        // margin-right: 100px;
+    }
+
+    .container-navbar {
+        .top-nav-items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 0;
+            color: #fdfdfd;
+            list-style-type: none;
+            padding: 0px;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 20px;
+
+            li {
+                text-decoration: none;
+                color: inherit;
+                width: 150px;
+                height: auto;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+            }
+
+            .link-navbar {
+                text-decoration: none;
+                color: inherit;
+                transition: all 0.5s ease-in-out;
+
+                &:hover {
+                    text-shadow:
+                        0 0 5px $logoColor,
+                        0 0 10px $logoColor,
+                        0 0 15px $logoColor,
+                        0 0 20px $logoColor,
+                        0 0 25px $logoColor,
+                        0 0 30px $logoColor,
+                        0 0 40px $logoColor,
+                        0 0 70px $logoColor,
+                }
+            }
+        }
+    }
+
+    .container-buttons-go-to {
+        display: flex;
+        justify-content: center;
+        height: auto;
+    }
+
+    .container-buttons-go-to,
+    .container-logo {
+        width: 200px;
+    }
+
+    .bxl-github {
+        @include navBarIcon();
+        margin: 0px 50px;
+    }
+
+    .bx-user-circle {
+        @include navBarIcon();
+        font-size: 2.5rem;
+        cursor: pointer;
+
+    }
+
+    .navbar-btn-go-to-sign-in,
+    .navbar-btn-go-to-sign-up {
+        width: 100px;
+        height: 100%;
+
+    }
+
+    .navbar-btn-go-to-sign-up {
+        margin-left: 5px;
+    }
+
+}
+
+.header-main {
+    .navbar-side {
+        // width: 100%;
+        width: 6rem;
+        position: fixed;
+        height: 100vh;
+        background-color: $default-navbar-side-color;
+        // transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease;
+        overflow: hidden;
+
+        &:hover {
+            width: 15rem;
+            .img-title-side-navbar {
+                rotate: 360deg;
+                display: inline;
+            }
+
+            .nav-link-title {
+                display: inline;
+            }
+
+        }
+
+        .navbar-side-list {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-direction: column;
+            padding-left: 0; //sembra inutile ma a quanto pare toglie del padding di defalt
+
+            .navbar-item {
+                // padding: 0rem 2rem;
+                border: 1px solid $default-background;
+                border-style: none none solid none;
+
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: darken($color: $default-navbar-side-color, $amount: 5)
+                }
+
+                &:first-child {
+                    cursor: default;
+                    background-color: $default-navbar-side-color;
+                }
+
+                &:last-child {
+                    margin-top: auto;
+                    margin-bottom: 1rem;
+                    border-style: solid none none none;
+                }
+
+                .nav-title,
+                .nav-link {
+                    display: flex;
+                    align-items: center;
+                    justify-content: left;
+                    height: 4rem;
+                    text-decoration: none;
+                }
+
+                .nav-title {
+                    justify-content: center;
+
+                    .img-title-side-navbar {
+                        width: 3rem;
+                        transition: all 0.5s ease-in-out;
+                        // &:hover {
+                        //     rotate: 360deg;
+                        // }
+                    }
+
+                    .btn-close-open-navbar {
+                        // margin-left: 1rem;
+                        font-size: 1.7rem;
+                        @include radiantColor;
+                        transition: all 0.5s ease-in-out;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+
+                    .btn-navbar-not-active {
+                        rotate: 180deg;
+                    }
+
+                    .btn-navbar-active {}
+
+                }
+
+                .nav-link {
+                    // todo check padding
+                    padding: 0rem 2rem;
+
+                    &:visited {
+                        color: inherit;
+                    }
+
+                    .user-pfp {
+                        border-radius: 50%;
+                    }
+
+                    .link-icon,
+                    .link-img {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .link-icon {
+                        font-size: 2rem;
+                        @include radiantColor();
+                    }
+
+                    .link-img {
+                        width: 2rem;
+                        height: 2rem;
+                    }
+
+                    .nav-link-title {
+                        margin-left: 2.3rem;
+                        font-size: 1.1rem;
+                        color: #fdfdfd;
+                        transition: 600ms;
+                        white-space: nowrap;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    // .navbar-side-active {
+    //     width: 15rem;
+    // }
+
+    .navbar-side-not-active {
+        width: 6rem;
+    }
+}
+
+.header-main-top {
+    width: 100%;
+    height: 3rem;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $default-background;
+    margin-left: 6rem;
+
+    .navbar-top-logo-title {
+        display: flex;
+        align-items: center;
+
+        .title-img-navbar {
+            margin-left: 1rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            object-fit: contain;
+            border: 1px solid white;
+        }
+
+        .navbar-top-title-page {
+            margin-left: 1rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: $default-font-color;
+        }
+
+    }
+
+    .container-setting-page {
+        display: flex;
+        // background-color: white;
+        margin-right: 7rem;
+
+        .icon-setting {
+            font-size: 1.7rem;
+            cursor: pointer;
+            @include radiantColor();
+        }
+    }
+
+}

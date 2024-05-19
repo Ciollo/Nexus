@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="site-bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="../assets/images/nexus_favicon.ico">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Register</title>
+</head>
+
+<body class="site-bg animated-body">
+    <div class="page-container">
+        <div class="content-wrap">
+            <header class="header" data-barba="wrapper">
+                <div class="container-logo">
+                    <img src="../assets/images/Nexus_logo_no_bg.png" alt="Nexus logo" class="logo no-cursor-effect"
+                        id="nexusLogo">
+                </div>
+                <nav class="container-navbar">
+                    <ul class="top-nav-items">
+                        <li>
+                            <a href="home.html" class="link-navbar no-cursor-effect">Home</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Ciollo/Nexus" target="_blank"><i
+                                    class='bx bxl-github icon-navbar no-cursor-effect'></i></a>
+                        </li>
+                        <li>
+                            <a href="https://ko-fi.com/ciollo" target="_blank"
+                                class="link-navbar no-cursor-effect">Support us</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="container-buttons-go-to">
+                    <button class="btn-default btn-go-to-sign-in navbar-btn-go-to-sign-in no-cursor-effect"
+                        id="btnGoToSignIn">Go back</button>
+                </div>
+            </header>
+            <div class="centered-container-page">
+                <div class="login-card no-cursor-effect">
+                    <div class="container-login-card-title">
+                        <span class="title-nexus-login-card">
+                            Nexus
+                        </span>
+                    </div>
+                    <form method="post" action="../includes/register.php">
+                       <div class="container-input-form">
+                            <label class="label-input-form">Email:</label>
+                            <input type="email" class="input-form border-default" name="email" id="userEmail"
+                                aria-describedby="emailHelp" placeholder="Your Email" required>
+                            <i class='bx bx-at'></i>
+                        </div>
+                        <div class="container-input-form hidden" id="container-user-username">
+                            <label class="label-input-form"> Username:  </label>
+                            <input type="text" class="form-control input-form" name="username" id="userUsername"
+                                placeholder="Your Username" required>
+                            <i class='bx bx-user'></i>
+                        </div>
+                        <div id="container-user-password" class="container-input-form hidden">
+                            <label class="label-input-form">Password:</label>
+                            <input type="password" class="form-control input-form" name="password" id="userPassword"
+                                placeholder="Your Password" required>
+                            <i class='bx bxs-hide' id="toggleViewPassword"></i>
+                        </div>
+                        <div class=" container-input-form hidden" hidden id="container-user-confirm-password">
+                            <label class="label-input-form">Confirm:</label>
+                            <input type="password" class="form-control input-form" name="confirmPassword"
+                                id="userConfirmPassword" placeholder="Confirm Password" required>
+                            <i class='bx bxs-hide' id="toggleViewConfirmPassword"></i>
+                        </div>
+                        <div id="continue-container" class="container-btn-form">
+                            <button class="btn-default btn-continue" id="btn-continue">Continue</button>
+                        </div>
+                        <div class="container-btn-form hidden" id="sign-in-container">
+                            <button class="btn-default btn-sign-up" id="btn-sign-up">Sign Up</button>
+                        </div> 
+
+                    </form>
+                    <p class="lbl-no-account">
+                        You already have an account? <a class="link-sign-up" id="link-sign-in">Sign In</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <footer class="footer">
+        <div class="no-cursor-effect">
+            <img class="logo-mini-footer" src="../assets/images/Nexus_only_logo_no_bg.png">
+            <span>
+                © 2024 Nexus
+            </span>
+        </div>
+    </footer>
+    </div>
+
+    <div class="cursor-light"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script type="module" src="../assets/js/pages/register.js"></script>
+    <script src="../assets/js/utils/cursor.js"></script>
+</body>
+
+
+</html>

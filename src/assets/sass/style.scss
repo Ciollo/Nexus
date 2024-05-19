@@ -1,0 +1,14 @@
+
+@use 'abstracts';
+@use 'utilities';
+@use 'base';
+
+@use 'components';
+@use 'layout';
+@use 'pages';
+
+// TODO FIX POSITION of those element
+.img-fluid {
+    width: 700px; /* Imposta direttamente la larghezza */
+    height: auto;
+}

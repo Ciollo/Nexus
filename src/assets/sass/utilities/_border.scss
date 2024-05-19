@@ -1,0 +1,19 @@
+@use '../abstracts/' as *;
+
+@mixin defaultInputBorder() {
+    border: 1px solid;
+}
+.border-confirm-green {
+    @include defaultInputBorder();
+    border-color: $confirmGreen;
+}
+
+.border-error-red {
+    @include defaultInputBorder();
+    border-color: $errorRed;
+}
+
+.border-default {
+    @include defaultInputBorder();
+    border-color: $borderDefaultColor;
+}
