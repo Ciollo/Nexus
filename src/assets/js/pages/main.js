@@ -25,8 +25,13 @@ let pageTitle = document.getElementById("page-title");
 
 // Functions
 export function toggleOverlayVisibility() {
-	mainOverlay.classList.toggle("display-none");
-	mainOverlay.classList.toggle("display-block");
+    if (mainOverlay.classList.contains("display-none")) {
+        mainOverlay.classList.remove("display-none");
+        mainOverlay.classList.add("display-block");
+    } else {
+        mainOverlay.classList.remove("display-block");
+        mainOverlay.classList.add("display-none");
+    }
 }
 
 function openSettingsPanel() {
@@ -59,7 +64,10 @@ function saveBlocks() {
 			case 'sectionTitle':
 				inputContent = block.textContent;
 				break;
-
+			case 'subTitle':
+			console.log("SubTitle");
+				inputContent = block.textContent;
+				break;
 			case 'paragraph':
 				inputContent = block.textContent;
 				break;
@@ -244,12 +252,15 @@ mainOverlay.addEventListener("click", function (event) {
 
 function addUserContentEventListeners(element) {
 		element.addEventListener("input", function () {
+			console.log("Input event triggered");
 			let newTextContent = event.target.textContent;
 
 			if (isAddComponentTriggered(newTextContent, TRIGGER_CHARACTER)) {
+				console.log("Trigger character detected");
 				toggleOverlayVisibility();
 				openSelectionBlockPanel(document.activeElement);
 			} else {
+				console.log("Trigger character not detected");
 				closeComponentPanel();
 			}
 		});

@@ -13,10 +13,10 @@ require '../includes/loadPageBlocks.php';
 	<link rel="icon" type="image/x-icon$_SESSION['id_page']" href="../assets/images/nexus_favicon.ico" />
 	<link rel="stylesheet" href="../assets/css/style.css" />
 	<?php
-					if (isset($_SESSION['pageTitle'])) {
-						$title = $_SESSION['pageTitle'];
-						echo "<title>$title</title>";
-					}
+	if (isset($_SESSION['pageTitle'])) {
+		$title = $_SESSION['pageTitle'];
+		echo "<title>$title</title>";
+	}
 	?>
 </head>
 
@@ -80,10 +80,10 @@ require '../includes/loadPageBlocks.php';
 								?>
 							</a>
 						</li>
-					<li class="navbar-item">
+						<li class="navbar-item">
 							<a class="nav-link" href="home.html">
-									<img src='../assets/images/Nexus_logo_resized.png' alt='user-pfp' class='link-img pageImg' />
-									<span class='nav-link-title'> Home </span>
+								<img src='../assets/images/Nexus_logo_resized.png' alt='user-pfp' class='link-img pageImg' />
+								<span class='nav-link-title'> Home </span>
 							</a>
 						</li>
 						<!-- TODO ADD FUNCTIONALITY -->
@@ -127,9 +127,9 @@ require '../includes/loadPageBlocks.php';
 
 					<div class="container-user-content" id="container-user-content">
 						<div class="user-content" contenteditable="true" data-text="Write something..." id="user-content"></div>
-						<?php foreach ($blocks as $block) : 
-						// echo "<script>console.log('".$block['ID_type_of_block']."')</script>";
-							?>
+						<?php foreach ($blocks as $block) :
+							// echo "<script>console.log('".$block['ID_type_of_block']."')</script>";
+						?>
 							<?php if ($block['ID_type_of_block'] == 2) : ?>
 								<div id="section-title-container" class="section-title-container sectionTitle block-class" contenteditable="false" type="sectionTitle">
 									<div id="section-title" class="section-title" contenteditable="true" data-placeholder="Title"><?= htmlspecialchars($block['Content']) ?: 'Title' ?></div>
@@ -141,6 +141,10 @@ require '../includes/loadPageBlocks.php';
 								</div>
 							<?php elseif ($block['ID_type_of_block'] == 3) : ?>
 								<div class="user-content block-class " contenteditable="true" type="paragraph"><?= htmlspecialchars($block['Content']) ?></div>
+							<?php elseif ($block['ID_type_of_block'] == 4) : ?>
+								<div id="section-sub-title-container" class="section-sub-title-container subTitle block-class" contenteditable="false" type="subTitle">
+									<div id="section-sub-title" class="section-sub-title" contenteditable="true" data-placeholder="Sub Title"><?= htmlspecialchars($block['Content']) ?: 'Sub Title' ?></div>
+								</div>
 							<?php endif; ?>
 						<?php endforeach; ?>
 					</div>
@@ -176,4 +180,5 @@ require '../includes/loadPageBlocks.php';
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script type="module" src="../assets/js/pages/main.js"></script>
 </body>
+
 </html>

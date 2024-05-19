@@ -25,6 +25,9 @@ function insertBlocks($conn, $data, $id_page) {
         case 'sectionTitle':
             $idType = TYPE_TITLE;
             break;
+        case 'subTitle':
+            $idType = TYPE_SUB_TITLE;
+            break;
         case 'paragraph':
             $idType = TYPE_PARGRAPH;
             break;
@@ -45,6 +48,7 @@ function insertBlocks($conn, $data, $id_page) {
 const TYPE_TODO = 1;
 const TYPE_TITLE = 2;
 const TYPE_PARGRAPH = 3;
+const TYPE_SUB_TITLE = 4;
 
 $data = json_decode(file_get_contents('php://input'), true);
 $id_page = $_SESSION['id_page']; // Get id_page from session
