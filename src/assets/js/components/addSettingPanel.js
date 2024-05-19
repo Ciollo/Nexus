@@ -45,11 +45,11 @@ function addClickListenersToButtons() {
           console.log("Setting button clicked");
           break;
         case "setting-element-people":
-          // peoplePanelContent(settingContent);//TODO implementare
+          userPanelContent(settingContent);
           console.log("Setting button clicked");
           break;
         case "setting-element-upgrade":
-          // upgradePanelContent(settingContent); //TODO implementare
+          upgradePanelContent(settingContent); 
           console.log("Setting button clicked");
           break;
         default:
@@ -67,7 +67,7 @@ function settingsPanelContent(settingContent) {
   settingContent.innerHTML = `
   <div class="setting-workspace-content" style="max-height: 600px; overflow-y: auto;">
       <div class="setting-workspace-content-title">
-          Settings of page
+        <h1>Page's settings</h1>
       </div>
       <div class="breakLine"></div>
       <div class="setting-workspace-content-element">
@@ -101,7 +101,6 @@ function settingsPanelContent(settingContent) {
           <button id="btn-update" class="btn-default btn-setting-workspace">Update</button>
           <button id="btn-cancel" class="btn-cancel btn-setting-workspace">Cancel</button>
       </div>
-      <div class="breakLine"></div>
   </div>`;
 
 
@@ -131,7 +130,9 @@ function settingsPanelContent(settingContent) {
   function handleUpdate() {
     const newTitle = document.getElementById('input-setting-workspace-name').value;
     const newDescription = document.getElementById('textarea-setting-workspace-description').value;
-    const newData = {
+
+    if (newTitle !== originalTitle || newDescription !== originalDescription){
+      const newData = {
       title: newTitle,
       description: newDescription
     };
@@ -146,11 +147,15 @@ function settingsPanelContent(settingContent) {
     })
       .then(response => response.json())
       .then(data => {
-        // Gestisci la risposta dal backend
-        console.log(data);
-        // Esegui eventuali azioni dopo l'aggiornamento
+        if (data.error) {
+          console.error('Error updating page:', data.error);
+        } else {
+          alert('Update successful!');
+          window.location.href = 'main.php';
+        }
       })
       .catch(error => console.error('Error updating page:', error));
+    }
   }
 
   function handleCancel() {
@@ -171,4 +176,146 @@ function settingsPanelContent(settingContent) {
     document.getElementById('input-setting-workspace-name').value = originalTitle;
     document.getElementById('textarea-setting-workspace-description').value = originalDescription;
   }
+}
+
+let originalPassword = '';
+let originalUsername = '';
+let originalEmail = '';
+
+function userPanelContent(settingContent) {
+  settingContent.innerHTML = `
+  <div class="user-workspace-content" style="max-height: 600px; overflow-y: auto;">
+      <div class="setting-workspace-content-title">
+        <h1>User's settings</h1>
+      </div>
+      <div class="breakLine"></div>
+      
+      <div class="setting-workspace-content-element">
+          <div class="setting-workspace-content-element-title">
+              Username
+          </div>
+          <div class="setting-workspace-content-element-input">
+              <input type="text" id="input-user-username" class="input-setting-workspace-name" readonly>
+          </div>
+          <div class="breakLine"></div>
+      </div>
+  
+      <div class="setting-workspace-content-element">
+          <div class="setting-workspace-content-element-title">
+              Email
+          </div>
+          <div class="setting-workspace-content-element-input">
+              <input type="email" id="input-user-email" class="input-setting-workspace-name" readonly>
+          </div>
+          <div class="breakLine"></div>
+      </div>
+  
+      <div class="setting-workspace-content-element">
+          <div class="setting-workspace-content-element-title">
+              Password
+          </div>
+          <div class="setting-workspace-content-element-input">
+              <input type="password" id="input-user-password" class="input-setting-workspace-name" readonly>
+              <button id="btn-show-password" class="btn-default btn-setting-workspace">Show Password</button>
+          </div>
+          <div class="breakLine"></div>
+      </div>
+  
+      <div class="setting-workspace-content-element">
+          <div class="setting-workspace-content-element-title">
+              Account Creation Date
+          </div>
+          <div class="setting-workspace-content-element-input">
+              <input type="text" id="input-user-account-creation-date" class="input-setting-workspace-name" readonly>
+          </div>
+          <div class="breakLine"></div>
+      </div>
+      <div class="setting-workspace-content-button">
+          <button id="btn-cancel" class="btn-cancel btn-setting-workspace">Go back</button>
+          <button id="btn-logout" class="btn-default btn-setting-workspace">Logout</button>
+      </div>
+  </div>`;
+
+  setupUserPanel();
+}
+
+function setupUserPanel() {
+  fetch('../includes/getUserDetails.php')
+    .then(response => response.json())
+    .then(data => {
+      if (data.error) {
+        console.error('Error:', data.error);
+      } else {
+        // Assegna i valori originali alle variabili corrispondenti
+        originalUsername = data.Username;
+        originalEmail = data.Email;
+        originalPassword = data.Password;
+
+        // Assegna i valori recuperati ai campi di input
+        document.getElementById('input-user-email').value = originalEmail;
+        document.getElementById('input-user-username').value = originalUsername;
+        document.getElementById('input-user-password').value = originalPassword;
+        document.getElementById('input-user-account-creation-date').value = data.Account_creation_date;
+      }
+    })
+    .catch(error => console.error('Error fetching user data:', error));
+
+  document.getElementById('btn-cancel').addEventListener('click', () => confirmCancel());
+  document.getElementById('btn-logout').addEventListener('click', () => logout());
+  // Aggiungi il listener per mostrare o nascondere la password
+  const btnShowPassword = document.getElementById('btn-show-password');
+  btnShowPassword.addEventListener('click', togglePasswordVisibility);
+}
+
+function logout() {
+  const confirmation = confirm("Are you sure you want to log out?");
+  
+  if (confirmation) {
+    window.location.href = '../includes/logout.php';
+  }
+}
+
+function togglePasswordVisibility() {
+  const passwordInput = document.getElementById('input-user-password');
+  const btnShowPassword = document.getElementById('btn-show-password');
+
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+    btnShowPassword.textContent = 'Hide Password';
+  } else {
+    passwordInput.type = 'password';
+    btnShowPassword.textContent = 'Show Password';
+  }
+}
+
+function upgradePanelContent(settingContent) {
+  settingContent.innerHTML = `
+  <div class="setting-workspace-content" style="max-height: 600px; overflow-y: auto;">
+      <div class="setting-workspace-content-title">
+          <h1>Nexus Version 1.0</h1>
+      </div>
+      <div class="breakLine"></div>
+      <div class="setting-workspace-content-element">
+          <div class="setting-workspace-content-element-title">
+              Icon
+          </div>
+          <div class="setting-workspace-content-element-icon">
+              <img id="setting-workspace-icon" src="../assets/images/pagePhoto/nexus_logo.png" alt="Workspace's logo" class="setting-workspace-icon">
+          </div>
+          <div class="breakLine"></div>
+      </div>
+      <div class="setting-workspace-content-copyright">
+          <p>&copy; 2024 Nexus. All rights reserved.</p>
+      </div>
+      <div class="breakLine"></div>
+      <div class="setting-workspace-content-button">
+          <button id="btn-cancel" class="btn-cancel btn-setting-workspace">Go back</button>
+      </div>
+  </div>`;
+
+  document.getElementById('btn-cancel').addEventListener('click', () => confirmCancel());
+}
+
+function confirmCancel() {
+  window.location.href = 'main.php';
 }

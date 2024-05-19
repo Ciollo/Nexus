@@ -16,6 +16,7 @@ if (
     $confirmPassword = $_POST['confirmPassword'];
     $email = $_POST['email'];
     $account_creation_date = date("Y-m-d");
+    $originalPassword = $password;
 
     if ($password !== $confirmPassword) {
         $_SESSION['logged'] = false;
@@ -37,6 +38,7 @@ if (
             if ($conn->query($insert_query) === TRUE) {
                 $_SESSION['logged'] = true;
                 $_SESSION['email'] = $email;
+                $_SESSION['password'] = $originalPassword;
                 header("Location: ../pages/insertPageName.html");
             } else {
                 $_SESSION['logged'] = false;

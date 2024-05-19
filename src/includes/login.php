@@ -8,7 +8,7 @@ if (!isset($_POST['emailUtente']) || !isset($_POST['password'])) {
 } else {
     $email = $_POST['emailUtente'];
     $password = $_POST['password'];
-
+    $originalPassword = $password;
     $email = strtolower($email);
 	$password = hash('sha256', $password);
 
@@ -22,6 +22,7 @@ if (!isset($_POST['emailUtente']) || !isset($_POST['password'])) {
 
         $_SESSION['logged'] = true;
         $_SESSION['email'] = $email;
+        $_SESSION['password'] = $originalPassword;
 
         // aggiungi la query join per prendere l'ID della pagina principale dell'utente
         $mainPageQuery = "
