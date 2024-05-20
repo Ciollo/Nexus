@@ -90,17 +90,17 @@ function settingsPanelContent(settingContent) {
               Icon
           </div>
           <div class="setting-workspace-content-element-icon">
-              <img id="setting-workspace-icon" src="" alt="Workspace's logo" class="setting-workspace-icon">
+              <img id="setting-workspace-icon" src="../assets/images/pagePhoto/nexus_logo.png" alt="Workspace's logo" class="setting-workspace-icon">
           </div>
           <div class="breakLine"></div>
       </div>
       <div class="setting-workspace-content-button">
           <button id="btn-update" class="btn-default btn-setting-workspace">Update</button>
-          <button id="btn-cancel" class="btn-cancel btn-setting-workspace">Cancel</button>
+          <button id="btn-cancel" class="btn-cancel btn-setting-workspace">Go back</button>
       </div>
   </div>`;
 
-
+  document.getElementById('btn-cancel').addEventListener('click', () => confirmCancel());
   // Recupera il titolo e la descrizione dalla API e impostali nell'input e nella textarea
   fetch('../includes/getInfoPage.php')
     .then(response => response.json())
@@ -116,7 +116,7 @@ function settingsPanelContent(settingContent) {
         const iconElement = document.getElementById('setting-workspace-icon');
         inputElement.value = originalTitle;
         textareaElement.value = originalDescription;
-        iconElement.src = data.Image_path;
+        iconElement.src = "../assets/images/pagePhoto/nexus_logo.png";
       }
     })
     .catch(error => console.error('Error fetching page data:', error));
@@ -159,25 +159,6 @@ function settingsPanelContent(settingContent) {
         })
         .catch(error => console.error('Error updating page:', error));
     }
-  }
-
-  function handleCancel() {
-    // Recupera i valori correnti nei campi di input
-    const currentTitle = document.getElementById('input-setting-workspace-name').value;
-    const currentDescription = document.getElementById('textarea-setting-workspace-description').value;
-
-    // Verifica se i valori correnti sono diversi dai valori originali
-    if (currentTitle !== originalTitle || currentDescription !== originalDescription) {
-      // Se almeno uno dei campi è stato modificato, chiedi conferma prima di annullare le modifiche
-      const confirmCancel = confirm("Sei sicuro di voler ripristinare le modifiche fatte?");
-      if (!confirmCancel) {
-        return; // Interrompi l'operazione di annullamento se l'utente ha scelto di non procedere
-      }
-    }
-
-    // Ripristina i valori originali nei campi di input
-    document.getElementById('input-setting-workspace-name').value = originalTitle;
-    document.getElementById('textarea-setting-workspace-description').value = originalDescription;
   }
 }
 
