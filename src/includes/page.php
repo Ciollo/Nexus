@@ -30,6 +30,8 @@ if (
                          VALUES ('$title', '$description', '$creation_date', '$last_modification', '$image_path', '$userID')";
         
         if ($conn->query($insert_query) === TRUE) {
+            //riesci a prendermi l'id della page
+            $_SESSION['id_page'] = $conn->insert_id; 
             $_SESSION['image_path'] = $image_path;
             $_SESSION['pageTitle'] = $title;
             header("Location: ../pages/main.php");
