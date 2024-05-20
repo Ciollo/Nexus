@@ -23,14 +23,10 @@ if (
         $userID = $row['ID']; 
         
         $_SESSION['user_id'] = $userID;
-        $_SESSION['username'] = $row['Username'];
-        $_SESSION['logged'] = true;
-        $_SESSION['email'] = $email;
         $insert_query = "INSERT INTO Pages (Title, Description, Creation_date, Last_modification, Image_path, ID_user) 
                          VALUES ('$title', '$description', '$creation_date', '$last_modification', '$image_path', '$userID')";
         
         if ($conn->query($insert_query) === TRUE) {
-            //riesci a prendermi l'id della page
             $_SESSION['id_page'] = $conn->insert_id; 
             $_SESSION['image_path'] = $image_path;
             $_SESSION['pageTitle'] = $title;
