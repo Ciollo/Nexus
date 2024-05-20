@@ -18,39 +18,41 @@
     position: relative;
     margin-top: 14px;
 
-    .label-input-form {
-        display: flex;
-        width: 100px;
-        align-items: center;
-        margin-left: 3px;
-        font-size: 15px;
-        font-weight: 600;
-    }
 
-    .input-form {
-        font-size: 14px;
-        font-weight: lighter;
-        padding: 10px 0px 10px 15px;
-        width: 60%;
-        border: 100px solid none;
+}
 
-        &:focus {
-            font-weight: 400;
-            outline: none;
-        }
-    }
+.label-input-form {
+    display: flex;
+    width: 100px;
+    align-items: center;
+    margin-left: 3px;
+    font-size: 15px;
+    font-weight: 600;
+}
 
-    .bx-at,
-    .bxs-hide,
-    .bx-user,
-    .bxs-show {
-        @include bxIconInput();
-    }
+.input-form {
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 10px 0px 10px 15px;
+    width: 60%;
+    border: 100px solid none;
 
-    .bxs-hide,
-    .bxs-show {
-        cursor: pointer;
+    &:focus {
+        font-weight: 400;
+        outline: none;
     }
+}
+
+.bx-at,
+.bxs-hide,
+.bx-user,
+.bxs-show {
+    @include bxIconInput();
+}
+
+.bxs-hide,
+.bxs-show {
+    cursor: pointer;
 }
 
 .container-btn-form {
@@ -74,6 +76,7 @@
         cursor: pointer;
         color: $linkColorDefault;
         transition: all 0.3s ease-in-out;
+
         &:hover {
             font-weight: 700;
         }

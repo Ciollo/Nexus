@@ -168,57 +168,59 @@ let originalEmail = '';
 
 function userPanelContent(settingContent) {
   settingContent.innerHTML = `
-  <div class="user-workspace-content" style="max-height: 600px; overflow-y: auto;">
-      <div class="setting-workspace-content-title">
+ <div class="user-workspace-content" style="max-height: 600px; overflow-y: auto;">
+    <div class="setting-workspace-content-title">
         <h1>User's settings</h1>
-      </div>
-      <div class="breakLine"></div>
-      
-      <div class="setting-workspace-content-element">
-          <div class="setting-workspace-content-element-title">
-              Username
-          </div>
-          <div class="setting-workspace-content-element-input">
-              <input type="text" id="input-user-username" class="input-setting-workspace-name" readonly>
-          </div>
-          <div class="breakLine"></div>
-      </div>
-  
-      <div class="setting-workspace-content-element">
-          <div class="setting-workspace-content-element-title">
-              Email
-          </div>
-          <div class="setting-workspace-content-element-input">
-              <input type="email" id="input-user-email" class="input-setting-workspace-name" readonly>
-          </div>
-          <div class="breakLine"></div>
-      </div>
-  
-      <div class="setting-workspace-content-element">
-          <div class="setting-workspace-content-element-title">
-              Password
-          </div>
-          <div class="setting-workspace-content-element-input">
-              <input type="password" id="input-user-password" class="input-setting-workspace-name" readonly>
-              <button id="btn-show-password" class="btn-default btn-setting-workspace">Show Password</button>
-          </div>
-          <div class="breakLine"></div>
-      </div>
-  
-      <div class="setting-workspace-content-element">
-          <div class="setting-workspace-content-element-title">
-              Account Creation Date
-          </div>
-          <div class="setting-workspace-content-element-input">
-              <input type="text" id="input-user-account-creation-date" class="input-setting-workspace-name" readonly>
-          </div>
-          <div class="breakLine"></div>
-      </div>
-      <div class="setting-workspace-content-button">
-          <button id="btn-cancel" class="btn-cancel btn-setting-workspace">Go back</button>
-          <button id="btn-logout" class="btn-default btn-setting-workspace">Logout</button>
-      </div>
-  </div>`;
+    </div>
+    <div class="breakLine"></div>
+
+    <div class="setting-workspace-content-element">
+        <div class="setting-workspace-content-element-title">
+            Username
+        </div>
+        <div class="setting-workspace-content-element-input">
+            <input type="text" id="input-user-username" class="input-setting-workspace-name" readonly>
+        </div>
+        <div class="breakLine"></div>
+    </div>
+
+    <div class="setting-workspace-content-element">
+        <div class="setting-workspace-content-element-title">
+            Email
+        </div>
+        <div class="setting-workspace-content-element-input">
+            <input type="email" id="input-user-email" class="input-setting-workspace-name" readonly>
+        </div>
+        <div class="breakLine"></div>
+    </div>
+
+    <div class="setting-workspace-content-element">
+        <div class="setting-workspace-content-element-title">
+            Password
+        </div>
+        <div class="setting-workspace-content-element-input">
+            <input type="password" id="input-user-password" class="input-setting-workspace-name" readonly>
+            <button id="btn-show-password" class="btn-default btn-setting-workspace">Show Password</button>
+        </div>
+        <div class="breakLine"></div>
+    </div>
+
+    <div class="setting-workspace-content-element">
+        <div class="setting-workspace-content-element-title">
+            Account Creation Date
+        </div>
+        <div class="setting-workspace-content-element-input">
+            <input type="text" id="input-user-account-creation-date" class="input-setting-workspace-name" readonly>
+        </div>
+        <div class="breakLine"></div>
+    </div>
+
+    <div class="user-workspace-content-button">
+        <button id="btn-cancel" class="btn-cancel btn-setting-workspace">Go back</button>
+        <button id="btn-logout" class="btn-default btn-setting-workspace">Logout</button>
+    </div>
+</div>`;
+ 
 
   setupUserPanel();
 }

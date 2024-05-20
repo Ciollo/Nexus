@@ -175,7 +175,8 @@ body {
   position: relative;
   margin-top: 14px;
 }
-.container-input-form .label-input-form {
+
+.label-input-form {
   display: flex;
   width: 100px;
   align-items: center;
@@ -183,28 +184,31 @@ body {
   font-size: 15px;
   font-weight: 600;
 }
-.container-input-form .input-form {
+
+.input-form {
   font-size: 14px;
   font-weight: lighter;
   padding: 10px 0px 10px 15px;
   width: 60%;
   border: 100px solid none;
 }
-.container-input-form .input-form:focus {
+.input-form:focus {
   font-weight: 400;
   outline: none;
 }
-.container-input-form .bx-at,
-.container-input-form .bxs-hide,
-.container-input-form .bx-user,
-.container-input-form .bxs-show {
+
+.bx-at,
+.bxs-hide,
+.bx-user,
+.bxs-show {
   position: absolute;
   top: 43%;
   right: 14px;
   transform: translateY(-27%);
 }
-.container-input-form .bxs-hide,
-.container-input-form .bxs-show {
+
+.bxs-hide,
+.bxs-show {
   cursor: pointer;
 }
 
@@ -979,20 +983,46 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content .setting-workspace-content-title {
+.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content,
+.main-overlay .container-user-setting-panel .setting-content .user-workspace-content {
+  width: 100%;
+}
+.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content .setting-workspace-content-title,
+.main-overlay .container-user-setting-panel .setting-content .user-workspace-content .setting-workspace-content-title {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
-.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content .setting-workspace-content-element .setting-workspace-content-element-title {
+.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content .setting-workspace-content-element .setting-workspace-content-element-title,
+.main-overlay .container-user-setting-panel .setting-content .user-workspace-content .setting-workspace-content-element .setting-workspace-content-element-title {
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 1rem;
 }
-.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content .setting-workspace-content-element .setting-workspace-content-element-input .input-setting-workspace-name {
+.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content .setting-workspace-content-element .setting-workspace-content-element-input,
+.main-overlay .container-user-setting-panel .setting-content .user-workspace-content .setting-workspace-content-element .setting-workspace-content-element-input {
+  width: 100%;
+  display: flex;
+}
+.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content .setting-workspace-content-element .setting-workspace-content-element-input input.input-setting-workspace-name,
+.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content .setting-workspace-content-element .setting-workspace-content-element-input textarea.input-setting-workspace-name,
+.main-overlay .container-user-setting-panel .setting-content .user-workspace-content .setting-workspace-content-element .setting-workspace-content-element-input input.input-setting-workspace-name,
+.main-overlay .container-user-setting-panel .setting-content .user-workspace-content .setting-workspace-content-element .setting-workspace-content-element-input textarea.input-setting-workspace-name {
+  border: 1px solid rgb(20, 22, 46);
+  padding: 0.5rem 1rem;
+  color: #fdfdfd;
+  background-color: #1c1f40;
+  border-radius: 6px;
   width: 100%;
 }
-.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content .setting-workspace-content-element .setting-workspace-content-element-icon .setting-workspace-icon {
+.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content .setting-workspace-content-element .setting-workspace-content-element-input input.input-setting-workspace-name:focus,
+.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content .setting-workspace-content-element .setting-workspace-content-element-input textarea.input-setting-workspace-name:focus,
+.main-overlay .container-user-setting-panel .setting-content .user-workspace-content .setting-workspace-content-element .setting-workspace-content-element-input input.input-setting-workspace-name:focus,
+.main-overlay .container-user-setting-panel .setting-content .user-workspace-content .setting-workspace-content-element .setting-workspace-content-element-input textarea.input-setting-workspace-name:focus {
+  outline: none;
+}
+.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content .setting-workspace-content-element .setting-workspace-content-element-icon .setting-workspace-icon,
+.main-overlay .container-user-setting-panel .setting-content .user-workspace-content .setting-workspace-content-element .setting-workspace-content-element-icon .setting-workspace-icon {
   width: 10rem;
   height: 10rem;
   cursor: pointer;
@@ -1000,10 +1030,12 @@ body {
      object-fit: contain;
   border: 1px solid white;
 }
-.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content-button {
+.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content-button,
+.main-overlay .container-user-setting-panel .setting-content .user-workspace-content-button {
   margin-top: 2rem;
 }
-.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content-button .btn-setting-workspace {
+.main-overlay .container-user-setting-panel .setting-content .setting-workspace-content-button .btn-setting-workspace,
+.main-overlay .container-user-setting-panel .setting-content .user-workspace-content-button .btn-setting-workspace {
   padding: 0.5rem 1rem;
 }
 
