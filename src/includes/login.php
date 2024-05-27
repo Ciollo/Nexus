@@ -51,7 +51,6 @@ if (!isset($_POST['emailUtente']) || !isset($_POST['password'])) {
         header("Location: ../pages/main.php");
     } else {
         $_SESSION['logged'] = false;
-        header("Location: ../pages/login.html");
         echo "<script>alert('Credenziali errate. Login fallito!'); window.location.href = '../pages/login.html';</script>";
     }
     $conn->close();

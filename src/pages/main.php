@@ -1,7 +1,8 @@
 <?php
 require '../includes/loadPageBlocks.php';
 
-function getUserPages($userId, $conn) {
+function getUserPages($userId, $conn)
+{
     $stmt = $conn->prepare("SELECT id, title FROM pages WHERE ID_user = ?");
     $stmt->bind_param("i", $userId);
     $stmt->execute();
@@ -9,10 +10,9 @@ function getUserPages($userId, $conn) {
     return $result->fetch_all(MYSQLI_ASSOC);
 }
 
-require '../includes/connect.php'; // Assicurati che $conn sia la tua connessione al database
+require '../includes/connect.php'; 
 
-$userId = $_SESSION['user_id']; // Assicurati che l'ID utente sia salvato nella sessione
-// echo "User ID: $userId";
+$userId = $_SESSION['user_id']; 
 $pages = getUserPages($userId, $conn);
 ?>
 
@@ -52,8 +52,6 @@ $pages = getUserPages($userId, $conn);
                     ?>
                 </div>
                 <div class="container-setting-page">
-                    <!-- <i class='bx bx-cog icon-setting' id="btn-page-settings"></i> -->
-                    <!-- TODO add functionality -->
                     <i class="bx bx-save icon-setting" id="save-blocks"></i>
                 </div>
             </header>
@@ -82,6 +80,7 @@ $pages = getUserPages($userId, $conn);
                         <?php foreach ($pages as $page) : ?>
                             <li class="navbar-item">
                                 <a class="nav-link page-link" href="#" data-page-id="<?= $page['id'] ?>" data-page-title="<?= htmlspecialchars($page['title']) ?>">
+                                    <i class='bx bxs-edit link-icon'></i>
                                     <span class="nav-link-title"><?= htmlspecialchars($page['title']) ?></span>
                                 </a>
                             </li>
@@ -152,7 +151,7 @@ $pages = getUserPages($userId, $conn);
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="module" src="../assets/js/pages/main.js"></script>
     <script>
-		 document.getElementById('btn-page-add').addEventListener('click', function() {
+        document.getElementById('btn-page-add').addEventListener('click', function() {
             $.ajax({
                 url: '../includes/add_page.php',
                 type: 'POST',
@@ -173,7 +172,10 @@ $pages = getUserPages($userId, $conn);
                 $.ajax({
                     url: '../includes/update_page.php',
                     type: 'POST',
-                    data: { pageId: pageId, pageTitle: pageTitle },
+                    data: {
+                        pageId: pageId,
+                        pageTitle: pageTitle
+                    },
                     success: function(response) {
                         const result = JSON.parse(response);
                         if (result.status === 'success') {
