@@ -14,7 +14,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     $user = $result->fetch_assoc();
-    $user["Password"] = $_SESSION['password']; // Aggiungi la password dalla sessione
+    $user["Password"] = $_SESSION['password']; 
     echo json_encode($user);
 } else {
     echo json_encode(["error" => "User not found"]);

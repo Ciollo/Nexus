@@ -15,8 +15,5 @@ if ($result->num_rows > 0) {
     }
 }
 
-// stampami tutto l'arrai di blocks
-//print_r($blocks);
-// echo json_encode($blocks);
 $conn->close();
 ?>
